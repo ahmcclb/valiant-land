@@ -1,0 +1,47 @@
+{
+  "template": "home",
+  "title": "Sell Your Land Fast!",
+  "meta_description": "Turn your raw land into cash. We buy vacant land throughout the US. No commissions or fees. Get a fair cash offer today.",
+  "hero": {
+    "title": "Do You Need To Sell Raw Land That’s Just Sitting There Costing You Money?",
+    "subtitle": "Turn that land into CASH now!",
+    "cta_text": "Get Your Cash Offer",
+    "cta_link": "#get-started"
+  },
+  "pain_points": {
+    "title": "People choose to sell land for many reasons.",
+    "items": [
+      "Own bare land in the middle of nowhere you are having a tough time selling.",
+      "Sick of paying property taxes year after year on a piece of dirt you’ve done nothing with.",
+      "Listed it with an agent in the past, and had it sit on the market for months at a time.",
+      "You’ve found yourself stuck with an unwanted inheritance, and don’t have any actual need for the property.",
+      "Fallen behind on property taxes and you realize it might be better to sell and make money, as opposed to spending a small fortune playing catch-up."
+    ]
+  },
+  "process": {
+    "title": "At Valiant Land, We Cut Out The Middleman",
+    "subtitle": "No commissions, no fees, no hassles, no gimmicks.",
+    "description": "We make you an offer, you decide if it’s a fit for you or not. It’s as simple as that. From there, we can close on your terms. Because we pay you directly, there is no need to wait on banks, no need to figure commissions and no closing costs or hidden fees will be paid by you."
+  },
+  "property_types": {
+    "title": "We Are Land Buyers Looking For…",
+    "types": [
+      "City Lots",
+      "Suburban Lots",
+      "Waterfront Lots",
+      "Recreational Lots",
+      "Rural Acreage",
+      "Ranches",
+      "Farms",
+      "Agricultural Land"
+    ]
+  },
+  "testimonial": {
+    "text": "We are land specialists. We will give you a fair price for your property and have the knowledge, patience, and overall fortitude to help you reach your real estate goals.",
+    "author": "Valiant Land"
+  },
+  "trust_badges": [
+    "/assets/images/letterbadge2.png",
+    "/assets/images/LetterbadgeSP2.png"
+  ]
+}

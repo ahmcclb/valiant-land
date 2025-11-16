@@ -1,0 +1,7 @@
+.env
+/admin/uploads/*
+!/admin/uploads/.gitkeep
+/vendor/
+.DS_Store
+*.log
+GITEOF

@@ -1,0 +1,6 @@
+echo "Repository created! Now run:"
+echo "git add ."
+echo "git commit -m 'Initial commit'"
+echo "git branch -M main"
+echo "git remote add origin https://github.com/ahmcclb/valiant-land.git"
+echo "git push -u origin main"

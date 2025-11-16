@@ -1,0 +1,79 @@
+backend:
+  name: git-gateway
+  branch: main
+  repo: ahmcclb/valiant-land  
+
+media_folder: "public/assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  # Global Settings
+  - name: "settings"
+    label: "Site Settings"
+    delete: false
+    files:
+      - name: "general"
+        label: "General Settings"
+        file: "content/settings.json"
+        fields:
+          - {label: "Site Title", name: "site_title", widget: "string"}
+          - {label: "Phone Number", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "GTM ID", name: "gtm_id", widget: "string", required: false}
+          - {label: "GA4 ID", name: "ga4_id", widget: "string", required: false}
+
+  # Page Content
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "Homepage"
+        file: "content/pages/home.json"
+        fields:
+          - {label: "Hero Title", name: "hero.title", widget: "string"}
+          - {label: "Hero Subtitle", name: "hero.subtitle", widget: "string"}
+          - {label: "Phone Number in Hero", name: "phone", widget: "string"}
+          - label: "Pain Points"
+            name: "pain_points"
+            widget: "list"
+            fields:
+              - {label: "Point", name: "point", widget: "string"}
+          - label: "Property Types"
+            name: "property_types"
+            widget: "list"
+            fields:
+              - {label: "Type", name: "type", widget: "string"}
+
+      - name: "faq"
+        label: "FAQ Page"
+        file: "content/pages/faq.json"
+        fields:
+          - {label: "Intro Text", name: "intro", widget: "text"}
+          - label: "Questions"
+            name: "questions"
+            widget: "list"
+            fields:
+              - {label: "Question", name: "question", widget: "string"}
+              - {label: "Answer", name: "answer", widget: "markdown"}
+
+  # Blog Posts
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Read Time", name: "read_time", widget: "string"}
+      - {label: "Featured Image", name: "featured_image", widget: "image", required: false}
+      - {label: "Body", name: "content", widget: "markdown"}
+
+  # Blog Listing Config
+  - name: "blog_listing"
+    label: "Blog Settings"
+    file: "content/blog/index.json"
+    fields:
+      - {label: "Page Title", name: "title", widget: "string"}
+      - {label: "Meta Description", name: "meta_description", widget: "text"}
