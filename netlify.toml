@@ -1,7 +1,3 @@
-[build]
-  publish = "public"
-  # No build command - this is pure static
-
 [[redirects]]
   from = "/admin/*"
   to = "/admin/:splat"
