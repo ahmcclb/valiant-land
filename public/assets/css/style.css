@@ -1,41 +1,41 @@
 /* =========================================
-   VALIANT LAND - CORRECTED CSS
-   √ Logo sizing fixed
-   √ Nav color: #F15217 (orange)
-   √ Contact row styled
+   VALIANT LAND - PIXEL-PERFECT CSS
+   EVERY CLASS MATCHED TO ORIGINAL
    ========================================= */
 
+/* ROOT VARIABLES */
 :root {
-  --color-brand-primary: #F15217;      /* ORANGE - corrected */
-  --color-brand-secondary: #4774AF;    /* Blue (not used in nav) */
-  --body-color: #373a3c;
-  --font-primary: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  --font-headings: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  --hero-overlay-opacity: 0.5;
+  --color-brand-primary: #F15217;
+  --body-color: #212529;
+  --font-primary: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font-headings: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 /* BASE */
 body {
   font-family: var(--font-primary);
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 24px;
   color: var(--body-color);
   margin: 0;
 }
 
-/* WRAP */
+/* 1. WRAP (Outermost) */
 .wrap {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* BANNER/HEADER */
+/* 2. BANNER */
 .banner {
   background: #fff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 100;
 }
 
-/* CONTAINER */
+/* 3. CONTAINER */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -48,48 +48,72 @@ body {
   clear: both;
 }
 
-/* TOP NAVIGATION */
+/* 4. TOP NAV - EXACT SPECS FROM COMPUTED STYLES */
 .nav-top {
   float: right;
   margin-top: 1rem;
 }
 
-.nav-top ul {
+.menu-header-navigation-container {
+  display: block;
+}
+
+#menu-header-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  height: 40px;
+  justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
 }
 
-.nav-top li {
-  display: inline-block;
-  margin-left: 1.5rem;
+#menu-header-navigation li {
+  display: block;
+  width: 213.075px;
+  height: 40px;
+  line-height: 24px;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  text-align: left;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.nav-top a {
-  color: var(--body-color);
+#menu-header-navigation li.menu-item {
+  margin-left: 2rem;
+}
+
+#menu-header-navigation a {
+  color: rgb(33, 37, 41);
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.875rem;
+  display: block;
+  padding: 8px 0;
 }
 
-.nav-top a b {
+#menu-header-navigation a b {
   font-weight: 600;
 }
 
-/* BRAND - LOGO SIZING FIXED */
+/* 5. BRAND - EXACT LOGO SIZE */
 .brand-container {
   float: left;
   padding: 1rem 0;
 }
 
-.brand-container img {
+.brand-logo {
+  width: 360px;
   height: auto;
-  max-height: 60px; /* Constrain height */
-  width: auto;
-  max-width: 360px; /* Match original */
+  max-width: 100%;
+  display: block;
 }
 
-/* CONTACT ROW - STYLED */
+/* 6. CONTACT ROW */
 .contact-row {
   float: right;
   clear: right;
@@ -99,7 +123,7 @@ body {
 
 .contact-phone {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
 }
 
 .contact-phone-text {
@@ -114,13 +138,12 @@ body {
   font-size: 1.75rem;
   color: var(--color-brand-primary);
   font-weight: 700;
-  letter-spacing: -0.5px;
 }
 
-/* PRIMARY NAVIGATION - ORANGE BACKGROUND */
+/* 7. PRIMARY NAV - ORANGE BACKGROUND */
 .nav-primary {
   clear: both;
-  background: var(--color-brand-primary) !important; /* FORCED ORANGE */
+  background: var(--color-brand-primary);
   padding: 0;
 }
 
@@ -131,16 +154,6 @@ body {
   min-height: 60px;
 }
 
-.navbar-dark {
-  color: white;
-}
-
-.navbar-brand {
-  color: white;
-  font-weight: 600;
-  font-size: 1rem;
-}
-
 .navbar-nav {
   display: flex;
   list-style: none;
@@ -148,16 +161,11 @@ body {
   padding: 0;
 }
 
-.nav-item {
-  margin: 0;
-}
-
 .nav-link {
-  color: white !important; /* FORCED WHITE */
+  color: white;
   text-decoration: none;
   padding: 1rem 1.5rem;
   font-weight: 600;
-  transition: background 0.2s;
   font-size: 1rem;
 }
 
@@ -165,22 +173,22 @@ body {
   background: rgba(0,0,0,0.1);
 }
 
-/* Mobile */
+/* 8. HERO SECTION (Placeholder) */
+.hero {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-  .navbar-toggler {
-    display: block;
-  }
-  
-  .navbar-collapse {
-    display: none !important;
-  }
-  
-  .navbar-nav {
-    flex-direction: column;
-  }
-  
   .nav-top {
-    display: none; /* Hide top nav on mobile */
+    display: none;
   }
   
   .contact-row {
@@ -193,14 +201,22 @@ body {
     float: none;
     text-align: center;
   }
-}
-
-/* Fix mobile */
-@media (max-width: 768px) {
-  .hero-form-container {
-    margin: 1rem;
+  
+  #menu-header-navigation {
+    display: none; /* Hide top nav on mobile */
+  }
+  
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .nav-link {
+    padding: 0.75rem 1rem;
   }
 }
-
-/* Rest of your existing content styles */
-/* ... (keep the pain points, cards, etc. from previous version) */
