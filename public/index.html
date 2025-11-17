@@ -166,7 +166,17 @@
         </footer>
     </div>
 
-    <!-- Admin Link -->
-    <script>window.location.href = "{{ settings.admin_url }}";</script>
+<!-- Optional: Smooth scroll for internal links -->
+<script>
+  // Only prevent default for same-page links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
 </body>
 </html>
