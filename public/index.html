@@ -22,36 +22,50 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ settings.gtm_id }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="wrap">
-        <header class="banner">
-            <!-- Top Nav & Logo -->
-            <div class="container clearfix">
-                <div class="brand-container">
-                    <a class="brand" href="/">
-                        <img class="brand-logo" src="/assets/images/logo-with-shield-360-wide.png" width="360" height="441" alt="Valiant Land">
-                    </a>
-                </div>
-                <div class="contact-row">
-                    <div class="contact-phone">
-                        <span class="contact-phone-text">Call Us!</span>
-                        <span class="telephone"><b>{{ settings.phone }}</b></span>
-                    </div>
-                </div>
-            </div>
+        <header class="banner banner--isDefault">
+  <div class="container clearfix">
+    <!-- Optional: Top nav (if you want it) -->
+    <nav class="nav-top">
+      <ul>
+        <li><a href="/sell-your-land/"><b>Sell Your Land For Cash</b></a></li>
+        <li><a href="/about/">About Us</a></li>
+      </ul>
+    </nav>
 
-            <!-- Main Navigation -->
-            <nav class="nav-primary">
-                <div class="container">
-                    <ul class="navbar-nav">
-                        <li><a href="/sell-your-land/" class="nav-link"><strong>Sell Your Land ›</strong></a></li>
-                        <li><a href="/how-it-works/" class="nav-link">How It Works</a></li>
-                        <li><a href="/about/" class="nav-link">About Us</a></li>
-                        <li><a href="/faq/" class="nav-link">FAQ</a></li>
-                        <li><a href="/blog/" class="nav-link">Blog</a></li>
-                        <li><a href="/contact/" class="nav-link">Contact Us</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+    <!-- Logo -->
+    <div class="brand-container brand--main-logo brand--isDefault">
+      <a class="brand" href="/">
+        <img class="brand-logo" src="/assets/images/logo-with-shield-360-wide.png" alt="Valiant Land">
+      </a>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-row">
+      <div class="contact-phone">
+        <span class="contact-phone-text">Call Us!</span>
+        <span class="telephone"><b>203-487-2412</b></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Nav (ORANGE) -->
+  <nav class="nav-primary navbar navbar-expand-md navbar-dark bg-primary">
+    <div class="container">
+      <div class="navbar-brand">Call Us! <span class="telephone"><b>203-487-2412</b></span></div>
+      <button class="navbar-toggler">Menu</button>
+      <div class="navbar-collapse">
+        <ul class="navbar-nav">
+          <li><a href="/sell-your-land/" class="nav-link"><strong>Sell Your Land ›</strong></a></li>
+          <li><a href="/how-it-works/" class="nav-link">How It Works</a></li>
+          <li><a href="/about/" class="nav-link">About Us</a></li>
+          <li><a href="/faq/" class="nav-link">FAQ</a></li>
+          <li><a href="/blog/" class="nav-link">Blog</a></li>
+          <li><a href="/contact/" class="nav-link">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
 
         <!-- Hero Section -->
         <section class="hero">
