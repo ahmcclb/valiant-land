@@ -22,7 +22,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ settings.gtm_id }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="wrap">
-        <header class="banner banner--isDefault">
+  <header class="banner banner--isDefault">
   <div class="container clearfix">
     <!-- Optional: Top nav (if you want it) -->
     <nav class="nav-top">
@@ -33,19 +33,27 @@
     </nav>
 
     <!-- Logo -->
-    <div class="brand-container brand--main-logo brand--isDefault">
-      <a class="brand" href="/">
-        <img class="brand-logo" src="/assets/images/logo-with-shield-360-wide.png" alt="Valiant Land">
+    <div class="brand-container" itemscope itemtype="https://schema.org/Organization">
+      <a class="brand" itemprop="url" href="/">
+        <img itemprop="logo" class="brand-logo" src="/assets/images/logo-with-shield-360-wide.png" 
+             width="360" height="441" alt="Valiant Land">
+        <div class="brand-text sr-only">
+          <b class="brand-name" itemprop="name">Valiant Land</b>
+          <span class="tagline brand-tagline">Sell your land the easy way!</span>
+        </div>
       </a>
     </div>
 
     <!-- Contact -->
     <div class="contact-row">
-      <div class="contact-phone">
+      <div id="main-contact-phone" class="contact-phone">
         <span class="contact-phone-text">Call Us!</span>
-        <span class="telephone"><b>203-487-2412</b></span>
+        <span class="telephone" itemprop="telephone">
+          <b>203-487-2412</b>
+        </span>
       </div>
     </div>
+
   </div>
 
   <!-- Main Nav (ORANGE) -->
