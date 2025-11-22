@@ -7,7 +7,7 @@
    1. ROOT VARIABLES (Brand System)
    ========================================= */
 :root {
-  /* Brand Colors  */
+  /* Brand Colors */
   --color-brand-primary: #f25116;
   --color-brand-primary-hover: #ca3e0b;
   --color-brand-primary-lighter: #f6875e;
@@ -106,6 +106,8 @@ strong, b {
   padding: 0;
   gap: 2rem;
   font-size: 16px;
+  height: 40px;
+  align-items: center;
 }
 
 .nav-top a {
@@ -118,15 +120,15 @@ strong, b {
   font-weight: 700;
 }
 
-/* Logo */
+/* Logo - FIXED SIZE */
 .brand-container {
   float: left;
   padding: 1rem 0;
 }
 
 .brand-logo {
-  width: 145px;        /* FIXED: Your exact size */
-  height: auto;        /* Maintains aspect ratio */
+  width: 145px;        /* CORRECT SIZE */
+  height: auto;
   max-width: 100%;
   display: block;
 }
@@ -227,7 +229,6 @@ strong, b {
   cursor: pointer;
   border-radius: 0.25rem;
 }
-
 /* =========================================
    5. HERO SECTION
    ========================================= */
