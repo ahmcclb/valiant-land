@@ -126,11 +126,21 @@ strong, b {
     margin-right: 0;
 }
 
+/* Navigation Links - CORRECTED 13.5PT SIZE */
+.banner--isDefault .nav-top li a {
+    display: block;
+    padding: 0 0.75rem;
+    height: 100%;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    font-size: 18px !important; /* 13.5PT = 18PX */
+}
+
 /* FIRST ITEM: "Sell Your Raw Land For Cash" (Bold, Dark Blue) */
 #menu-header-navigation .menu-item:first-child a {
     color: #065B81 !important;
     font-weight: 700;
-    text-decoration: none;
 }
 
 #menu-header-navigation .menu-item:first-child a b {
@@ -143,7 +153,6 @@ strong, b {
 #menu-header-navigation .menu-item:nth-child(3) a {
     color: #009ED3 !important;
     font-weight: 500;
-    text-decoration: none;
 }
 
 /* Hover states for all items */
@@ -220,7 +229,7 @@ strong, b {
     display: inline-block;
     text-align: right;
     white-space: nowrap;
-    font-size: inherit;
+    font-size: 25px; /* 19PT BASE SIZE */
     line-height: 1.5;
     width: auto;
 }
@@ -238,10 +247,10 @@ strong, b {
     margin-right: 0.5rem;
 }
 
-/* Telephone Number - INLINE BOLD BLACK */
+/* Telephone Number - CORRECTED 19PT SIZE */
 #main-contact-phone .telephone {
     display: inline;
-    font-size: inherit;
+    font-size: 25px; /* 19PT = 25PX */
     line-height: 1.5;
     text-align: right;
     white-space: nowrap;
