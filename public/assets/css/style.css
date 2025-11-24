@@ -111,7 +111,7 @@ strong, b {
   position: relative;
 }
 
-/* Navigation List Items - REFINED */
+/* Navigation List Items - ALL THREE ITEMS */
 .banner--isDefault .nav-top li {
   display: block;
   height: 40px;
@@ -121,22 +121,27 @@ strong, b {
   list-style: none;
 }
 
-.banner--isDefault .nav-top li a {
-  color: var(--body-color);
-  text-decoration: none;
-  display: block;
-  padding: 0 0.75rem;
-  height: 100%;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.banner--isDefault .nav-top li a b {
+/* FIRST ITEM: "Sell Your Raw Land For Cash" (Bold, Dark Blue) */
+#menu-header-navigation .menu-item:first-child a {
+  color: #065B81 !important; /* Dark blue from DevTools */
   font-weight: 700;
 }
 
-.banner--isDefault .nav-top li a:hover {
-  color: var(--color-brand-primary);
+#menu-header-navigation .menu-item:first-child a b {
+  color: #065B81 !important;
+  font-weight: 700;
+}
+
+/* SECOND & THIRD ITEMS: "About Us" & "Our Company" (Regular, Light Blue) */
+#menu-header-navigation .menu-item:nth-child(2) a,
+#menu-header-navigation .menu-item:nth-child(3) a {
+  color: #009ED3 !important; /* Light blue from DevTools */
+  font-weight: 500;
+}
+
+/* Hover states for all items */
+#menu-header-navigation .menu-item a:hover {
+  color: var(--color-brand-primary) !important; /* Orange on hover */
 }
 
 /* Navigation List - REFINED */
@@ -304,48 +309,6 @@ strong, b {
   font-size: 1rem;
   cursor: pointer;
   border-radius: 0.25rem;
-}
-
-/* Hamburger Icon */
-.navbar-toggler .toggler-icon {
-  display: block;
-  width: 30px;
-  height: 3px;
-  background: var(--color-text-on-primary);
-  position: relative;
-  transition: background 0.3s ease;
-}
-
-.navbar-toggler .toggler-icon::before,
-.navbar-toggler .toggler-icon::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: var(--color-text-on-primary);
-  transition: transform 0.3s ease;
-}
-
-.navbar-toggler .toggler-icon::before {
-  top: -8px;
-}
-
-.navbar-toggler .toggler-icon::after {
-  bottom: -8px;
-}
-
-/* Mobile menu open state */
-.navbar-toggler[aria-expanded="true"] .toggler-icon {
-  background: transparent;
-}
-
-.navbar-toggler[aria-expanded="true"] .toggler-icon::before {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.navbar-toggler[aria-expanded="true"] .toggler-icon::after {
-  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* =========================================
