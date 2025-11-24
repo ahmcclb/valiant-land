@@ -119,7 +119,7 @@ strong, b {
     margin: 0;
     padding: 0;
     list-style: none;
-    margin-right: 2em; /* THREE SPACE WIDTH BETWEEN LINKS */
+    margin-right: 1em; /* REDUCED BY 50% (from 2em) */
 }
 
 .banner--isDefault .nav-top li:last-child {
@@ -189,14 +189,14 @@ strong, b {
     height: 40px;
 }
 
-/* Logo - No changes needed */
+/* Logo - RESIZED TO 78% OF ORIGINAL */
 .brand-container {
     float: left;
     padding: 1rem 0;
 }
 
 .brand-logo {
-    width: 145px;
+    width: 113px; /* REDUCED TO 78% (from 145px) */
     height: auto;
     max-width: 100%;
     display: block;
