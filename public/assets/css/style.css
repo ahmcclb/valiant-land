@@ -74,7 +74,7 @@ strong, b {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1080px; /* SET TO 1080PX FOR CENTERED CONTENT */
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -102,7 +102,7 @@ strong, b {
 
 /* Header Container - REFINED */
 .banner--isDefault .container {
-    max-width: 960px;
+    max-width: 1080px; /* SET TO 1080PX */
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
@@ -119,7 +119,7 @@ strong, b {
     margin: 0;
     padding: 0;
     list-style: none;
-    margin-right: 1em; /* REDUCED BY 50% (from 2em) */
+    margin-right: 1em; /* REDUCED BY 50% */
 }
 
 .banner--isDefault .nav-top li:last-child {
@@ -266,19 +266,27 @@ strong, b {
     color: var(--color-brand-primary-hover) !important;
 }
 
-/* Primary Nav (Orange Bar) */
+/* =========================================
+   5. PRIMARY NAVBAR (ORANGE BAR) - FULL WIDTH WITH CENTERED CONTENT
+   ========================================= */
 .nav-primary {
     clear: both;
     background: var(--color-brand-primary);
     padding: 0;
     margin-top: 1rem;
+    width: 100%; /* FULL SCREEN WIDTH */
+    height: 54px; /* SET TO 54PX HEIGHT */
 }
 
+/* Container for navbar content - CENTERED AT 1080PX */
 .nav-primary .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 60px;
+    min-height: 54px; /* MATCH NAVBAR HEIGHT */
+    max-width: 1080px; /* CENTERED CONTENT WIDTH */
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .navbar-brand {
@@ -288,22 +296,28 @@ strong, b {
     font-size: 1.1rem;
 }
 
+/* Navbar List - 8 BUTTONS CENTERED */
 .navbar-nav {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
     gap: 0;
+    width: 100%;
+    justify-content: center; /* CENTER BUTTONS */
 }
 
 .nav-link {
     color: var(--color-text-on-primary);
     text-decoration: none;
-    padding: 1rem 1.5rem;
-    font-size: 1.2rem;
+    padding: 0 1.5rem; /* HORIZONTAL PADDING */
+    font-size: 24px; /* 18PT = 24PX */
     font-weight: 600;
     display: block;
+    line-height: 54px; /* MATCH NAVBAR HEIGHT */
+    height: 54px;
     transition: background 0.2s ease;
+    text-align: center;
 }
 
 .nav-link:hover,
@@ -328,7 +342,7 @@ strong, b {
 }
 
 /* =========================================
-   5. HERO SECTION
+   6. HERO SECTION - FULL WIDTH WITH CENTERED CONTENT
    ========================================= */
 .hero {
     position: relative;
@@ -342,14 +356,26 @@ strong, b {
     background-position: center;
     color: #fff;
     overflow: hidden;
+    width: 100%; /* FULL SCREEN WIDTH */
 }
 
+/* Hero Container - FULL WIDTH */
+.hero .container {
+    max-width: 100%; /* OVERRIDE DEFAULT CONTAINER */
+    padding: 0;
+    margin: 0;
+}
+
+/* Hero Content Container - CENTERED AT 1080PX */
 .hero-content-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: center;
     width: 100%;
+    max-width: 1080px; /* CENTERED CONTENT WIDTH */
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .hero-content {
@@ -397,6 +423,7 @@ strong, b {
     transform: scale(1.05);
 }
 
+/* Form Container - RESET FOR HERO */
 .hero-form-container,
 .hero-layout-columns .hero-form,
 .hero-layout-stacked .hero-form {
@@ -473,8 +500,15 @@ strong, b {
 }
 
 /* =========================================
-   6. MAIN CONTENT SECTIONS
+   7. MAIN CONTENT - CENTERED AT 1080PX
    ========================================= */
+.content-wrap {
+    width: 100%;
+    max-width: 1080px; /* SET TO 1080PX */
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
 .content-wrap figure:first-child {
     text-align: center;
     margin: 2rem 0;
@@ -543,7 +577,7 @@ strong, b {
 }
 
 /* =========================================
-   7. FOOTER
+   8. FOOTER
    ========================================= */
 .content-info-bottom {
     background: #efefef;
@@ -594,7 +628,7 @@ strong, b {
 }
 
 /* =========================================
-   8. MOBILE RESPONSIVE (max-width: 768px)
+   9. MOBILE RESPONSIVE (max-width: 768px)
    ========================================= */
 @media (max-width: 768px) {
     .banner--isDefault .nav-top {
@@ -660,7 +694,7 @@ strong, b {
 }
 
 /* =========================================
-   9. UTILITY CLASSES
+   10. UTILITY CLASSES
    ========================================= */
 .sr-only {
     position: absolute;
@@ -679,7 +713,7 @@ strong, b {
 }
 
 /* =========================================
-   10. HOVERS & INTERACTIONS
+   11. HOVERS & INTERACTIONS
    ========================================= */
 .banner--isDefault .nav-link:hover {
     background: rgba(0,0,0,0.1);
@@ -692,16 +726,16 @@ strong, b {
 }
 
 /* =========================================
-   11. BREAKPOINT FIXES
+   12. BREAKPOINT FIXES
    ========================================= */
 @media (min-width: 960px) {
     .banner--isDefault .container {
-        width: 960px;
+        width: 1080px; /* SET TO 1080PX */
     }
 }
 
 /* =========================================
-   12. CONTACT PHONE INLINE FIX
+   13. CONTACT PHONE INLINE FIX
    ========================================= */
 /* Ensure contact phone stays inline on all screen sizes */
 @media (min-width: 769px) {
@@ -718,5 +752,20 @@ strong, b {
     #main-contact-phone .telephone {
         display: inline;
         vertical-align: baseline;
+    }
+}
+
+/* =========================================
+   14. LARGE SCREEN CONTENT CONTAINER FIXES
+   ========================================= */
+@media (min-width: 1081px) {
+    /* Ensure all main content respects 1080px max-width */
+    .banner--isDefault .container,
+    .content-wrap,
+    .hero-content-container,
+    .nav-primary .container {
+        max-width: 1080px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
