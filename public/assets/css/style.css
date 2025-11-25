@@ -1,7 +1,28 @@
 /* =========================================
    VALIANT LAND - PIXEL-PERFECT HOMEPAGE CSS
-   Extracted & Cleaned from Original Theme
    ========================================= */
+
+/* =========================================
+   0. FONT LOADING (FIXES THE PROBLEM)
+   ========================================= */
+
+/* Source Sans Pro - Variable Font */
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url('https://cdn.carrot.com/fonts/source-sans-pro/v21/variable.woff2') format('woff2');
+}
+
+/* Open Sans - Variable Font */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url('https://cdn.carrot.com/fonts/open-sans/v29/variable.woff2') format('woff2');
+}
 
 /* =========================================
    1. ROOT VARIABLES (Brand System)
@@ -43,13 +64,6 @@
 /* =========================================
    2. BASE & TYPOGRAPHY
    ========================================= */
-
-/* Base font for form elements */
-.hero-form-container,
-.hero-form-container * {
-    font-family: var(--font-primary);
-}
-
 body {
     font-family: var(--font-primary);
     font-size: 16px;
@@ -417,7 +431,6 @@ strong, b {
     color: var(--color-brand-primary);
 }
 
-/* THE FIX: Clean, specific font rule */
 .form-description {
     font-family: var(--font-primary) !important;
     font-size: 18px !important;
