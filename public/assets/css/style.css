@@ -454,7 +454,7 @@ strong, b {
 }
 
 /* Force correct font for form description paragraph */
-.hero-form > p:first-of-type {
+.hero-form p:first-of-type {
     font-family: var(--font-primary) !important;
     font-size: 18px !important; /* 13.5pt */
     font-weight: 400 !important;
@@ -466,7 +466,7 @@ strong, b {
 /* Ensure all form elements use Source Sans Pro */
 .hero-form-container,
 .hero-form-container * {
-    font-family: var(--font-primary);
+    font-family: var(--font-primary) !important;
 }
 
 /* NEW: Required asterisk styling */
