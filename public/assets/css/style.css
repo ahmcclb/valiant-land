@@ -344,6 +344,28 @@ strong, b {
 /* =========================================
    6. HERO SECTION - FULL WIDTH WITH CENTERED CONTENT
    ========================================= */
+.hero {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('https://image-cdn.carrot.com/eyJidWNrZXQiOiJwcm9kdWN0aW9uLmNhcnJvdC11cGxvYWRzLm9uY2Fycm90LmNvbSIsImtleSI6InVwbG9hZHMvc2l0ZXMvNzEwOTcvMjAyMi8xMi9sYW5kc2t5MmEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo0ODB9LCJ0b0Zvcm1hdCI6IndlYnAifX0=');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    overflow: hidden;
+    width: 100%; /* FULL SCREEN WIDTH */
+}
+
+/* Hero Container - FULL WIDTH */
+.hero .container {
+    max-width: 100%; /* OVERRIDE DEFAULT CONTAINER */
+    padding: 0;
+    margin: 0;
+}
+
 /* Hero Content Container - Align items to top */
 .hero-content-container {
     display: grid;
@@ -363,6 +385,48 @@ strong, b {
     margin-top: 36px; /* NEW: Push down to reveal background */
 }
 
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.hero-content h1 strong {
+    display: block;
+    font-size: 1.25em;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content .is-style-h4 {
+    font-size: 1.125rem;
+    line-height: 1.4;
+    margin: 1.5rem 0;
+    color: #e9ecef;
+}
+
+.hero-content figure {
+    display: block;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.hero-content figure img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    transition: transform 0.2s ease;
+}
+
+.hero-content figure a:hover img {
+    transform: scale(1.05);
+}
+
+/* Form Container - RESET FOR HERO */
 /* Form Container - Remove rounded corners */
 .hero-form-container {
     background: #f3f3f3;
@@ -372,6 +436,18 @@ strong, b {
     margin: 0 auto;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     border-radius: 0; /* REMOVED: No rounded corners */
+}
+
+.hero-form-container h3.gform_title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-brand-primary);
+}
+
+.hero-form-container p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #6c757d;
 }
 
 /* NEW: Required asterisk styling */
@@ -421,6 +497,57 @@ strong, b {
     margin-bottom: 1.5rem;
 }
 
+.hero-form-container input[type="text"],
+.hero-form-container input[type="tel"],
+.hero-form-container input[type="email"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+.hero-form-container input::placeholder {
+    color: #6c757d;
+}
+
+.hero-form-container input:focus {
+    border-color: var(--color-brand-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(242, 81, 22, 0.25);
+}
+
+.ginput_container--name {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.hero-form-container .gform_button,
+.hero-form-container button[type="submit"] {
+    background: var(--color-button);
+    color: var(--color-text-on-primary);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    width: 100%;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.hero-form-container .gform_button:hover,
+.hero-form-container button[type="submit"]:hover {
+    background: var(--color-button-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
 /* Mobile adjustments */
 @media (max-width: 768px) {
     .hero-content {
@@ -432,6 +559,7 @@ strong, b {
         gap: 1rem;
     }
 }
+
 /* =========================================
    7. MAIN CONTENT - CENTERED AT 1080PX
    ========================================= */
@@ -614,7 +742,7 @@ strong, b {
     .hero-content h1 {
         font-size: 2rem;
     }
-
+{
     .hero-content figure {
         margin: 1rem 0;
     }
