@@ -453,9 +453,20 @@ strong, b {
     color: var(--color-brand-primary);
 }
 
-.hero-form-container > p:first-of-type {
-    margin-bottom: 1.5rem;
-    line-height: 1.4;
+/* Force correct font for form description paragraph */
+.hero-form > p:first-of-type {
+    font-family: var(--font-primary) !important;
+    font-size: 18px !important; /* 13.5pt */
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    color: #000 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Ensure all form elements use Source Sans Pro */
+.hero-form-container,
+.hero-form-container * {
+    font-family: var(--font-primary);
 }
 
 /* NEW: Required asterisk styling */
