@@ -70,63 +70,91 @@
                         <span class="toggler-icon"></span>
                     </button>
                     <div class="navbar-collapse">
-                        <ul class="navbar-nav">
-                            <li><a href="/sell-your-land/" class="nav-link"><strong>Sell Your Land ›</strong></a></li>
-                            <li><a href="/how-it-works/" class="nav-link">How It Works</a></li>
-                            <li><a href="/about/" class="nav-link">About Us</a></li>
-                            <li><a href="/faq/" class="nav-link">FAQ</a></li>
-                            <li><a href="/blog/" class="nav-link">Blog</a></li>
-                            <li><a href="/contact/" class="nav-link">Contact Us</a></li>
-                        </ul>
+<ul class="navbar-nav">
+    <li><a href="/sell-your-land/" class="nav-link"><strong>Sell Your Land ›</strong></a></li>
+    <li><a href="/how-it-works/" class="nav-link">How It Works</a></li>
+    <li><a href="/testimonials/" class="nav-link">Testimonials</a></li>
+    <li><a href="/our-company/" class="nav-link">Our Company</a></li>
+    <li><a href="/about/" class="nav-link">About Us</a></li>
+    <li><a href="/faq/" class="nav-link">FAQ</a></li>
+    <li><a href="/blog/" class="nav-link">Blog</a></li>
+    <li><a href="/contact/" class="nav-link">Contact Us</a></li>
+</ul>
                     </div>
                 </div>
             </nav>
         </header>
 
  <!-- Hero Section -->
-        <section class="hero hero-layout-columns">
-            <div class="container">
-                <div class="hero-content-container">
-                    <div class="hero-content">
-                        <h1 style="font-family: 'Open Sans', sans-serif; font-size: 23pt; font-weight: 700; line-height: 1.2; margin-bottom: 0.5rem;"><strong>Sell Your Vacant Land</strong></h1>
-                        <h1 style="font-family: 'Open Sans', sans-serif; font-size: 23pt; font-weight: 700; line-height: 1.2; margin-bottom: 1rem;">The Hassle-Free Way</h1>
-                        <p style="font-family: 'Source Sans Pro', sans-serif; font-size: 13.5pt; font-weight: 400; line-height: 1.5; margin-bottom: 1rem;">Get a fair ALL cash offer on your land today.</p>
-                        <p style="font-family: 'Open Sans', sans-serif; font-size: 13.5pt; font-weight: 700; line-height: 1.4; margin-bottom: 1rem;"><strong>No</strong> Fees. <strong>No</strong> Commissions. <strong>No</strong> Hassle.</p>
-                        <p style="font-family: 'Source Sans Pro', sans-serif; font-size: 12pt; font-weight: 700; line-height: 1.4; margin-bottom: 1.5rem;">We Pay All Closing Costs. We Pay Back Taxes. Our offers are net offers!</p>
+<section class="hero hero-layout-columns">
+    <div class="container">
+        <div class="hero-content-container">
+            <div class="hero-content">
+                <h1 style="font-family: 'Open Sans', sans-serif; font-size: 23pt; font-weight: 700; line-height: 1.2; margin-bottom: 0.5rem;"><strong>Sell Your Vacant Land</strong></h1>
+                <h1 style="font-family: 'Open Sans', sans-serif; font-size: 23pt; font-weight: 700; line-height: 1.2; margin-bottom: 1rem;">The Hassle-Free Way</h1>
+                <p style="font-family: 'Source Sans Pro', sans-serif; font-size: 13.5pt; font-weight: 400; line-height: 1.5; margin-bottom: 1rem;">Get a fair ALL cash offer on your land today.</p>
+                <p style="font-family: 'Open Sans', sans-serif; font-size: 13.5pt; font-weight: 700; line-height: 1.4; margin-bottom: 1rem;"><strong>No</strong> Fees. <strong>No</strong> Commissions. <strong>No</strong> Hassle.</p>
+                <p style="font-family: 'Source Sans Pro', sans-serif; font-size: 12pt; font-weight: 700; line-height: 1.4; margin-bottom: 1.5rem;">We Pay All Closing Costs. We Pay Back Taxes. Our offers are net offers!</p>
+                
+                <!-- Trust Badges with Links -->
+                <figure><a href="/letterresponse"><img src="/assets/images/letterbadge2.png" alt="Letter Response"></a></figure>
+                <figure><a href="/letterresponse-2"><img src="/assets/images/LetterbadgeSP2.png" alt="Letter Response SP"></a></figure>
+            </div>
+            
+            <!-- Netlify Form with Wrapper -->
+            <div class="hero-form-container">
+                <div class="hero-form">
+                    <form name="land-offer" method="POST" data-netlify="true">
+                        <h3 class="gform_title" style="font-family: 'Open Sans', sans-serif; font-size: 13.5pt; font-weight: 700; margin-bottom: 0.5rem;">Get Started: Get Your Cash Offer Below...</h3>
+                        <p style="font-family: 'Source Sans Pro', sans-serif; font-size: 13.5pt; font-weight: 400; line-height: 1.4; margin-bottom: 1.5rem;">We are direct land buyers. There are no commissions or fees and no obligation whatsoever. Start below by sharing where your property is and where we can send your offer...</p>
                         
-                        <!-- Trust Badges with Links -->
-                        <figure><a href="/letterresponse"><img src="/assets/images/letterbadge2.png" alt="Letter Response"></a></figure>
-                        <figure><a href="/letterresponse-2"><img src="/assets/images/LetterbadgeSP2.png" alt="Letter Response SP"></a></figure>
-                    </div>
-                    
-                    <!-- Netlify Form with Wrapper -->
-                    <div class="hero-form-container">
-                        <div class="hero-form">
-                            <form name="land-offer" method="POST" data-netlify="true">
-                                <h3 class="gform_title">Get Started: Get Your Cash Offer Below...</h3>
-                                <p>We are direct land buyers. There are no commissions or fees.</p>
-                                
-                                <div class="ginput_container--name">
-                                    <span class="name_first">
-                                        <input type="text" name="first_name" placeholder="First Name" required>
-                                    </span>
-                                    <span class="name_last">
-                                        <input type="text" name="last_name" placeholder="Last Name" required>
-                                    </span>
-                                </div>
-                                
-                                <input type="text" name="city_state" placeholder="City, State" required>
-                                <input type="tel" name="phone" placeholder="Phone #" required>
-                                <input type="email" name="email" placeholder="Email*" required>
-                                
-                                <button type="submit" class="gform_button">Get My Fair Cash Offer >></button>
-                            </form>
+                        <!-- Name Field -->
+                        <div class="form-field-group gfield">
+                            <label class="gfield_label">Name <span class="required-asterisk">*</span></label>
+                            <div class="ginput_container--name">
+                                <span class="name_first">
+                                    <input type="text" name="first_name" placeholder="First Name" required>
+                                    <label class="gform-field-label--type-sub">First</label>
+                                </span>
+                                <span class="name_last">
+                                    <input type="text" name="last_name" placeholder="Last Name" required>
+                                    <label class="gform-field-label--type-sub">Last</label>
+                                </span>
+                            </div>
                         </div>
-                    </div>
+                        
+                        <!-- City, State Field -->
+                        <div class="form-field-group gfield">
+                            <label class="gfield_label">City, State <span class="required-asterisk">*</span></label>
+                            <div class="ginput_container">
+                                <input type="text" name="city_state" placeholder="City, State" required>
+                            </div>
+                            <div class="gfield_description">What city and state is the property located in?</div>
+                        </div>
+                        
+                        <!-- Phone and Email Fields -->
+                        <div class="form-row">
+                            <div class="gf_left_half gfield">
+                                <label class="gfield_label">Phone # <span class="required-asterisk">*</span></label>
+                                <div class="ginput_container">
+                                    <input type="tel" name="phone" placeholder="Phone #" required>
+                                </div>
+                            </div>
+                            <div class="gf_right_half gfield">
+                                <label class="gfield_label">Email <span class="required-asterisk">*</span></label>
+                                <div class="ginput_container">
+                                    <input type="email" name="email" placeholder="Email*" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="gform_button">Get My Fair Cash Offer >></button>
+                    </form>
                 </div>
             </div>
-        </section>
-
+        </div>
+    </div>
+</section>
         <!-- Main Content -->
         <div class="content-wrap">
             <main class="main">
