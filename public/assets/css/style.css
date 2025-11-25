@@ -409,13 +409,15 @@ strong, b {
 }
 
 .hero-content figure {
-    display: inline-block;
-    margin: 1rem 1.5rem 0 0;
+    display: block;
+    margin: 1.5rem 0;
+    text-align: center;
 }
 
 .hero-content figure img {
-    max-height: 90px;
     width: auto;
+    height: auto;
+    max-width: 100%;
     transition: transform 0.2s ease;
 }
 
@@ -681,6 +683,15 @@ strong, b {
     .hero-content h1 {
         font-size: 2rem;
     }
+
+    .hero-content figure {
+        margin: 1rem 0;
+    }
+    
+    .hero-content figure img {
+        max-height: 80px;
+    }
+
     
     .wp-block-columns {
         grid-template-columns: 1fr;
