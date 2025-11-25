@@ -307,14 +307,15 @@ strong, b {
     justify-content: center; /* CENTER BUTTONS */
 }
 
+/* Navbar Buttons - UPDATED to 13.5pt */
 .nav-link {
     color: var(--color-text-on-primary);
     text-decoration: none;
-    padding: 0 1.5rem; /* HORIZONTAL PADDING */
-    font-size: 24px; /* 18PT = 24PX */
+    padding: 0 1.5rem;
+    font-size: 18px; /* 13.5PT = 18PX */
     font-weight: 600;
     display: block;
-    line-height: 54px; /* MATCH NAVBAR HEIGHT */
+    line-height: 54px;
     height: 54px;
     transition: background 0.2s ease;
     text-align: center;
