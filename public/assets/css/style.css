@@ -438,14 +438,6 @@ strong, b {
 
 /* Form Container - RESET FOR HERO */
 
-.form-description {
-    font-family: var(--font-primary) !important;
-    font-size: 18px !important;
-    font-weight: 400 !important;
-    line-height: 1.4 !important;
-    color: #000 !important;
-    margin-bottom: 1.5rem !important;
-}
 
 .hero-form-container {
     background: #f3f3f3;
@@ -463,24 +455,19 @@ strong, b {
     color: var(--color-brand-primary);
 }
 
-.hero-form-container p:first-of-type {
+/* Form description - Source Sans Pro 13.5pt */
+.form-description {
     font-family: var(--font-primary) !important;
-    font-size: 18px !important; /* 13.5pt */
+    font-size: 18px !important; /* 13.5pt = 18px */
     font-weight: 400 !important;
     line-height: 1.4 !important;
     color: #000 !important;
     margin-bottom: 1.5rem !important;
 }
 
+
 /* Force correct font for form description paragraph */
-.hero-form p:first-of-type {
-    font-family: var(--font-primary) !important;
-    font-size: 18px !important; /* 13.5pt */
-    font-weight: 400 !important;
-    line-height: 1.4 !important;
-    color: #000 !important;
-    margin-bottom: 1.5rem !important;
-}
+
 
 .hero-form-container .hero-form > form > p {
     font-family: var(--font-primary) !important;
@@ -491,11 +478,7 @@ strong, b {
     margin-bottom: 1.5rem !important;
 }
 
-/* Ensure all form elements use Source Sans Pro */
-.hero-form-container,
-.hero-form-container * {
-    font-family: var(--font-primary) !important;
-}
+
 
 /* NEW: Required asterisk styling */
 .required-asterisk {
