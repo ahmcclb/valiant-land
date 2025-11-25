@@ -437,6 +437,16 @@ strong, b {
 }
 
 /* Form Container - RESET FOR HERO */
+
+.form-description {
+    font-family: var(--font-primary) !important;
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    color: #000 !important;
+    margin-bottom: 1.5rem !important;
+}
+
 .hero-form-container {
     background: #f3f3f3;
     padding: 2.5rem 2rem;
@@ -464,6 +474,15 @@ strong, b {
 
 /* Force correct font for form description paragraph */
 .hero-form p:first-of-type {
+    font-family: var(--font-primary) !important;
+    font-size: 18px !important; /* 13.5pt */
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    color: #000 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.hero-form-container .hero-form > form > p {
     font-family: var(--font-primary) !important;
     font-size: 18px !important; /* 13.5pt */
     font-weight: 400 !important;
