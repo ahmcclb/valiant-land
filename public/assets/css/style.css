@@ -550,7 +550,6 @@ strong, b {
 /* Content Wrap */
 .content-wrap {
     width: 100%;
-    /* Remove max-width from here - let children handle it */
     margin: 0;
     padding: 0;
 }
@@ -573,39 +572,42 @@ strong, b {
     display: inline-block;
 }
 
+/* Base Typography - ALL BLACK */
+.content-wrap p,
+.content-wrap li,
+.content-wrap h2,
+.content-wrap h3,
+.content-wrap strong {
+    color: #000000 !important;
+}
+
 /* Base Heading Styles */
 .wp-block-heading {
     font-family: var(--font-headings);
     font-weight: 700;
     line-height: 1.2;
     margin: 2rem 0 1rem;
-    color: var(--color-brand-primary);
 }
 
-/* Specific Heading Sizes */
+/* Specific Heading Sizes - INCREASED by 2pts */
 h2.wp-block-heading {
-    font-size: 1.75rem;
+    font-size: calc(1.75rem + 3px); /* +2pts */
     margin-top: 2rem;
     margin-bottom: 1rem;
+    text-align: center !important;
 }
 
 h3.wp-block-heading {
-    font-size: 1.5rem;
+    font-size: calc(1.5rem + 3px); /* +2pts */
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
 }
 
-/* Brand Color Modifier */
-.has-c-brand-primary-color {
-    color: var(--color-brand-primary) !important;
-}
-
 /* H3 Style Variant - Centered */
 .is-style-h3 {
-    font-size: 1.5rem;
+    font-size: calc(1.5rem + 3px); /* +2pts */
     text-align: center;
     margin: 2rem 0;
-    color: var(--color-brand-primary);
     font-weight: 700;
 }
 
@@ -625,6 +627,7 @@ ul.wp-block-list {
     padding: 0.75rem 0;
     border-bottom: 1px solid #e9ecef;
     line-height: 1.5;
+    font-size: calc(1rem + 3px); /* +2pts */
 }
 
 .wp-block-list li:last-child {
@@ -632,26 +635,27 @@ ul.wp-block-list {
 }
 
 .wp-block-list strong {
-    color: var(--color-brand-primary);
+    color: #000000 !important; /* Black, not orange */
     font-weight: 700;
 }
 
-/* Group Block with Background */
+/* Group Block with Background - FIXED PADDING */
 .wp-block-group.has-c-brand-primary-lighter-background-color {
     background-color: var(--color-brand-primary-lighter) !important;
-    padding: 3rem 2rem;
+    padding: 2rem 2rem 1.5rem !important; /* Reduced top/bottom padding */
     border-radius: 0.25rem;
     margin: 3rem 0;
 }
 
 .wp-block-group h3 {
     text-align: center;
-    color: #fff;
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
+    color: #000000 !important; /* Black text */
+    margin-bottom: 1rem !important; /* Reduced margin */
+    font-size: calc(1.5rem + 3px); /* +2pts */
+    font-weight: 700;
 }
 
-/* Columns Block */
+/* Columns Block - FIXED SPACING */
 .wp-block-columns.is-layout-flex {
     display: flex;
     gap: 2rem;
@@ -673,28 +677,199 @@ ul.wp-block-list {
 .wp-block-columns ul {
     list-style: disc;
     padding-left: 1.5rem;
-    margin: 0;
+    margin: 0; /* Remove default margin */
 }
 
 .wp-block-columns .wp-block-list li {
     border: none;
     padding: 0.25rem 0;
+    font-size: calc(1rem + 3px); /* +2pts */
 }
 
-/* Content Form Container */
-.content-form-container {
-    max-width: 600px;
-    margin: 3rem auto;
-    padding: 0 1rem;
+/* Form Wrapper - Gravity Forms Exact Styles */
+.gform-wrapper {
+    margin: 3rem 0;
+}
+
+.gform_wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    background: transparent;
+}
+
+.gform_heading {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.gform_title {
+    font-family: var(--font-headings);
+    font-size: calc(1.5rem + 3px); /* +2pts */
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 0.5rem;
+}
+
+.gform_description {
+    font-family: var(--font-primary);
+    font-size: calc(1rem + 3px); /* +2pts */
+    color: #000000;
+    line-height: 1.4;
+}
+
+/* Gravity Forms Field Structure */
+.gform_body {
+    width: 100%;
+}
+
+.gform_fields {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.gfield {
+    margin-bottom: 1.25rem;
+    display: block;
+}
+
+.gfield_label {
+    font-family: var(--font-headings);
+    font-size: calc(1rem + 3px); /* +2pts */
+    font-weight: 600;
+    color: #000000;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.gfield_required {
+    color: #f25116; /* Keep asterisk orange */
+}
+
+.gfield_required_asterisk {
+    color: #f25116; /* Keep asterisk orange */
+}
+
+/* Input Containers */
+.ginput_container {
+    width: 100%;
+}
+
+.ginput_container--name {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.gform-grid-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.gform-grid-col {
+    display: block;
+}
+
+/* Half Width Fields */
+.gf_left_half,
+.gf_right_half {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.gf_left_half {
+    margin-right: 4%;
+}
+
+/* Input Fields */
+.gform_wrapper input[type="text"],
+.gform_wrapper input[type="tel"],
+.gform_wrapper input[type="email"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    font-size: calc(1rem + 3px); /* +2pts */
+    font-family: var(--font-primary);
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+.gform_wrapper input::placeholder {
+    color: #6c757d;
+}
+
+.gform_wrapper input:focus {
+    border-color: var(--color-brand-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(242, 81, 22, 0.25);
+}
+
+/* Sub Labels */
+.gform-field-label--type-sub {
+    font-family: var(--font-primary);
+    font-size: calc(0.875rem + 2px); /* +2pts */
+    font-weight: 400;
+    display: block;
+    margin-top: 0.25rem;
+    color: #6c757d;
+}
+
+/* Field Description */
+.gfield_description {
+    font-family: var(--font-primary);
+    font-size: calc(0.875rem + 2px); /* +2pts */
+    color: #6c757d;
+    margin-top: 0.25rem;
+}
+
+/* Submit Button */
+.gform_button {
+    background: var(--color-button);
+    color: var(--color-text-on-primary);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: calc(1.1rem + 3px); /* +2pts */
+    font-weight: 700;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    width: 100%;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    margin-top: 1rem;
+}
+
+.gform_button:hover {
+    background: var(--color-button-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 /* Footer Note */
 .footer-note {
-    font-size: 0.875rem;
+    font-size: calc(0.875rem + 2px); /* +2pts */
     color: #999999;
     text-align: center;
     margin: 2rem 0;
     font-style: italic;
+}
+
+.footer-note span {
+    color: #999999 !important;
+}
+
+/* Final Phone CTA - SMALLER */
+.final-phone-cta {
+    font-size: 1rem; /* Smaller than h3 */
+    margin: 2rem 0;
+}
+
+.final-phone-cta strong {
+    color: #000000 !important;
+    font-weight: 700;
 }
 
 /* Social Share */
@@ -746,31 +921,22 @@ ul.wp-block-list {
         display: none; /* Hide spacer columns on mobile */
     }
     
-    .content-form-container {
+    .gform-wrapper {
         margin: 2rem 0;
-        padding: 0;
     }
-}
-
-/* Link Styling in Content */
-.content-wrap a {
-    color: var(--color-link);
-    text-decoration: underline;
-    transition: color 0.2s ease;
-}
-
-.content-wrap a:hover {
-    color: var(--color-link-hover);
-}
-
-/* Paragraph Spacing */
-.content-wrap p {
-    margin-bottom: 1rem;
-    line-height: 1.5;
-}
-
-.content-wrap p:empty {
-    display: none; /* Hide empty paragraphs */
+    
+    .gf_left_half,
+    .gf_right_half {
+        width: 100%;
+        display: block;
+        margin-right: 0;
+    }
+    
+    .ginput_container--name,
+    .gform-grid-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }
 /* =========================================
    8. FOOTER
