@@ -544,39 +544,87 @@ strong, b {
 }
 
 /* =========================================
-   7. MAIN CONTENT
+   7. MAIN CONTENT - WordPress Block Styles
    ========================================= */
+
+/* Content Wrap */
 .content-wrap {
     width: 100%;
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    /* Remove max-width from here - let children handle it */
+    margin: 0;
+    padding: 0;
 }
 
-.content-wrap figure:first-child {
+.content-wrap > .main {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Banner Image */
+.content-wrap figure.wp-block-image {
     text-align: center;
     margin: 2rem 0;
 }
 
-.content-wrap figure img {
+.content-wrap figure.wp-block-image img {
     max-width: 100%;
     height: auto;
+    display: inline-block;
 }
 
+/* Base Heading Styles */
 .wp-block-heading {
-    font-size: 1.75rem;
+    font-family: var(--font-headings);
+    font-weight: 700;
+    line-height: 1.2;
     margin: 2rem 0 1rem;
     color: var(--color-brand-primary);
 }
 
-.wp-block-list {
+/* Specific Heading Sizes */
+h2.wp-block-heading {
+    font-size: 1.75rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+h3.wp-block-heading {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Brand Color Modifier */
+.has-c-brand-primary-color {
+    color: var(--color-brand-primary) !important;
+}
+
+/* H3 Style Variant - Centered */
+.is-style-h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 2rem 0;
+    color: var(--color-brand-primary);
+    font-weight: 700;
+}
+
+/* Text Alignment */
+.has-text-align-center {
+    text-align: center !important;
+}
+
+/* WordPress List Block */
+ul.wp-block-list {
     list-style: none;
     padding: 0;
+    margin: 2rem 0;
 }
 
 .wp-block-list li {
-    padding: 0.5rem 0;
+    padding: 0.75rem 0;
     border-bottom: 1px solid #e9ecef;
+    line-height: 1.5;
 }
 
 .wp-block-list li:last-child {
@@ -585,8 +633,10 @@ strong, b {
 
 .wp-block-list strong {
     color: var(--color-brand-primary);
+    font-weight: 700;
 }
 
+/* Group Block with Background */
 .wp-block-group.has-c-brand-primary-lighter-background-color {
     background-color: var(--color-brand-primary-lighter) !important;
     padding: 3rem 2rem;
@@ -597,29 +647,131 @@ strong, b {
 .wp-block-group h3 {
     text-align: center;
     color: #fff;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
 }
 
-.wp-block-columns {
-    display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+/* Columns Block */
+.wp-block-columns.is-layout-flex {
+    display: flex;
     gap: 2rem;
     max-width: 900px;
     margin: 0 auto;
+    align-items: flex-start;
+}
+
+.wp-block-columns .wp-block-column {
+    flex: 1;
+}
+
+/* Empty spacer columns */
+.wp-block-columns .wp-block-column:first-child,
+.wp-block-columns .wp-block-column:last-child {
+    flex: 0.5;
 }
 
 .wp-block-columns ul {
     list-style: disc;
     padding-left: 1.5rem;
+    margin: 0;
 }
 
-.is-style-h3 {
-    font-size: 1.5rem;
+.wp-block-columns .wp-block-list li {
+    border: none;
+    padding: 0.25rem 0;
+}
+
+/* Content Form Container */
+.content-form-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+/* Footer Note */
+.footer-note {
+    font-size: 0.875rem;
+    color: #999999;
     text-align: center;
     margin: 2rem 0;
-    color: var(--color-brand-primary);
+    font-style: italic;
 }
 
+/* Social Share */
+.entry-share {
+    margin: 2rem 0;
+}
+
+.entry-share-btns {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+}
+
+.entry-share-btn a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #1877f2;
+    color: #fff;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.entry-share-btn a:hover {
+    background: #166fe5;
+}
+
+.entry-share-btn svg {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .wp-block-columns.is-layout-flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .wp-block-columns .wp-block-column:first-child,
+    .wp-block-columns .wp-block-column:last-child {
+        display: none; /* Hide spacer columns on mobile */
+    }
+    
+    .content-form-container {
+        margin: 2rem 0;
+        padding: 0;
+    }
+}
+
+/* Link Styling in Content */
+.content-wrap a {
+    color: var(--color-link);
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.content-wrap a:hover {
+    color: var(--color-link-hover);
+}
+
+/* Paragraph Spacing */
+.content-wrap p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.content-wrap p:empty {
+    display: none; /* Hide empty paragraphs */
+}
 /* =========================================
    8. FOOTER
    ========================================= */
