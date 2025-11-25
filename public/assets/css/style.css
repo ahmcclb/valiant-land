@@ -639,10 +639,10 @@ ul.wp-block-list {
     font-weight: 700;
 }
 
-/* Group Block with Background - FIXED PADDING */
+/* Group Block with Background - REDUCED TOP PADDING */
 .wp-block-group.has-c-brand-primary-lighter-background-color {
     background-color: var(--color-brand-primary-lighter) !important;
-    padding: 2rem 2rem 1.5rem !important; /* Reduced top/bottom padding */
+    padding: 1rem 2rem 1.5rem !important; /* REDUCED from 2rem to 1rem top */
     border-radius: 0.25rem;
     margin: 3rem 0;
 }
@@ -650,7 +650,8 @@ ul.wp-block-list {
 .wp-block-group h3 {
     text-align: center;
     color: #000000 !important; /* Black text */
-    margin-bottom: 1rem !important; /* Reduced margin */
+    margin-bottom: 1rem !important;
+    margin-top: 0 !important; /* Remove top margin */
     font-size: calc(1.5rem + 3px); /* +2pts */
     font-weight: 700;
 }
@@ -686,13 +687,23 @@ ul.wp-block-list {
     font-size: calc(1rem + 3px); /* +2pts */
 }
 
-/* Form Wrapper - Gravity Forms Exact Styles */
+/* Content Form Wrapper - MATCHES HERO FORM */
+.content-form-wrapper {
+    background: #f3f3f3;
+    padding: 2.5rem 2rem;
+    max-width: 450px;
+    margin: 3rem auto;
+    border: 1px solid #ced4da; /* Hairline border */
+    border-radius: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
 .gform-wrapper {
-    margin: 3rem 0;
+    width: 100%;
 }
 
 .gform_wrapper {
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
     background: transparent;
 }
@@ -921,8 +932,10 @@ ul.wp-block-list {
         display: none; /* Hide spacer columns on mobile */
     }
     
-    .gform-wrapper {
-        margin: 2rem 0;
+    .content-form-wrapper {
+        margin: 2rem 1rem;
+        padding: 1.5rem 1rem;
+        max-width: 100%;
     }
     
     .gf_left_half,
