@@ -167,7 +167,7 @@
         </figure>
 
         <!-- Pain Points Section -->
-        <h2 class="wp-block-heading has-c-brand-primary-color has-text-color">
+        <h2 class="wp-block-heading has-text-align-center">
             <strong>Do You Need To Sell Raw Land That's Just Sitting There Costing You Money?</strong> Turn that land into CASH now!
         </h2>
 
@@ -240,75 +240,83 @@
 
         <!-- Final CTA -->
         <h3 class="wp-block-heading is-style-h3 has-text-align-center">
-            <strong>Find Out What We Can Do For You Now!</strong>
+            <strong>Find Out What We Can Do For You Now! </strong>
         </h3>
 
-        <!-- Second Form (duplicate of hero form) -->
-        <div class="content-form-container">
-            <div class="hero-form">
-                <form name="land-offer-bottom" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                    <h3 class="gform_title">Get Started: Get Your Cash Offer Below...</h3>
-                    <p class="form-description">
-                        We are direct land buyers. There are no commissions or fees and no obligation whatsoever. Start below by sharing where your property is and where we can send your offer...
-                    </p>
-
-                    <div class="form-field-group gfield">
-                        <label class="gfield_label">Name <span class="required-asterisk">*</span></label>
-                        <div class="ginput_container--name">
-                            <span class="name_first">
-                                <input type="text" name="first_name" placeholder="First Name" required>
-                                <label class="gform-field-label--type-sub">First</label>
-                            </span>
-                            <span class="name_last">
-                                <input type="text" name="last_name" placeholder="Last Name" required>
-                                <label class="gform-field-label--type-sub">Last</label>
-                            </span>
-                        </div>
+        <!-- Form Section - Now using Gravity Forms structure -->
+        <div class="gform-wrapper">
+            <div class='gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework' data-form-theme='legacy' data-form-index='1' id='gform_wrapper_100002'>
+                <div class='gform_heading'>
+                    <h3 class="gform_title">Get Started: Get Your Cash Offer Below… </h3>
+                    <p class='gform_description'>We are direct land buyers. There are no commissions or fees and no obligation whatsoever. Start below by sharing where your property is and where we can send your offer… </p>
+                </div>
+                <form method='post' enctype='multipart/form-data' id='gform_100002' action='/#gf_100002' data-formid='1' novalidate>
+                    <div class='gform_body gform_body'>
+                        <ul id='gform_fields_100002' class='gform_fields top_label form_sublabel_below description_below'>
+                            <li id="field_100002_5" class="gfield gfield--type-name gfield_contains_required">
+                                <label class='gfield_label gform-field-label gfield_label_before_complex'>Name<span class="gfield_required"><span class="gfield_required_asterisk">*</span></span></label>
+                                <div class='ginput_complex ginput_container ginput_container--name gform-grid-row'>
+                                    <span class='name_first gform-grid-col'>
+                                        <input type='text' name='input_5.3' id='input_100002_5_3' value='' aria-required='true' />
+                                        <label for='input_100002_5_3' class='gform-field-label gform-field-label--type-sub'>First</label>
+                                    </span>
+                                    <span class='name_last gform-grid-col'>
+                                        <input type='text' name='input_5.6' id='input_100002_5_6' value='' aria-required='true' />
+                                        <label for='input_100002_5_6' class='gform-field-label gform-field-label--type-sub'>Last</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li id="field_100002_4" class="gfield gfield--type-text">
+                                <label class='gfield_label gform-field-label' for='input_100002_4'>City, State</label>
+                                <div class='ginput_container ginput_container_text'>
+                                    <input name='input_4' id='input_100002_4' type='text' value='' class='medium' aria-describedby="gfield_description_100002_4" />
+                                </div>
+                                <div class='gfield_description' id='gfield_description_100002_4'>What city and state is the property located in?</div>
+                            </li>
+                            <li id="field_100002_2" class="gfield gfield--type-text gf_left_half">
+                                <label class='gfield_label gform-field-label' for='input_100002_2'>Phone #</label>
+                                <div class='ginput_container ginput_container_text'>
+                                    <input name='input_2' id='input_100002_2' type='tel' value='' class='medium' />
+                                </div>
+                            </li>
+                            <li id="field_100002_3" class="gfield gfield--type-email gf_right_half gfield_contains_required">
+                                <label class='gfield_label gform-field-label' for='input_100002_3'>Email<span class="gfield_required"><span class="gfield_required_asterisk">*</span></span></label>
+                                <div class='ginput_container ginput_container_email'>
+                                    <input name='input_3' id='input_100002_3' type='email' value='' class='medium' aria-required="true" />
+                                </div>
+                            </li>
+                            <li id="field_100002_6" class="gfield gfield--type-honeypot gform_validation_container" style="display: none;">
+                                <label class='gfield_label gform-field-label' for='input_100002_6'>Comments</label>
+                                <div class='ginput_container'>
+                                    <input name='input_6' id='input_100002_6' type='text' value='' autocomplete='new-password' />
+                                </div>
+                                <div class='gfield_description'>This field is for validation purposes and should be left unchanged.</div>
+                            </li>
+                        </ul>
                     </div>
-
-                    <div class="form-field-group gfield">
-                        <label class="gfield_label">City, State <span class="required-asterisk">*</span></label>
-                        <div class="ginput_container">
-                            <input type="text" name="city_state" placeholder="City, State" required>
-                        </div>
-                        <div class="gfield_description">What city and state is the property located in?</div>
+                    <div class='gform_footer top_label'>
+                        <input type='submit' id='gform_submit_button_100002' class='gform_button button' value='Get My Fair Cash Offer >>' />
+                        <input type='hidden' class='gform_hidden' name='is_submit_1' value='1' />
+                        <input type='hidden' class='gform_hidden' name='gform_submit' value='1' />
+                        <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+                        <input type='hidden' class='gform_hidden' name='state_1' value='WyJbXSIsIjU2MTVjN2VlOTYzMzE4OGM5YWIwOGM4MzBiODdkYmM5Il0=' />
+                        <input type='hidden' class='gform_hidden' name='gform_target_page_number_1' value='0' />
+                        <input type='hidden' class='gform_hidden' name='gform_source_page_number_1' value='1' />
+                        <input type='hidden' name='gform_field_values' value='' />
                     </div>
-
-                    <div class="form-row">
-                        <div class="gf_left_half gfield">
-                            <label class="gfield_label">Phone # <span class="required-asterisk">*</span></label>
-                            <div class="ginput_container">
-                                <input type="tel" name="phone" placeholder="Phone #" required>
-                            </div>
-                        </div>
-                        <div class="gf_right_half gfield">
-                            <label class="gfield_label">Email <span class="required-asterisk">*</span></label>
-                            <div class="ginput_container">
-                                <input type="email" name="email" placeholder="Email*" required>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="gfield gfield--type-honeypot" style="display: none;">
-                        <label class="gfield_label">Comments</label>
-                        <div class="ginput_container">
-                            <input type="text" name="bot-field" placeholder="Leave blank">
-                        </div>
-                        <div class="gfield_description">This field is for validation purposes and should be left unchanged.</div>
-                    </div>
-
-                    <button type="submit" class="gform_button">Get My Fair Cash Offer >></button>
+                    <p style="display: none !important;"><label>Δ<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_22" name="ak_js" value="69" /><script>document.getElementById("ak_js_22").setAttribute("value", (new Date()).getTime());</script></p>
                 </form>
             </div>
         </div>
 
-        <p class="has-text-align-center is-style-h3">
+        <!-- Final Phone CTA -->
+        <p class="final-phone-cta has-text-align-center">
             <strong>Or Give Our Office A Call Today! 203-487-2412</strong>
         </p>
 
         <!-- Footer Note -->
-        <p class="footer-note">
-            <span style="color: #999999"><em>Valiant Land is buying land throughout the country. If you need to sell your land fast and hassle-free, get in touch with us today!</em></span>
+        <p class="footer-note has-text-align-center">
+            <span><em>Valiant Land is buying land throughout the country. If you need to sell your land fast and hassle-free, get in touch with us today!</em></span>
         </p>
 
         <!-- Social Share -->
