@@ -1462,23 +1462,23 @@ textarea:focus {
     text-align: left !important;
 }
 
-/* Bulleted list without horizontal lines */
-.contact-bullets {
-    list-style: disc;
-    padding-left: 1.5rem;
-    margin: 1rem 0 1.5rem;
+/* Bulleted list with proper indentation - HIGH SPECIFICITY */
+ul.wp-block-list.contact-bullets {
+    list-style: disc !important;
+    padding-left: 2rem !important;
+    margin: 1rem 0 1.5rem !important;
 }
 
-.contact-bullets li {
-    padding: 0.5rem 0;
+ul.wp-block-list.contact-bullets li {
+    padding: 0.5rem 0 !important;
     border-bottom: none !important;
-    font-size: calc(1rem + 3px); /* +2pts */
-    line-height: 1.6;
+    font-size: calc(1rem + 3px) !important; /* +2pts */
+    line-height: 1.6 !important;
 }
 
-.contact-bullets strong {
+ul.wp-block-list.contact-bullets strong {
     color: #000000 !important;
-    font-weight: 700;
+    font-weight: 700 !important;
 }
 
 .contact-info-p {
@@ -1513,31 +1513,5 @@ textarea:focus {
     .contact-text-column h1.wp-block-heading,
     .contact-text-column h2.wp-block-heading {
         text-align: center !important;
-    }
-}
-
-/* Mobile Contact Layout */
-@media (max-width: 768px) {
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .contact-form-section,
-    .contact-info-section {
-        width: 100%;
-    }
-    
-    .contact-info-section {
-        order: 2; /* Put form first on mobile */
-    }
-    
-    .contact-form-section {
-        order: 1;
-    }
-    
-    .contact-info-card,
-    .contact-hours-card {
-        padding: 1.5rem;
     }
 }
