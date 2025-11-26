@@ -1696,6 +1696,30 @@ ul.wp-block-list.contact-bullets strong {
     margin-bottom: 1rem;
 }
 
+
+/* Force consistent font sizing across all blog content */
+.entry-content p {
+    font-size: calc(1rem + 3px);
+    line-height: 1.5;
+}
+
+/* Enforce bulleted list styling */
+.entry-content ul.wp-block-list {
+    list-style: disc;
+    padding-left: 2rem;
+    margin: 1rem 0 2rem;
+}
+
+.entry-content ul.wp-block-list li {
+    border-bottom: none;
+    padding: 0.25rem 0;
+}
+
+/* Prevent linefeeds around inline strong tags */
+.entry-content p strong {
+    display: inline;
+    font-weight: 700;
+}
 /* Social Share */
 .entry-share {
     margin: 2rem 0;
