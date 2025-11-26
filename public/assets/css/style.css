@@ -1282,3 +1282,169 @@ hr.wp-block-separator.has-alpha-channel-opacity {
         font-size: calc(0.875rem + 3px); /* Slightly smaller on mobile */
     }
 }
+/* =========================================
+   16. CONTACT PAGE SPECIFIC STYLES
+   ========================================= */
+
+/* Contact Intro */
+.contact-intro {
+    margin: 2rem 0 1.5rem;
+}
+
+.page-template-contact h1.wp-block-heading {
+    font-family: var(--font-headings);
+    font-size: calc(2rem + 3px); /* +2pts */
+    font-weight: 700;
+    margin: 2rem auto 1rem;
+    color: #000000;
+}
+
+.page-template-contact h3.wp-block-heading {
+    font-family: var(--font-headings);
+    font-size: calc(1.5rem + 3px); /* +2pts */
+    font-weight: 400;
+    margin: 0 auto 1rem;
+    color: #000000;
+}
+
+.contact-intro p {
+    font-family: var(--font-primary);
+    font-size: calc(1rem + 3px); /* +2pts */
+    line-height: 1.6;
+    margin: 0 auto 1.5rem;
+    max-width: 900px;
+}
+
+/* Contact Content Layout */
+.contact-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin: 3rem 0;
+    align-items: start;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    width: 100%;
+}
+
+/* Contact Info Section */
+.contact-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-info-card,
+.contact-hours-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    border: 1px solid #e9ecef;
+}
+
+.contact-info-card h3,
+.contact-hours-card h4 {
+    font-family: var(--font-headings);
+    font-size: calc(1.25rem + 3px); /* +2pts */
+    margin-bottom: 1.5rem;
+    color: #000000;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.contact-item svg {
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+.contact-item span {
+    font-family: var(--font-primary);
+    font-size: calc(1rem + 3px); /* +2pts */
+    line-height: 1.5;
+}
+
+.telephone-link {
+    color: var(--color-brand-primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.telephone-link:hover {
+    color: var(--color-brand-primary-hover);
+    text-decoration: underline;
+}
+
+.contact-item a {
+    color: var(--color-link);
+    text-decoration: underline;
+}
+
+.contact-hours-card p {
+    font-family: var(--font-primary);
+    font-size: calc(1rem + 3px); /* +2pts */
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Textarea Styling */
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    font-size: calc(1rem + 3px); /* +2pts */
+    font-family: var(--font-primary);
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    resize: vertical;
+    min-height: 120px;
+}
+
+textarea:focus {
+    border-color: var(--color-brand-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(242, 81, 22, 0.25);
+}
+
+/* Contact Final CTA */
+.contact-final-cta {
+    margin: 3rem 0;
+}
+
+/* Mobile Contact Layout */
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-form-section,
+    .contact-info-section {
+        width: 100%;
+    }
+    
+    .contact-info-section {
+        order: 2; /* Put form first on mobile */
+    }
+    
+    .contact-form-section {
+        order: 1;
+    }
+    
+    .contact-info-card,
+    .contact-hours-card {
+        padding: 1.5rem;
+    }
+}
