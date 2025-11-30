@@ -1859,3 +1859,145 @@ ul.wp-block-list.contact-bullets strong {
         gap: 2rem;
     }
 }
+/* =========================================
+   19. LETTER RESPONSE FORM PAGE STYLES
+   ========================================= */
+
+/* Ensure form matches FAQ styling */
+.letterresponse-form-wrapper .gform_fields {
+    background: #f3f3f3;
+    padding: 2.5rem 2rem;
+    border: 1px solid #ced4da;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    list-style: none;
+    margin: 0;
+    padding-inline-start: 0;
+}
+
+/* Form field spacing */
+.letterresponse-form-wrapper .gfield {
+    margin-bottom: 1.25rem;
+}
+
+/* Radio/checkbox grid */
+.gfield_radio,
+.gfield_checkbox {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.gfield_checkbox {
+    grid-template-columns: repeat(3, auto);
+}
+
+.gchoice {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.gchoice input[type="radio"],
+.gchoice input[type="checkbox"] {
+    margin: 0;
+    width: auto;
+    min-height: auto;
+}
+
+/* Address field grid */
+.ginput_container_address {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.ginput_container_address .address_line_1 {
+    grid-column: 1 / -1;
+}
+
+/* Name field grid */
+.ginput_container--name {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Hidden honeypot field */
+.gfield--type-honeypot {
+    display: none !important;
+}
+
+/* Privacy badge spacing */
+.wp-block-image figure.aligncenter {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.wp-block-image figure.aligncenter img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+/* Spanish link styling */
+.wp-block-preformatted {
+    margin: 1.5rem 0;
+    text-align: right;
+}
+
+.wp-block-preformatted strong a {
+    color: var(--color-brand-primary);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.wp-block-preformatted strong a:hover {
+    color: var(--color-brand-primary-hover);
+}
+
+/* Table header layout */
+.wp-block-group__inner-container table {
+    border: none;
+    margin: 0;
+}
+
+.wp-block-group__inner-container table td {
+    vertical-align: middle;
+    padding: 0.5rem;
+    border: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gfield_radio,
+    .gfield_checkbox {
+        grid-template-columns: 1fr;
+    }
+    
+    .ginput_container_address,
+    .ginput_container--name {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .letterresponse-form-wrapper .gform_fields {
+        padding: 1.5rem 1rem;
+    }
+    
+    .wp-block-group__inner-container table {
+        display: block;
+    }
+    
+    .wp-block-group__inner-container table td {
+        display: block;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+    
+    .wp-block-preformatted {
+        text-align: center;
+    }
+}
