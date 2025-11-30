@@ -1963,12 +1963,12 @@ ul.wp-block-list.contact-bullets strong {
     padding-inline-start: 0;
 }
 
-/* Input field sizing */
-.letterresponse-form-wrapper input[type="text"],
-.letterresponse-form-wrapper input[type="tel"],
-.letterresponse-form-wrapper input[type="email"],
-.letterresponse-form-wrapper select,
-.letterresponse-form-wrapper textarea {
+/* HIGH SPECIFICITY INPUT STYLES - OVERRIDES GRAVITY FORMS */
+.page-template-letterresponse .letterresponse-form-wrapper input[type="text"],
+.page-template-letterresponse .letterresponse-form-wrapper input[type="tel"],
+.page-template-letterresponse .letterresponse-form-wrapper input[type="email"],
+.page-template-letterresponse .letterresponse-form-wrapper select,
+.page-template-letterresponse .letterresponse-form-wrapper textarea {
     width: 100%;
     height: 40px; /* Exact height requested */
     padding: 0.5rem 0.75rem; /* Adjusted for 40px height */
@@ -1981,37 +1981,37 @@ ul.wp-block-list.contact-bullets strong {
     transition: all 0.2s ease-in-out;
 }
 
-.letterresponse-form-wrapper textarea {
+.page-template-letterresponse .letterresponse-form-wrapper textarea {
     height: auto;
     min-height: 120px;
 }
 
 /* Focus states */
-.letterresponse-form-wrapper input:focus,
-.letterresponse-form-wrapper select:focus,
-.letterresponse-form-wrapper textarea:focus {
+.page-template-letterresponse .letterresponse-form-wrapper input:focus,
+.page-template-letterresponse .letterresponse-form-wrapper select:focus,
+.page-template-letterresponse .letterresponse-form-wrapper textarea:focus {
     border-color: var(--color-brand-primary);
     outline: none;
     box-shadow: 0 0 0 3px rgba(242, 81, 22, 0.25);
 }
 
-/* Full width single fields */
-.letterresponse-form-wrapper .gfield--width-full input:not([name="address_zip"]):not([name="phone"]):not([name="lot_size"]),
-.letterresponse-form-wrapper .gfield--width-full select {
+/* Full width single fields - VERY HIGH SPECIFICITY (668px) */
+.page-template-letterresponse .letterresponse-form-wrapper .gfield--width-full .ginput_container input:not([name="address_zip"]):not([name="phone"]):not([name="lot_size"]),
+.page-template-letterresponse .letterresponse-form-wrapper .gfield--width-full .ginput_container select {
     width: 668px; /* Full width for single fields */
     max-width: 100%;
 }
 
-/* Special 322px width fields */
-.letterresponse-form-wrapper input[name="address_zip"],
-.letterresponse-form-wrapper input[name="phone"],
-.letterresponse-form-wrapper input[name="lot_size"] {
-    width: 322px !important;
+/* Special half-width fields - VERY HIGH SPECIFICITY (322px) */
+.page-template-letterresponse .letterresponse-form-wrapper .ginput_container input[name="address_zip"],
+.page-template-letterresponse .letterresponse-form-wrapper .ginput_container input[name="phone"],
+.page-template-letterresponse .letterresponse-form-wrapper .ginput_container input[name="lot_size"] {
+    width: 322px; /* Half width fields */
     max-width: 100%;
 }
 
 /* Two-column grid for name and address */
-.letterresponse-form-wrapper .ginput_container--name {
+.page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name {
     display: grid;
     grid-template-columns: 322px 322px;
     gap: 24px; /* 24px gap requested */
@@ -2019,7 +2019,7 @@ ul.wp-block-list.contact-bullets strong {
     max-width: 668px;
 }
 
-.letterresponse-form-wrapper .ginput_container_address {
+.page-template-letterresponse .letterresponse-form-wrapper .ginput_container_address {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 24px;
@@ -2027,13 +2027,13 @@ ul.wp-block-list.contact-bullets strong {
     max-width: 668px;
 }
 
-.letterresponse-form-wrapper .ginput_container_address .address_line_1 {
+.page-template-letterresponse .letterresponse-form-wrapper .ginput_container_address .address_line_1 {
     grid-column: 1 / -1; /* Full width for street address */
 }
 
 /* Radio/checkbox grids */
-.letterresponse-form-wrapper .gfield_radio,
-.letterresponse-form-wrapper .gfield_checkbox {
+.page-template-letterresponse .letterresponse-form-wrapper .gfield_radio,
+.page-template-letterresponse .letterresponse-form-wrapper .gfield_checkbox {
     list-style: none;
     padding: 0;
     margin: 0.5rem 0;
@@ -2042,25 +2042,25 @@ ul.wp-block-list.contact-bullets strong {
     gap: 1rem;
 }
 
-.letterresponse-form-wrapper .gfield_checkbox {
+.page-template-letterresponse .letterresponse-form-wrapper .gfield_checkbox {
     grid-template-columns: repeat(3, auto);
 }
 
-.letterresponse-form-wrapper .gchoice {
+.page-template-letterresponse .letterresponse-form-wrapper .gchoice {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.letterresponse-form-wrapper .gchoice input[type="radio"],
-.letterresponse-form-wrapper .gchoice input[type="checkbox"] {
+.page-template-letterresponse .letterresponse-form-wrapper .gchoice input[type="radio"],
+.page-template-letterresponse .letterresponse-form-wrapper .gchoice input[type="checkbox"] {
     margin: 0;
     width: auto;
     height: auto;
 }
 
 /* Submit button */
-.letterresponse-form-wrapper .gform_button {
+.page-template-letterresponse .letterresponse-form-wrapper .gform_button {
     background: var(--color-button);
     color: var(--color-text-on-primary);
     border: none;
@@ -2075,7 +2075,7 @@ ul.wp-block-list.contact-bullets strong {
     margin-top: 1rem;
 }
 
-.letterresponse-form-wrapper .gform_button:hover {
+.page-template-letterresponse .letterresponse-form-wrapper .gform_button:hover {
     background: var(--color-button-hover);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
@@ -2100,21 +2100,21 @@ ul.wp-block-list.contact-bullets strong {
         margin: 1rem 0;
     }
     
-    .letterresponse-form-wrapper .gfield--width-full input,
-    .letterresponse-form-wrapper input[name="address_zip"],
-    .letterresponse-form-wrapper input[name="phone"],
-    .letterresponse-form-wrapper input[name="lot_size"] {
+    .page-template-letterresponse .letterresponse-form-wrapper .gfield--width-full input,
+    .page-template-letterresponse .letterresponse-form-wrapper input[name="address_zip"],
+    .page-template-letterresponse .letterresponse-form-wrapper input[name="phone"],
+    .page-template-letterresponse .letterresponse-form-wrapper input[name="lot_size"] {
         width: 100% !important;
     }
     
-    .letterresponse-form-wrapper .ginput_container--name,
-    .letterresponse-form-wrapper .ginput_container_address {
+    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name,
+    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container_address {
         grid-template-columns: 1fr;
         gap: 0.75rem;
     }
     
-    .letterresponse-form-wrapper .gfield_radio,
-    .letterresponse-form-wrapper .gfield_checkbox {
+    .page-template-letterresponse .letterresponse-form-wrapper .gfield_radio,
+    .page-template-letterresponse .letterresponse-form-wrapper .gfield_checkbox {
         grid-template-columns: 1fr;
     }
 }
