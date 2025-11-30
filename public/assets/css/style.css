@@ -1904,6 +1904,7 @@ ul.wp-block-list.contact-bullets strong {
 /* Spanish link styling */
 .spanish-link-container {
     margin: 1rem 0 2rem;
+    padding-left: 23px; /* Match form field left spacing */
 }
 
 .spanish-link-container p {
@@ -1934,6 +1935,7 @@ ul.wp-block-list.contact-bullets strong {
     color: #000000 !important;
     text-align: left !important;
     margin: 2rem 0 0.5rem 0;
+    padding-left: 23px; /* Match form field left spacing */
 }
 
 .letterresponse-form-subtitle {
@@ -1944,18 +1946,21 @@ ul.wp-block-list.contact-bullets strong {
     color: #000000 !important;
     text-align: left !important;
     margin: 0 0 2rem 0;
+    padding-left: 23px; /* Match form field left spacing */
 }
 
-/* Form container styling */
+/* Form container styling - ADDED LEFT PADDING */
 .letterresponse-form-wrapper {
     max-width: 714px;
     margin: 2rem auto;
     width: 100%;
+    padding: 0 23px; /* 23px left/right spacing = 714-668=46px total */
+    box-sizing: border-box;
 }
 
 .letterresponse-form-wrapper .gform_fields {
     background: #f3f3f3;
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 0; /* REMOVED horizontal padding */
     border: 1px solid #ced4da;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     list-style: none;
@@ -2098,6 +2103,7 @@ ul.wp-block-list.contact-bullets strong {
     .letterresponse-form-wrapper {
         max-width: 100%;
         margin: 1rem 0;
+        padding: 0 1rem; /* Smaller padding on mobile */
     }
     
     .page-template-letterresponse .letterresponse-form-wrapper .gfield--width-full input,
