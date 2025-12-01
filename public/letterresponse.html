@@ -517,13 +517,13 @@
                             </li>
 
                             <!-- Hidden Honeypot -->
-                            <li class="gfield gfield_visibility_hidden">
-                                <label class="gfield_label" for="input_7_57">Email</label>
-                                <div class="ginput_container">
-                                    <input name="input_57" id="input_7_57" type="text" autocomplete="new-password">
-                                </div>
-                                <div class="gfield_description">This field is for validation purposes and should be left unchanged.</div>
-                            </li>
+<li class="gfield honeypot-field" style="display: none !important; position: absolute; left: -9999px;">
+    <label class="gfield_label" for="input_7_57">Email</label>
+    <div class="ginput_container">
+        <input name="input_57" id="input_7_57" type="text" autocomplete="new-password" tabindex="-1">
+    </div>
+    <div class="gfield_description">This field is for validation purposes and should be left unchanged.</div>
+</li>
                         </ul>
 
                         <div class="gform_footer">
@@ -538,7 +538,7 @@
                 <p>We will never hassle you about the offer, and there is no obligation whatsoever. We want to buy your land now for a great cash price!</p>
 
                 <!-- Privacy Image -->
-               <div class="wp-block-image aligncenter">
+                <div class="wp-block-image aligncenter">
                     <figure class="aligncenter">
                         <img decoding="async" src="/assets/images/privacy-2.png" alt="we care about your privacy">
                     </figure>
@@ -572,4 +572,3 @@
     </div>
 </body>
 </html>
-
