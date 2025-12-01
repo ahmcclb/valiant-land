@@ -162,55 +162,56 @@
                             Fill out the form below and we'll get back to you within 48 hours.
                         </p>
                         
-                        <!-- FAQ Form -->
-                        <form name="faq-land-offer" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                            <div class="form-field-group gfield">
-                                <label class="gfield_label">Name <span class="required-asterisk">*</span></label>
-                                <div class="ginput_container--name">
-                                    <span class="name_first">
-                                        <input type="text" name="first_name" placeholder="First Name" required>
-                                        <label class="gform-field-label--type-sub">First</label>
-                                    </span>
-                                    <span class="name_last">
-                                        <input type="text" name="last_name" placeholder="Last Name" required>
-                                        <label class="gform-field-label--type-sub">Last</label>
-                                    </span>
-                                </div>
-                            </div>
-                            
-                            <div class="form-field-group gfield">
-                                <label class="gfield_label">City, State <span class="required-asterisk">*</span></label>
-                                <div class="ginput_container">
-                                    <input type="text" name="city_state" placeholder="City, State" required>
-                                </div>
-                                <div class="gfield_description">What city and state is the property located in?</div>
-                            </div>
-                            
-                            <div class="form-row">
-                                <div class="gf_left_half gfield">
-                                    <label class="gfield_label">Phone # <span class="required-asterisk">*</span></label>
-                                    <div class="ginput_container">
-                                        <input type="tel" name="phone" placeholder="Phone #" required>
-                                    </div>
-                                </div>
-                                <div class="gf_right_half gfield">
-                                    <label class="gfield_label">Email <span class="required-asterisk">*</span></label>
-                                    <div class="ginput_container">
-                                        <input type="email" name="email" placeholder="Email*" required>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="gfield gfield--type-honeypot" style="display: none;">
-                                <label class="gfield_label">Comments</label>
-                                <div class="ginput_container">
-                                    <input type="text" name="bot-field" placeholder="Leave blank">
-                                </div>
-                                <div class="gfield_description">This field is for validation purposes and should be left unchanged.</div>
-                            </div>
-                            
-                            <button type="submit" class="gform_button">Get My Fair Cash Offer >></button>
-                        </form>
+<!-- FAQ Form -->
+<form name="faq-land-offer" method="POST" data-netlify="true" action="/step-2.html">
+    <input type="hidden" name="form-name" value="faq-land-offer">
+    <div class="form-field-group gfield">
+        <label class="gfield_label">Name <span class="required-asterisk">*</span></label>
+        <div class="ginput_container--name">
+            <span class="name_first">
+                <input type="text" name="first_name" placeholder="First Name" required>
+                <label class="gform-field-label--type-sub">First</label>
+            </span>
+            <span class="name_last">
+                <input type="text" name="last_name" placeholder="Last Name" required>
+                <label class="gform-field-label--type-sub">Last</label>
+            </span>
+        </div>
+    </div>
+    
+    <div class="form-field-group gfield">
+        <label class="gfield_label">City, State <span class="required-asterisk">*</span></label>
+        <div class="ginput_container">
+            <input type="text" name="city_state" placeholder="City, State" required>
+        </div>
+        <div class="gfield_description">What city and state is the property located in?</div>
+    </div>
+    
+    <div class="form-row">
+        <div class="gf_left_half gfield">
+            <label class="gfield_label">Phone # <span class="required-asterisk">*</span></label>
+            <div class="ginput_container">
+                <input type="tel" name="phone" placeholder="Phone #" required>
+            </div>
+        </div>
+        <div class="gf_right_half gfield">
+            <label class="gfield_label">Email <span class="required-asterisk">*</span></label>
+            <div class="ginput_container">
+                <input type="email" name="email" placeholder="Email*" required>
+            </div>
+        </div>
+    </div>
+    
+    <div class="gfield gfield--type-honeypot" style="display: none;">
+        <label class="gfield_label">Comments</label>
+        <div class="ginput_container">
+            <input type="text" name="bot-field" placeholder="Leave blank">
+        </div>
+        <div class="gfield_description">This field is for validation purposes and should be left unchanged.</div>
+    </div>
+    
+    <button type="submit" class="gform_button">Get My Fair Cash Offer >></button>
+</form>
                     </div>
                 </div>
 
