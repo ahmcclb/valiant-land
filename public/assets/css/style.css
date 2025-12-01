@@ -2381,3 +2381,152 @@ ul.wp-block-list.contact-bullets strong {
         margin: 2rem 0;
     }
 }
+/* =========================================
+   20.1 THANK YOU PAGE STYLES (letterresponse-2 Spanish)
+   ========================================= */
+
+/* Apply same styles as English version - shared architecture */
+.page-template-thankyou-letterresponse-2 .content-wrap > .main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+/* Shared content wrapper styles */
+.page-template-thankyou-letterresponse-2 .thankyou-content {
+    font-family: var(--font-primary);
+    font-size: calc(1rem + 3px);
+    line-height: 1.6;
+    color: #000000;
+    margin-bottom: 3rem;
+}
+
+/* Heading styles - Spanish version */
+.page-template-thankyou-letterresponse-2 h1.wp-block-heading {
+    font-family: var(--font-headings);
+    font-size: calc(2.25rem + 3px);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000000;
+    text-align: center;
+    margin: 0 auto 2rem;
+    max-width: 800px;
+}
+
+.page-template-thankyou-letterresponse-2 h2.wp-block-heading {
+    font-family: var(--font-headings);
+    font-size: calc(1.75rem + 3px);
+    font-weight: 700;
+    line-height: 1.3;
+    color: #000000;
+    text-align: center;
+    margin: 2rem auto 1.5rem;
+}
+
+/* Paragraph styling */
+.page-template-thankyou-letterresponse-2 .thankyou-content p {
+    font-family: var(--font-primary);
+    font-size: calc(1rem + 3px);
+    line-height: 1.7;
+    color: #000000;
+    text-align: center;
+    margin: 0 auto 1.5rem;
+    max-width: 700px;
+}
+
+/* Phone emphasis */
+.page-template-thankyou-letterresponse-2 .thankyou-content p strong {
+    color: #000000;
+    font-weight: 700;
+}
+
+/* Signature */
+.page-template-thankyou-letterresponse-2 .thankyou-content .signature {
+    font-family: var(--font-primary);
+    font-size: calc(1rem + 3px);
+    text-align: center;
+    margin: 2rem auto;
+    font-weight: 700;
+}
+
+/* Image */
+.page-template-thankyou-letterresponse-2 .wp-block-image.size-full {
+    text-align: center;
+    margin: 2.5rem auto;
+}
+
+.page-template-thankyou-letterresponse-2 .wp-block-image.size-full img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    display: inline-block;
+    border-radius: 0.25rem;
+}
+
+/* Social share */
+.page-template-thankyou-letterresponse-2 .entry-share {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.page-template-thankyou-letterresponse-2 .entry-share-btns {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+}
+
+.page-template-thankyou-letterresponse-2 .entry-share-btn a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #1877f2;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-family: var(--font-primary);
+    font-size: calc(1rem + 3px);
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.page-template-thankyou-letterresponse-2 .entry-share-btn a:hover {
+    background: #166fe5;
+}
+
+/* Privacy image */
+.page-template-thankyou-letterresponse-2 .privacy-image-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .page-template-thankyou-letterresponse-2 .content-wrap > .main {
+        padding: 2rem 1rem;
+    }
+    
+    .page-template-thankyou-letterresponse-2 h1.wp-block-heading {
+        font-size: calc(1.75rem + 3px);
+    }
+    
+    .page-template-thankyou-letterresponse-2 h2.wp-block-heading {
+        font-size: calc(1.5rem + 3px);
+    }
+    
+    .page-template-thankyou-letterresponse-2 .thankyou-content p {
+        font-size: calc(0.9375rem + 3px);
+        line-height: 1.6;
+    }
+    
+    .page-template-thankyou-letterresponse-2 .wp-block-image.size-full {
+        margin: 1.5rem auto;
+    }
+    
+    .page-template-thankyou-letterresponse-2 .entry-share {
+        margin: 2rem 0;
+    }
+}
