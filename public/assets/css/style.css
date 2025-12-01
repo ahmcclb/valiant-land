@@ -1864,7 +1864,8 @@ ul.wp-block-list.contact-bullets strong {
    ========================================= */
 
 /* Content width for non-form sections */
-.page-template-letterresponse .content-wrap > .main {
+.page-template-letterresponse .content-wrap > .main,
+.page-template-letterresponse-2 .content-wrap > .main {
     max-width: 1000px;
     margin: 0 auto;
     padding: 2rem 1rem;
@@ -1961,7 +1962,7 @@ ul.wp-block-list.contact-bullets strong {
 /* Form background - padding goes here */
 .letterresponse-form-wrapper form {
     background: #f3f3f3;
-    padding: 2.5rem 23px; /* 23px left/right padding creates 668px content area */
+    padding: 2.5rem 23px; /* 23px padding = 668px content area */
     border: 1px solid #ced4da;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
@@ -1986,7 +1987,12 @@ ul.wp-block-list.contact-bullets strong {
 .page-template-letterresponse .letterresponse-form-wrapper input[type="tel"],
 .page-template-letterresponse .letterresponse-form-wrapper input[type="email"],
 .page-template-letterresponse .letterresponse-form-wrapper select,
-.page-template-letterresponse .letterresponse-form-wrapper textarea {
+.page-template-letterresponse .letterresponse-form-wrapper textarea,
+.page-template-letterresponse-2 .letterresponse-form-wrapper input[type="text"],
+.page-template-letterresponse-2 .letterresponse-form-wrapper input[type="tel"],
+.page-template-letterresponse-2 .letterresponse-form-wrapper input[type="email"],
+.page-template-letterresponse-2 .letterresponse-form-wrapper select,
+.page-template-letterresponse-2 .letterresponse-form-wrapper textarea {
     width: 100%;
     height: 40px;
     padding: 0.5rem 0.75rem;
@@ -1999,7 +2005,8 @@ ul.wp-block-list.contact-bullets strong {
     transition: all 0.2s ease-in-out;
 }
 
-.page-template-letterresponse .letterresponse-form-wrapper textarea {
+.page-template-letterresponse .letterresponse-form-wrapper textarea,
+.page-template-letterresponse-2 .letterresponse-form-wrapper textarea {
     height: auto;
     min-height: 120px;
 }
@@ -2007,7 +2014,10 @@ ul.wp-block-list.contact-bullets strong {
 /* Focus states */
 .page-template-letterresponse .letterresponse-form-wrapper input:focus,
 .page-template-letterresponse .letterresponse-form-wrapper select:focus,
-.page-template-letterresponse .letterresponse-form-wrapper textarea:focus {
+.page-template-letterresponse .letterresponse-form-wrapper textarea:focus,
+.page-template-letterresponse-2 .letterresponse-form-wrapper input:focus,
+.page-template-letterresponse-2 .letterresponse-form-wrapper select:focus,
+.page-template-letterresponse-2 .letterresponse-form-wrapper textarea:focus {
     border-color: var(--color-brand-primary);
     outline: none;
     box-shadow: 0 0 0 3px rgba(242, 81, 22, 0.25);
@@ -2018,20 +2028,24 @@ ul.wp-block-list.contact-bullets strong {
 /* ==================================================== */
 
 /* Street Address - FULL WIDTH */
-.page-template-letterresponse .letterresponse-form-wrapper .ginput_container_address .address_line_1 {
+.page-template-letterresponse .letterresponse-form-wrapper .ginput_container_address .address_line_1,
+.page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container_address .address_line_1 {
     width: 668px !important;
     max-width: 100%;
 }
 
 /* City and State - 322px each, side by side */
 .page-template-letterresponse .letterresponse-form-wrapper .ginput_container_address .address_city,
-.page-template-letterresponse .letterresponse-form-wrapper .ginput_container_address .address_state {
+.page-template-letterresponse .letterresponse-form-wrapper .ginput_container_address .address_state,
+.page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container_address .address_city,
+.page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container_address .address_state {
     width: 322px !important;
     max-width: 100%;
 }
 
 /* Zip Code - FULL WIDTH, SEPARATE LINE */
-.page-template-letterresponse .letterresponse-form-wrapper .ginput_container_address .address_zip {
+.page-template-letterresponse .letterresponse-form-wrapper .ginput_container_address .address_zip,
+.page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container_address .address_zip {
     width: 668px !important;
     max-width: 100%;
     display: block !important;
@@ -2039,14 +2053,16 @@ ul.wp-block-list.contact-bullets strong {
 }
 
 /* Hide country field */
-.page-template-letterresponse .letterresponse-form-wrapper input[name="address_country"] {
+.page-template-letterresponse .letterresponse-form-wrapper input[name="address_country"],
+.page-template-letterresponse-2 .letterresponse-form-wrapper input[name="address_country"] {
     display: none;
 }
 
 /* ==================================================== */
 /* NAME FIELD LAYOUT */
 /* ==================================================== */
-.page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name {
+.page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name,
+.page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container--name {
     display: grid;
     grid-template-columns: 322px 322px;
     gap: 24px;
@@ -2059,7 +2075,8 @@ ul.wp-block-list.contact-bullets strong {
 /* ==================================================== */
 
 /* Radio buttons - STACK ONE PER LINE */
-.page-template-letterresponse .letterresponse-form-wrapper .gfield_radio {
+.page-template-letterresponse .letterresponse-form-wrapper .gfield_radio,
+.page-template-letterresponse-2 .letterresponse-form-wrapper .gfield_radio {
     list-style: none;
     padding: 0;
     margin: 0.5rem 0;
@@ -2069,7 +2086,8 @@ ul.wp-block-list.contact-bullets strong {
 }
 
 /* Checkboxes - STACK ONE PER LINE */
-.page-template-letterresponse .letterresponse-form-wrapper .gfield_checkbox {
+.page-template-letterresponse .letterresponse-form-wrapper .gfield_checkbox,
+.page-template-letterresponse-2 .letterresponse-form-wrapper .gfield_checkbox {
     list-style: none;
     padding: 0;
     margin: 0.5rem 0;
@@ -2079,7 +2097,8 @@ ul.wp-block-list.contact-bullets strong {
 }
 
 /* Individual choice items */
-.page-template-letterresponse .letterresponse-form-wrapper .gchoice {
+.page-template-letterresponse .letterresponse-form-wrapper .gchoice,
+.page-template-letterresponse-2 .letterresponse-form-wrapper .gchoice {
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -2090,36 +2109,34 @@ ul.wp-block-list.contact-bullets strong {
 /* Remove default field widths */
 .page-template-letterresponse .letterresponse-form-wrapper .gfield--width-half,
 .page-template-letterresponse .letterresponse-form-wrapper .gf_left_half,
-.page-template-letterresponse .letterresponse-form-wrapper .gf_right_half {
+.page-template-letterresponse .letterresponse-form-wrapper .gf_right_half,
+.page-template-letterresponse-2 .letterresponse-form-wrapper .gfield--width-half,
+.page-template-letterresponse-2 .letterresponse-form-wrapper .gf_left_half,
+.page-template-letterresponse-2 .letterresponse-form-wrapper .gf_right_half {
     width: 100% !important;
 }
 
 /* Full width single fields (APN, Email, Phone, etc.) */
 .page-template-letterresponse .letterresponse-form-wrapper .gfield--width-full input:not([type="radio"]):not([type="checkbox"]),
 .page-template-letterresponse .letterresponse-form-wrapper .gfield--width-full select,
-.page-template-letterresponse .letterresponse-form-wrapper .gfield--width-full textarea {
+.page-template-letterresponse .letterresponse-form-wrapper .gfield--width-full textarea,
+.page-template-letterresponse-2 .letterresponse-form-wrapper .gfield--width-full input:not([type="radio"]):not([type="checkbox"]),
+.page-template-letterresponse-2 .letterresponse-form-wrapper .gfield--width-full select,
+.page-template-letterresponse-2 .letterresponse-form-wrapper .gfield--width-full textarea {
     width: 668px !important;
     max-width: 100%;
 }
 
 /* Half width fields - Lot Size specifically */
-.page-template-letterresponse .letterresponse-form-wrapper input[name="lot_size"] {
+.page-template-letterresponse .letterresponse-form-wrapper input[name="lot_size"],
+.page-template-letterresponse-2 .letterresponse-form-wrapper input[name="lot_size"] {
     width: 322px !important;
     max-width: 100%;
 }
-.honeypot-field {
-    display: none !important;
-    position: absolute !important;
-    left: -9999px !important;
-    height: 0 !important;
-    width: 0 !important;
-    overflow: hidden !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-}
 
 /* Submit button - 668px width */
-.page-template-letterresponse .letterresponse-form-wrapper .gform_button {
+.page-template-letterresponse .letterresponse-form-wrapper .gform_button,
+.page-template-letterresponse-2 .letterresponse-form-wrapper .gform_button {
     background: var(--color-button);
     color: var(--color-text-on-primary);
     border: none;
@@ -2137,11 +2154,14 @@ ul.wp-block-list.contact-bullets strong {
     display: block;
 }
 
-.page-template-letterresponse .letterresponse-form-wrapper .gform_button:hover {
+.page-template-letterresponse .letterresponse-form-wrapper .gform_button:hover,
+.page-template-letterresponse-2 .letterresponse-form-wrapper .gform_button:hover {
     background: var(--color-button-hover);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
+
+/* Center alignment utility */
 .wp-block-image.aligncenter {
     text-align: center;
     margin: 2rem 0;
@@ -2154,7 +2174,8 @@ ul.wp-block-list.contact-bullets strong {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .page-template-letterresponse .content-wrap > .main {
+    .page-template-letterresponse .content-wrap > .main,
+    .page-template-letterresponse-2 .content-wrap > .main {
         padding: 1rem;
     }
     
@@ -2179,17 +2200,22 @@ ul.wp-block-list.contact-bullets strong {
     
     .page-template-letterresponse .letterresponse-form-wrapper input,
     .page-template-letterresponse .letterresponse-form-wrapper select,
-    .page-template-letterresponse .letterresponse-form-wrapper textarea {
+    .page-template-letterresponse .letterresponse-form-wrapper textarea,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper input,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper select,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper textarea {
         width: 100% !important;
         max-width: 100% !important;
     }
     
-    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name {
+    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container--name {
         grid-template-columns: 1fr;
         gap: 0.75rem;
     }
     
-    .page-template-letterresponse .letterresponse-form-wrapper .gform_button {
+    .page-template-letterresponse .letterresponse-form-wrapper .gform_button,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .gform_button {
         margin-left: 0;
     }
 }
