@@ -2530,3 +2530,267 @@ ul.wp-block-list.contact-bullets strong {
         margin: 2rem 0;
     }
 }
+/* =========================================
+   21. STEP 2 PAGE STYLES
+   ========================================= */
+
+/* Content container - 1000px max-width */
+.page-template-step-2 .content-wrap > .main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Intro section with image */
+.step-2-intro {
+    margin: 2rem 0 1.5rem;
+}
+
+.intro-with-image {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.representative-image {
+    width: 144px;
+    height: 144px;
+    flex-shrink: 0;
+    display: block;
+}
+
+.step-2-intro h3 {
+    font-family: var(--font-headings);
+    font-size: 23.5pt;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-brand-primary) !important;
+    text-align: left !important;
+    margin: 0;
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Form title and subtitle */
+.step-2-form-title {
+    font-family: var(--font-headings);
+    font-size: 20.5pt;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #000000 !important;
+    text-align: left !important;
+    margin: 2rem 0 0.5rem 0;
+    padding-left: 23px;
+}
+
+.step-2-form-subtitle {
+    font-family: var(--font-primary);
+    font-size: 13.5pt;
+    font-style: italic;
+    line-height: 1.4;
+    color: #000000 !important;
+    text-align: left !important;
+    margin: 0 0 2rem 0;
+    padding-left: 23px;
+}
+
+/* Form container - FORCED 714px WIDTH */
+.step-2-form-wrapper {
+    width: 714px !important;
+    max-width: 714px !important;
+    margin: 2rem auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Form background - padding goes here */
+.step-2-form-wrapper form {
+    background: #f3f3f3;
+    padding: 2.5rem 23px;
+    border: 1px solid #ced4da;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.step-2-form-wrapper .gform_fields {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-inline-start: 0;
+}
+
+/* FIELD CONTAINER */
+.step-2-form-wrapper .gfield {
+    margin-bottom: 1.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+/* HIGH SPECIFICITY INPUT STYLES */
+.page-template-step-2 .step-2-form-wrapper input[type="text"],
+.page-template-step-2 .step-2-form-wrapper input[type="tel"],
+.page-template-step-2 .step-2-form-wrapper input[type="email"],
+.page-template-step-2 .step-2-form-wrapper select,
+.page-template-step-2 .step-2-form-wrapper textarea {
+    width: 100%;
+    height: 40px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    font-family: var(--font-primary);
+    font-size: calc(1rem + 3px);
+    font-weight: 400;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+.page-template-step-2 .step-2-form-wrapper textarea {
+    height: auto;
+    min-height: 120px;
+}
+
+/* Focus states */
+.page-template-step-2 .step-2-form-wrapper input:focus,
+.page-template-step-2 .step-2-form-wrapper select:focus,
+.page-template-step-2 .step-2-form-wrapper textarea:focus {
+    border-color: var(--color-brand-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(242, 81, 22, 0.25);
+}
+
+/* NAME FIELD LAYOUT */
+.page-template-step-2 .step-2-form-wrapper .ginput_container--name {
+    display: grid;
+    grid-template-columns: 322px 322px;
+    gap: 24px;
+    width: 100%;
+    max-width: 668px;
+}
+
+/* ADDRESS FIELD LAYOUT */
+.page-template-step-2 .step-2-form-wrapper .ginput_container_address .address_line_1,
+.page-template-step-2 .step-2-form-wrapper .ginput_container_address .address_zip {
+    width: 668px !important;
+    max-width: 100%;
+}
+
+.page-template-step-2 .step-2-form-wrapper .ginput_container_address .address_city,
+.page-template-step-2 .step-2-form-wrapper .ginput_container_address .address_state {
+    width: 322px !important;
+    max-width: 100%;
+}
+
+/* RADIO & CHECKBOX - STACKED VERTICALLY */
+.page-template-step-2 .step-2-form-wrapper .gfield_radio,
+.page-template-step-2 .step-2-form-wrapper .gfield_checkbox {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+}
+
+.page-template-step-2 .step-2-form-wrapper .gchoice {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0 !important;
+    width: 100%;
+}
+
+/* Full width fields */
+.page-template-step-2 .step-2-form-wrapper .gfield--width-full input:not([type="radio"]):not([type="checkbox"]),
+.page-template-step-2 .step-2-form-wrapper .gfield--width-full select,
+.page-template-step-2 .step-2-form-wrapper .gfield--width-full textarea {
+    width: 668px !important;
+    max-width: 100%;
+}
+
+/* Submit button */
+.page-template-step-2 .step-2-form-wrapper .gform_button {
+    background: var(--color-button);
+    color: var(--color-text-on-primary);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: calc(1.1rem + 3px);
+    font-weight: 700;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    width: 668px !important;
+    max-width: 668px !important;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    margin-top: 1rem;
+    display: block;
+}
+
+.page-template-step-2 .step-2-form-wrapper .gform_button:hover {
+    background: var(--color-button-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Footer note */
+.step-2-content p {
+    font-family: var(--font-primary);
+    font-size: calc(1rem + 3px);
+    line-height: 1.6;
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+/* Privacy image */
+.page-template-step-2 .wp-block-image.aligncenter {
+    text-align: center;
+    margin: 2.5rem auto;
+}
+
+.page-template-step-2 .wp-block-image.aligncenter img {
+    margin: 0 auto;
+    display: inline-block;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .page-template-step-2 .content-wrap > .main {
+        padding: 1rem;
+    }
+    
+    .step-2-intro h3 {
+        font-size: calc(1.5rem + 3px);
+    }
+    
+    .step-2-form-wrapper {
+        max-width: 100%;
+        margin: 1rem 0;
+        padding: 0 1rem;
+    }
+    
+    .step-2-form-wrapper .gfield {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .page-template-step-2 .step-2-form-wrapper input,
+    .page-template-step-2 .step-2-form-wrapper select,
+    .page-template-step-2 .step-2-form-wrapper textarea {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .page-template-step-2 .step-2-form-wrapper .ginput_container--name {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .page-template-step-2 .step-2-form-wrapper .gform_button {
+        margin-left: 0;
+    }
+    
+    .intro-with-image {
+        flex-direction: column;
+        text-align: center;
+    }
+}
