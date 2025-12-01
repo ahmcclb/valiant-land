@@ -2531,22 +2531,21 @@ ul.wp-block-list.contact-bullets strong {
     }
 }
 /* =========================================
-   21. STEP 2 PAGE STYLES
+   21. STEP 2 PAGE STYLES - DEBUGGED & ENFORCED
    ========================================= */
 
-/* Global box-sizing enforcement for this page */
-.page-template-step-2 .step-2-form-wrapper * {
-    box-sizing: border-box;
+/* ========== CRITICAL RESET FOR THIS PAGE ========== */
+.page-template-step-2 form[name="step-2-land-offer"] * {
+    box-sizing: border-box !important;
 }
 
-/* Content container - 1000px max-width */
+/* ========== CONTAINER & LAYOUT ========== */
 .page-template-step-2 .content-wrap > .main {
     max-width: 1000px;
     margin: 0 auto;
     padding: 2rem 1rem;
 }
 
-/* Intro section with image */
 .step-2-intro {
     margin: 2rem 0 1.5rem;
 }
@@ -2577,7 +2576,6 @@ ul.wp-block-list.contact-bullets strong {
     min-width: 300px;
 }
 
-/* Form title and subtitle */
 .step-2-form-title {
     font-family: var(--font-headings);
     font-size: 20.5pt;
@@ -2600,187 +2598,199 @@ ul.wp-block-list.contact-bullets strong {
     padding-left: 23px;
 }
 
-/* Form container - FORCED 714px WIDTH */
-.step-2-form-wrapper {
+/* ========== FORM CONTAINER - 714px LOCKED ========== */
+.page-template-step-2 .step-2-form-wrapper {
     width: 714px !important;
     max-width: 714px !important;
-    margin: 2rem auto;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 2rem auto !important;
+    padding: 0 !important;
 }
 
-/* Form background - padding goes here */
-.step-2-form-wrapper form {
+.page-template-step-2 .step-2-form-wrapper form {
     background: #f3f3f3;
-    padding: 2.5rem 23px;
+    padding: 2.5rem 23px !important;
     border: 1px solid #ced4da;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.step-2-form-wrapper .gform_fields {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    padding-inline-start: 0;
+/* ========== BASE FIELD STYLES - 40px HEIGHT ENFORCED ========== */
+.page-template-step-2 form[name="step-2-land-offer"] input[type="text"],
+.page-template-step-2 form[name="step-2-land-offer"] input[type="tel"],
+.page-template-step-2 form[name="step-2-land-offer"] input[type="email"],
+.page-template-step-2 form[name="step-2-land-offer"] select,
+.page-template-step-2 form[name="step-2-land-offer"] textarea {
+    width: 100% !important;
+    height: 40px !important;
+    padding: 0.5rem 0.75rem !important;
+    border: 1px solid #ced4da !important;
+    border-radius: 0.25rem !important;
+    font-family: var(--font-primary) !important;
+    font-size: calc(1rem + 3px) !important;
+    font-weight: 400 !important;
+    background-color: #ffffff !important;
+    transition: all 0.2s ease-in-out !important;
 }
 
-/* FIELD CONTAINER */
-.step-2-form-wrapper .gfield {
-    margin-bottom: 1.5rem;
-    padding-left: 0;
-    padding-right: 0;
-    box-sizing: border-box;
+/* Remove Gravity Forms' default padding that breaks height */
+.page-template-step-2 form[name="step-2-land-offer"] input,
+.page-template-step-2 form[name="step-2-land-offer"] select {
+    padding: 0.5rem 0.75rem !important;
 }
 
-/* HIGH SPECIFICITY INPUT STYLES - ALL 40px HEIGHT */
-.page-template-step-2 .step-2-form-wrapper input[type="text"],
-.page-template-step-2 .step-2-form-wrapper input[type="tel"],
-.page-template-step-2 .step-2-form-wrapper input[type="email"],
-.page-template-step-2 .step-2-form-wrapper select,
-.page-template-step-2 .step-2-form-wrapper textarea {
-    width: 100%;
-    height: 40px !important; /* MANDATORY 40px height */
-    padding: 0.5rem 0.75rem;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    font-family: var(--font-primary);
-    font-size: calc(1rem + 3px);
-    font-weight: 400;
-    box-sizing: border-box;
-    transition: all 0.2s ease-in-out;
-}
-
-/* Select dropdown specific enforcement */
-.page-template-step-2 .step-2-form-wrapper select {
+/* Specific height for selects */
+.page-template-step-2 form[name="step-2-land-offer"] select {
     height: 40px !important;
     line-height: 1.2 !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
 }
 
-.page-template-step-2 .step-2-form-wrapper textarea {
-    height: auto;
-    min-height: 120px;
+/* Textarea exception */
+.page-template-step-2 form[name="step-2-land-offer"] textarea {
+    height: auto !important;
+    min-height: 120px !important;
 }
 
 /* Focus states */
-.page-template-step-2 .step-2-form-wrapper input:focus,
-.page-template-step-2 .step-2-form-wrapper select:focus,
-.page-template-step-2 .step-2-form-wrapper textarea:focus {
-    border-color: var(--color-brand-primary);
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(242, 81, 22, 0.25);
+.page-template-step-2 form[name="step-2-land-offer"] input:focus,
+.page-template-step-2 form[name="step-2-land-offer"] select:focus,
+.page-template-step-2 form[name="step-2-land-offer"] textarea:focus {
+    border-color: var(--color-brand-primary) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(242, 81, 22, 0.25) !important;
 }
 
-/* ==================================================== */
-/* NAME FIELD LAYOUT - 322px + 24px + 322px = 668px */
-/* ==================================================== */
-.page-template-step-2 .step-2-form-wrapper .ginput_container--name {
-    display: grid;
-    grid-template-columns: 322px 322px;
-    gap: 24px; /* MANDATORY 24px gap */
-    width: 100%;
-    max-width: 668px;
-}
-
-/* ==================================================== */
-/* EMAIL FIELDS LAYOUT - 322px + 24px + 322px = 668px */
-/* ==================================================== */
-.page-template-step-2 .step-2-form-wrapper .ginput_container_email {
-    display: grid;
-    grid-template-columns: 322px 322px;
-    gap: 24px; /* MANDATORY 24px gap */
-    width: 100%;
-    max-width: 668px;
-}
-
-/* ADDRESS FIELD LAYOUT */
-.page-template-step-2 .step-2-form-wrapper .ginput_container_address .address_line_1,
-.page-template-step-2 .step-2-form-wrapper .ginput_container_address .address_zip {
+/* ========== NAME FIELD PAIR - 322px + 24px + 322px ========== */
+.page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name,
+.page-template-step-2 form[name="step-2-land-offer"] .ginput_container.ginput_container--name {
+    display: grid !important;
+    grid-template-columns: 322px 322px !important;
+    gap: 24px !important;
     width: 668px !important;
-    max-width: 100%;
+    max-width: 100% !important;
 }
 
-.page-template-step-2 .step-2-form-wrapper .ginput_container_address .address_city,
-.page-template-step-2 .step-2-form-wrapper .ginput_container_address .address_state {
+/* Override Gravity Forms' float */
+.page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name span {
+    width: 100% !important;
+    float: none !important;
+}
+
+/* ========== EMAIL FIELD PAIR - ADDED CONFIRM EMAIL ========== */
+.page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email,
+.page-template-step-2 form[name="step-2-land-offer"] .ginput_container.ginput_container_email {
+    display: grid !important;
+    grid-template-columns: 322px 322px !important;
+    gap: 24px !important;
+    width: 668px !important;
+    max-width: 100% !important;
+}
+
+/* Override Gravity Forms' float for email spans */
+.page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email span {
+    width: 100% !important;
+    float: none !important;
+}
+
+/* ========== ADDRESS FIELD STRUCTURE ========== */
+/* Street Address = 668px full width */
+.page-template-step-2 form[name="step-2-land-offer"] .ginput_container_address .address_line_1,
+.page-template-step-2 form[name="step-2-land-offer"] .ginput_container_address .address_line_1 input {
+    width: 668px !important;
+    max-width: 100% !important;
+}
+
+/* City and State side-by-side, 322px each */
+.page-template-step-2 form[name="step-2-land-offer"] .ginput_container_address .address_city,
+.page-template-step-2 form[name="step-2-land-offer"] .ginput_container_address .address_state {
+    display: inline-block !important;
     width: 322px !important;
-    max-width: 100%;
+    max-width: 100% !important;
+    vertical-align: top !important;
 }
 
-/* Force ZIP to full width and on new line */
-.page-template-step-2 .step-2-form-wrapper .ginput_container_address .address_zip {
+.page-template-step-2 form[name="step-2-land-offer"] .ginput_container_address .address_city {
+    margin-right: 24px !important;
+}
+
+/* ZIP Code = 668px on separate line */
+.page-template-step-2 form[name="step-2-land-offer"] .ginput_container_address .address_zip,
+.page-template-step-2 form[name="step-2-land-offer"] .ginput_container_address .address_zip input {
+    width: 668px !important;
+    max-width: 100% !important;
     display: block !important;
-    margin-top: 1.5rem;
+    margin-top: 1.5rem !important;
 }
 
 /* Hide country field */
-.page-template-step-2 .step-2-form-wrapper input[name="input_7.6"] {
-    display: none;
+.page-template-step-2 form[name="step-2-land-offer"] input[name="input_7.6"] {
+    display: none !important;
 }
 
-/* RADIO & CHECKBOX - STACKED VERTICALLY */
-.page-template-step-2 .step-2-form-wrapper .gfield_radio,
-.page-template-step-2 .step-2-form-wrapper .gfield_checkbox {
-    list-style: none;
-    padding: 0;
-    margin: 0.5rem 0;
+/* ========== RADIO & CHECKBOX - VERTICAL STACK ========== */
+.page-template-step-2 form[name="step-2-land-offer"] .gfield_radio,
+.page-template-step-2 form[name="step-2-land-offer"] .gfield_checkbox {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0.5rem 0 !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 0.75rem !important;
 }
 
-.page-template-step-2 .step-2-form-wrapper .gchoice {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
+.page-template-step-2 form[name="step-2-land-offer"] .gchoice {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
     margin: 0 !important;
-    width: 100%;
-}
-
-/* Remove default field widths */
-.page-template-step-2 .step-2-form-wrapper .gfield--width-half,
-.page-template-step-2 .step-2-form-wrapper .gf_left_half,
-.page-template-step-2 .step-2-form-wrapper .gf_right_half {
     width: 100% !important;
+    float: none !important;
 }
 
-/* Full width single fields */
-.page-template-step-2 .step-2-form-wrapper .gfield--width-full input:not([type="radio"]):not([type="checkbox"]),
-.page-template-step-2 .step-2-form-wrapper .gfield--width-full select,
-.page-template-step-2 .step-2-form-wrapper .gfield--width-full textarea {
-    width: 668px !important;
-    max-width: 100%;
-}
-
-/* Half width fields - Lot Size specifically */
-.page-template-step-2 .step-2-form-wrapper input[name="input_10"] {
+/* ========== HALF-WIDTH EXCEPTIONS ========== */
+/* Lot Size = 322px */
+.page-template-step-2 form[name="step-2-land-offer"] input[name="input_10"],
+.page-template-step-2 form[name="step-2-land-offer"] input[name="input_10"] {
     width: 322px !important;
-    max-width: 100%;
+    max-width: 100% !important;
 }
 
-/* SUBMIT BUTTON - 668px WIDTH */
-.page-template-step-2 .step-2-form-wrapper .gform_button {
-    background: var(--color-button);
-    color: var(--color-text-on-primary);
-    border: none;
-    padding: 1rem 2rem;
-    font-size: calc(1.1rem + 3px);
-    font-weight: 700;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    width: 668px !important; /* MANDATORY width */
+/* Listed with Realtor dropdown = 322px */
+.page-template-step-2 form[name="step-2-land-offer"] select[name="input_19"] {
+    width: 322px !important;
+    max-width: 100% !important;
+}
+
+/* ========== FULL WIDTH FIELDS ========== */
+.page-template-step-2 form[name="step-2-land-offer"] input[name="input_30"],
+.page-template-step-2 form[name="step-2-land-offer"] select[name="input_7.4"],
+.page-template-step-2 form[name="step-2-land-offer"] textarea[name="input_17"],
+.page-template-step-2 form[name="step-2-land-offer"] textarea[name="input_31"],
+.page-template-step-2 form[name="step-2-land-offer"] select[name="input_4"] {
+    width: 668px !important;
+    max-width: 100% !important;
+}
+
+/* ========== SUBMIT BUTTON - 668px WIDTH ========== */
+.page-template-step-2 form[name="step-2-land-offer"] .gform_button,
+.page-template-step-2 .gform_wrapper .gform_footer input[type="submit"] {
+    background: var(--color-button) !important;
+    color: var(--color-text-on-primary) !important;
+    border: none !important;
+    padding: 1rem 2rem !important;
+    font-size: calc(1.1rem + 3px) !important;
+    font-weight: 700 !important;
+    border-radius: 0.25rem !important;
+    cursor: pointer !important;
+    width: 668px !important;
     max-width: 668px !important;
-    text-transform: uppercase;
-    transition: all 0.2s ease;
-    margin-top: 1rem;
-    display: block;
+    text-transform: uppercase !important;
+    transition: all 0.2s ease !important;
+    margin-top: 1rem !important;
+    display: block !important;
 }
 
-.page-template-step-2 .step-2-form-wrapper .gform_button:hover {
-    background: var(--color-button-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-/* Footer note */
+/* ========== FOOTER & IMAGES ========== */
 .step-2-content p {
     font-family: var(--font-primary);
     font-size: calc(1rem + 3px);
@@ -2789,7 +2799,6 @@ ul.wp-block-list.contact-bullets strong {
     margin-bottom: 1.5rem;
 }
 
-/* Privacy image */
 .page-template-step-2 .wp-block-image.aligncenter {
     text-align: center;
     margin: 2.5rem auto;
@@ -2800,42 +2809,37 @@ ul.wp-block-list.contact-bullets strong {
     display: inline-block;
 }
 
-/* Mobile responsive */
+/* ========== MOBILE RESPONSIVE - ≤768px ========== */
 @media (max-width: 768px) {
     .page-template-step-2 .content-wrap > .main {
-        padding: 1rem;
+        padding: 1rem !important;
     }
     
-    .step-2-intro h3 {
-        font-size: calc(1.5rem + 3px);
+    .page-template-step-2 .step-2-form-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 1rem 0 !important;
+        padding: 0 1rem !important;
     }
     
-    .step-2-form-wrapper {
-        max-width: 100%;
-        margin: 1rem 0;
-        padding: 0 1rem;
+    .page-template-step-2 .step-2-form-wrapper form {
+        padding: 1.5rem !important;
     }
     
-    .step-2-form-wrapper .gfield {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-    
-    .page-template-step-2 .step-2-form-wrapper input,
-    .page-template-step-2 .step-2-form-wrapper select,
-    .page-template-step-2 .step-2-form-wrapper textarea {
+    .page-template-step-2 form[name="step-2-land-offer"] input,
+    .page-template-step-2 form[name="step-2-land-offer"] select,
+    .page-template-step-2 form[name="step-2-land-offer"] textarea {
         width: 100% !important;
         max-width: 100% !important;
     }
     
-    .page-template-step-2 .step-2-form-wrapper .ginput_container--name,
-    .page-template-step-2 .step-2-form-wrapper .ginput_container_email {
-        grid-template-columns: 1fr;
-        gap: 0.75rem; /* 12px on mobile */
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name,
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem !important; /* 12px mobile gap */
     }
     
     .page-template-step-2 .step-2-form-wrapper .gform_button {
-        margin-left: 0;
         width: 100% !important;
     }
     
