@@ -1949,18 +1949,19 @@ ul.wp-block-list.contact-bullets strong {
     padding-left: 23px;
 }
 
-/* Form container - PROPER 714px WIDTH WITH CENTERING */
+/* Form container - FORCED 714px WIDTH */
 .letterresponse-form-wrapper {
-    max-width: 714px;
+    width: 714px !important; /* Force exact width */
+    max-width: 714px !important;
     margin: 2rem auto;
-    width: 100%;
-    padding: 0 23px; /* 23px left/right spacing */
+    padding: 0; /* Remove padding from container */
     box-sizing: border-box;
 }
 
+/* Form background - padding goes here */
 .letterresponse-form-wrapper form {
     background: #f3f3f3;
-    padding: 2.5rem 0; /* Vertical padding only */
+    padding: 2.5rem 23px; /* 23px left/right padding creates 668px content area */
     border: 1px solid #ced4da;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
@@ -1975,8 +1976,8 @@ ul.wp-block-list.contact-bullets strong {
 /* FIELD CONTAINER - ADD LEFT SPACING */
 .letterresponse-form-wrapper .gfield {
     margin-bottom: 1.5rem;
-    padding-left: 23px; /* LEFT spacing for each field */
-    padding-right: 23px; /* RIGHT spacing for each field */
+    padding-left: 0; /* No extra padding - container handles it */
+    padding-right: 0;
     box-sizing: border-box;
 }
 
@@ -2106,8 +2107,18 @@ ul.wp-block-list.contact-bullets strong {
     width: 322px !important;
     max-width: 100%;
 }
+.honeypot-field {
+    display: none !important;
+    position: absolute !important;
+    left: -9999px !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
 
-/* Submit button */
+/* Submit button - 668px width */
 .page-template-letterresponse .letterresponse-form-wrapper .gform_button {
     background: var(--color-button);
     color: var(--color-text-on-primary);
@@ -2117,13 +2128,13 @@ ul.wp-block-list.contact-bullets strong {
     font-weight: 700;
     border-radius: 0.25rem;
     cursor: pointer;
-    width: 668px; /* EXACT width */
-    max-width: 100%;
+    width: 668px !important; /* Force exact width */
+    max-width: 668px !important;
     text-transform: uppercase;
     transition: all 0.2s ease;
     margin-top: 1rem;
-    margin-left: 23px; /* Align with fields */
-    display: block; /* For proper centering */
+    margin-left: 0; /* Centered by container padding */
+    display: block;
 }
 
 .page-template-letterresponse .letterresponse-form-wrapper .gform_button:hover {
