@@ -2627,14 +2627,14 @@ ul.wp-block-list.contact-bullets strong {
     box-sizing: border-box;
 }
 
-/* HIGH SPECIFICITY INPUT STYLES */
+/* HIGH SPECIFICITY INPUT STYLES - ALL 40px HEIGHT */
 .page-template-step-2 .step-2-form-wrapper input[type="text"],
 .page-template-step-2 .step-2-form-wrapper input[type="tel"],
 .page-template-step-2 .step-2-form-wrapper input[type="email"],
 .page-template-step-2 .step-2-form-wrapper select,
 .page-template-step-2 .step-2-form-wrapper textarea {
     width: 100%;
-    height: 40px;
+    height: 40px !important; /* MANDATORY 40px height */
     padding: 0.5rem 0.75rem;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
@@ -2659,11 +2659,24 @@ ul.wp-block-list.contact-bullets strong {
     box-shadow: 0 0 0 3px rgba(242, 81, 22, 0.25);
 }
 
-/* NAME FIELD LAYOUT */
+/* ==================================================== */
+/* NAME FIELD LAYOUT - 322px + 24px + 322px = 668px */
+/* ==================================================== */
 .page-template-step-2 .step-2-form-wrapper .ginput_container--name {
     display: grid;
     grid-template-columns: 322px 322px;
-    gap: 24px;
+    gap: 24px; /* MANDATORY 24px gap */
+    width: 100%;
+    max-width: 668px;
+}
+
+/* ==================================================== */
+/* EMAIL FIELDS LAYOUT - 322px + 24px + 322px = 668px */
+/* ==================================================== */
+.page-template-step-2 .step-2-form-wrapper .ginput_container_email {
+    display: grid;
+    grid-template-columns: 322px 322px;
+    gap: 24px; /* MANDATORY 24px gap */
     width: 100%;
     max-width: 668px;
 }
@@ -2679,6 +2692,11 @@ ul.wp-block-list.contact-bullets strong {
 .page-template-step-2 .step-2-form-wrapper .ginput_container_address .address_state {
     width: 322px !important;
     max-width: 100%;
+}
+
+/* Hide country field */
+.page-template-step-2 .step-2-form-wrapper input[name="input_7.6"] {
+    display: none;
 }
 
 /* RADIO & CHECKBOX - STACKED VERTICALLY */
@@ -2700,7 +2718,14 @@ ul.wp-block-list.contact-bullets strong {
     width: 100%;
 }
 
-/* Full width fields */
+/* Remove default field widths */
+.page-template-step-2 .step-2-form-wrapper .gfield--width-half,
+.page-template-step-2 .step-2-form-wrapper .gf_left_half,
+.page-template-step-2 .step-2-form-wrapper .gf_right_half {
+    width: 100% !important;
+}
+
+/* Full width single fields */
 .page-template-step-2 .step-2-form-wrapper .gfield--width-full input:not([type="radio"]):not([type="checkbox"]),
 .page-template-step-2 .step-2-form-wrapper .gfield--width-full select,
 .page-template-step-2 .step-2-form-wrapper .gfield--width-full textarea {
@@ -2708,7 +2733,13 @@ ul.wp-block-list.contact-bullets strong {
     max-width: 100%;
 }
 
-/* Submit button */
+/* Half width fields - Lot Size specifically */
+.page-template-step-2 .step-2-form-wrapper input[name="input_10"] {
+    width: 322px !important;
+    max-width: 100%;
+}
+
+/* SUBMIT BUTTON - 668px WIDTH */
 .page-template-step-2 .step-2-form-wrapper .gform_button {
     background: var(--color-button);
     color: var(--color-text-on-primary);
@@ -2718,7 +2749,7 @@ ul.wp-block-list.contact-bullets strong {
     font-weight: 700;
     border-radius: 0.25rem;
     cursor: pointer;
-    width: 668px !important;
+    width: 668px !important; /* MANDATORY width */
     max-width: 668px !important;
     text-transform: uppercase;
     transition: all 0.2s ease;
@@ -2780,13 +2811,15 @@ ul.wp-block-list.contact-bullets strong {
         max-width: 100% !important;
     }
     
-    .page-template-step-2 .step-2-form-wrapper .ginput_container--name {
+    .page-template-step-2 .step-2-form-wrapper .ginput_container--name,
+    .page-template-step-2 .step-2-form-wrapper .ginput_container_email {
         grid-template-columns: 1fr;
         gap: 0.75rem;
     }
     
     .page-template-step-2 .step-2-form-wrapper .gform_button {
         margin-left: 0;
+        width: 100% !important;
     }
     
     .intro-with-image {
