@@ -3104,7 +3104,7 @@ ul.wp-block-list.contact-bullets strong {
     font-family: var(--font-headings);
     font-size: calc(2.25rem + 3px);
     font-weight: 700;
-    text-align: center;
+    text-align: left; /* Changed from center */
     margin: 2rem 0 1rem;
     color: #000000;
 }
@@ -3112,7 +3112,7 @@ ul.wp-block-list.contact-bullets strong {
 .page-template-testimonials .has-text-align-center {
     font-family: var(--font-primary);
     font-size: 18px;
-    text-align: center;
+    text-align: left; /* Changed from center */
     margin: 0 0 2rem;
     color: #000000;
 }
@@ -3144,6 +3144,7 @@ ul.wp-block-list.contact-bullets strong {
     font-weight: 700;
     margin: 0 0 0.5rem;
     color: #000000;
+    text-align: left; /* Added to override center alignment */
 }
 
 /* Five star images */
