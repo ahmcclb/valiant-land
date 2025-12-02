@@ -1607,6 +1607,10 @@ ul.wp-block-list.contact-bullets strong {
     max-width: 600px; /* Slightly narrower for better UX in content flow */
 }
 
+.page-template-sell-land .gfield--type-honeypot .gfield_description {
+    display: none !important;
+}
+
 /* Center align the privacy image */
 .page-template-sell-land .wp-block-image.aligncenter {
     margin: 3rem auto 2rem;
@@ -2974,7 +2978,6 @@ ul.wp-block-list.contact-bullets strong {
         flex-direction: column;
         text-align: center;
     }
-
 }
 /* =========================================
    22. NUMBERED LIST STYLES - LARGE ORANGE CIRCLES
@@ -3071,5 +3074,24 @@ ul.wp-block-list.contact-bullets strong {
     max-width: 600px;
 }
 
+.page-template-how-it-works .gfield--type-honeypot .gfield_description {
+    display: none !important;
+}
 
+/* Privacy Image centering */
+.page-template-how-it-works figure.aligncenter {
+    text-align: center;
+    margin: 3rem auto 2rem;
+}
+
+.page-template-how-it-works figure.aligncenter img {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+/* Phone CTA centering */
+.page-template-how-it-works main > p:last-of-type {
+    text-align: center;
+    margin: 2rem 0;
+}
 
