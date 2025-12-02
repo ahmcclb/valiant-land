@@ -2976,5 +2976,83 @@ ul.wp-block-list.contact-bullets strong {
     }
 
 }
+/* =========================================
+   22. NUMBERED LIST STYLES - LARGE ORANGE CIRCLES
+   ========================================= */
+
+.is-style-list-numbers-lg.wp-block-list {
+    list-style: none;
+    padding-left: 80px;
+    counter-reset: numbered-list;
+    margin: 2rem 0;
+}
+
+.is-style-list-numbers-lg.wp-block-list li {
+    counter-increment: numbered-list;
+    position: relative;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-primary);
+    font-size: 18px; /* 13.5pt */
+    font-weight: 700;
+    line-height: 1.5;
+    color: #000000;
+}
+
+.is-style-list-numbers-lg.wp-block-list li::before {
+    content: counter(numbered-list);
+    position: absolute;
+    left: -80px;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-brand-primary);
+    color: var(--color-text-on-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-primary);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .is-style-list-numbers-lg.wp-block-list {
+        padding-left: 60px;
+    }
+
+    .is-style-list-numbers-lg.wp-block-list li::before {
+        left: -60px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+/* =========================================
+   23. HOW IT WORKS PAGE SPECIFIC STYLES
+   ========================================= */
+
+.page-template-how-it-works .wp-block-separator {
+    border: none;
+    border-top: 2px solid #000000;
+    margin: 2rem auto;
+    max-width: 100px;
+    height: 0;
+    clear: both;
+}
+
+.page-template-how-it-works .has-text-align-center.is-style-h3 {
+    font-family: var(--font-headings);
+    font-size: calc(1.5rem + 3px);
+    font-weight: 700;
+    text-align: center;
+    margin: 2rem 0;
+    color: #000000;
+}
 
 
