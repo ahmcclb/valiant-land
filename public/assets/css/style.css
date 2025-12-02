@@ -3273,9 +3273,23 @@ ul.wp-block-list.contact-bullets strong {
     width: 100%;
 }
 
+/* ===== ALIGN SIDEBAR WITH MAIN IMAGE TOP ===== */
+.page-template-about-us .sidebar {
+    margin-top: 2.5rem; /* Aligns widget top with image top */
+}
+
+.page-template-about-us .sidebar .widget h3 {
+    margin-top: 0; /* Removes h3 top margin for precise alignment */
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
     .page-template-about-us .is-style-h2 {
         font-size: calc(1.75rem + 3px) !important; /* Scales down on mobile */
     }
+    
+    .page-template-about-us .sidebar {
+        margin-top: 0; /* Reset margin on mobile stacking */
+    }
 }
+
