@@ -1548,6 +1548,51 @@ ul.wp-block-list.contact-bullets strong {
     margin: 0 auto;
 }
 /* =========================================
+   16.3 SELL LAND PAGE STYLES
+   ========================================= */
+
+/* Paragraph with H3 styling variant - for callout text */
+.is-style-h3 {
+    font-family: var(--font-headings);
+    font-size: calc(1.5rem + 3px); /* +2pts from base */
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 1.5rem 0;
+    color: #000000 !important;
+    text-align: center;
+}
+
+/* Ensure form in content area uses proper spacing */
+.page-template-sell-land .gform_wrapper {
+    margin: 2rem auto;
+    max-width: 600px; /* Slightly narrower for better UX in content flow */
+}
+
+/* Center align the privacy image */
+.page-template-sell-land .wp-block-image.aligncenter {
+    margin: 3rem auto 2rem;
+}
+
+/* Center the final call to action */
+.page-template-sell-land main > p:last-of-type {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: calc(1.125rem + 3px);
+}
+
+/* Mobile adjustments for sell land page */
+@media (max-width: 768px) {
+    .page-template-sell-land .gform_wrapper {
+        margin: 1.5rem 0;
+        max-width: 100%;
+    }
+    
+    .is-style-h3 {
+        font-size: calc(1.25rem + 3px);
+        line-height: 1.3;
+    }
+}
+/* =========================================
    17. BLOG STYLES - INDEX & POSTS
    ========================================= */
 
@@ -2879,4 +2924,5 @@ ul.wp-block-list.contact-bullets strong {
         flex-direction: column;
         text-align: center;
     }
+
 }
