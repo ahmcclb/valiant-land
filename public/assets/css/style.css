@@ -3037,6 +3037,15 @@ ul.wp-block-list.contact-bullets strong {
    23. HOW IT WORKS PAGE SPECIFIC STYLES
    ========================================= */
 
+/* Body text sizing - 13.5pt (18px) */
+.page-template-how-it-works main p {
+    font-family: var(--font-primary);
+    font-size: 18px !important; /* 13.5pt */
+    line-height: 1.6;
+    color: #000000;
+}
+
+/* Separator styling */
 .page-template-how-it-works .wp-block-separator {
     border: none;
     border-top: 2px solid #000000;
@@ -3046,6 +3055,7 @@ ul.wp-block-list.contact-bullets strong {
     clear: both;
 }
 
+/* Callout text styling */
 .page-template-how-it-works .has-text-align-center.is-style-h3 {
     font-family: var(--font-headings);
     font-size: calc(1.5rem + 3px);
@@ -3054,5 +3064,12 @@ ul.wp-block-list.contact-bullets strong {
     margin: 2rem 0;
     color: #000000;
 }
+
+/* Form container width - constrain to 600px like sell-your-land.html */
+.page-template-how-it-works .gform_wrapper {
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
 
 
