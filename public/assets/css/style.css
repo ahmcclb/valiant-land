@@ -1550,8 +1550,11 @@ ul.wp-block-list.contact-bullets strong {
 /* =========================================
    16.3 SELL LAND PAGE STYLES
    ========================================= */
+
+
 /* Fix font size to 13.5pt (18px) for sell land page content */
 .page-template-sell-land main p {
+    font-family: var(--font-primary);
     font-size: 18px !important; /* 13.5pt equivalent */
     line-height: 1.6 !important;
 }
@@ -1564,11 +1567,20 @@ ul.wp-block-list.contact-bullets strong {
 }
 
 .page-template-sell-land .wp-block-list.contact-bullets li {
+    font-family: var(--font-primary);
     font-size: 18px !important; /* 13.5pt equivalent */
     line-height: 1.6 !important;
     padding: 0.5rem 0 !important;
     border-bottom: none !important;
+    margin-left: 0 !important;
 }
+
+/* Left-align the h2 and is-style-h3 on sell land page */
+.page-template-sell-land h2.wp-block-heading {
+    font-family: var(--font-headings);
+    text-align: left !important;
+}
+
 /* Paragraph with H3 styling variant - for callout text */
 .is-style-h3 {
     font-family: var(--font-headings);
@@ -1578,6 +1590,15 @@ ul.wp-block-list.contact-bullets strong {
     margin: 1.5rem 0;
     color: #000000 !important;
     text-align: center;
+}
+.page-template-sell-land .is-style-h3 {
+    font-family: var(--font-headings);
+    font-size: calc(1.5rem + 3px); /* +2pts from base */
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 1.5rem 0;
+    color: #000000 !important;
+    text-align: left !important; /* Changed from center */
 }
 
 /* Ensure form in content area uses proper spacing */
@@ -1589,6 +1610,16 @@ ul.wp-block-list.contact-bullets strong {
 /* Center align the privacy image */
 .page-template-sell-land .wp-block-image.aligncenter {
     margin: 3rem auto 2rem;
+}
+/* Fix privacy image centering */
+.page-template-sell-land figure.aligncenter {
+    text-align: center;
+    margin: 3rem auto 2rem;
+}
+
+.page-template-sell-land figure.aligncenter img {
+    display: inline-block;
+    margin: 0 auto;
 }
 
 /* Center the final call to action */
@@ -1605,11 +1636,12 @@ ul.wp-block-list.contact-bullets strong {
         max-width: 100%;
     }
     
-    .is-style-h3 {
+    .page-template-sell-land .is-style-h3 {
         font-size: calc(1.25rem + 3px);
         line-height: 1.3;
     }
 }
+
 /* =========================================
    17. BLOG STYLES - INDEX & POSTS
    ========================================= */
@@ -2944,4 +2976,5 @@ ul.wp-block-list.contact-bullets strong {
     }
 
 }
+
 
