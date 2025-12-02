@@ -1516,6 +1516,38 @@ ul.wp-block-list.contact-bullets strong {
     }
 }
 /* =========================================
+   16.2 CONTACT SUCCESS MESSAGE
+   ========================================= */
+
+.contact-success-message {
+    font-family: var(--font-headings);
+    font-size: 23.5pt;
+    font-weight: 700;
+    color: var(--color-brand-primary);
+    text-align: center;
+    margin: 4rem auto;
+    padding: 3rem 2rem;
+    max-width: 800px;
+    display: none; /* Hidden until form submission */
+    line-height: 1.3;
+}
+
+.contact-success-message.show {
+    display: block;
+}
+
+/* Hide form when submitted */
+.contact-page-layout.form-submitted .contact-form-column {
+    display: none;
+}
+
+/* Maintain spacing when form is hidden */
+.contact-page-layout.form-submitted .contact-text-column {
+    grid-column: 1 / -1; /* Span full width */
+    max-width: 800px;
+    margin: 0 auto;
+}
+/* =========================================
    17. BLOG STYLES - INDEX & POSTS
    ========================================= */
 
