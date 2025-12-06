@@ -7,21 +7,11 @@
    ========================================= */
 
 /* Source Sans Pro - Variable Font */
-@font-face {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 400 700;
-    font-display: swap;
-    src: url('https://cdn.carrot.com/fonts/source-sans-pro/v21/variable.woff2') format('woff2');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap');
 }
 
 /* Open Sans - Variable Font */
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400 700;
-    font-display: swap;
-    src: url('https://cdn.carrot.com/fonts/open-sans/v29/variable.woff2') format('woff2');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap');
 }
 
 /* =========================================
@@ -343,7 +333,7 @@ strong, b {
     align-items: center;
     justify-content: center;
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                url('https://image-cdn.carrot.com/eyJidWNrZXQiOiJwcm9kdWN0aW9uLmNhcnJvdC11cGxvYWRzLm9uY2Fycm90LmNvbSIsImtleSI6InVwbG9hZHMvc2l0ZXMvNzEwOTcvMjAyMi8xMi9sYW5kc2t5MmEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo0ODB9LCJ0b0Zvcm1hdCI6IndlYnAifX0=');
+                url(/assets/images/landsky2a.jpg);
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -3204,7 +3194,6 @@ ul.wp-block-list.contact-bullets strong {
         align-items: flex-start;
     }
 }
-
 /* =========================================
    25. ABOUT US PAGE SPECIFIC STYLES
    ========================================= */
