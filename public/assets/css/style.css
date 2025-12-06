@@ -2256,17 +2256,21 @@ ul.wp-block-list.contact-bullets strong {
         font-size: calc(1.125rem + 3px);
     }
     
+    /* ✅ FIX: Make wrapper responsive */
     .letterresponse-form-wrapper {
-        max-width: 100%;
-        margin: 1rem 0;
-        padding: 0 1rem;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 1rem 0 !important;
+        padding: 0 1rem !important;
     }
     
-    .letterresponse-form-wrapper .gfield {
-        padding-left: 1rem;
-        padding-right: 1rem;
+    /* ✅ FIX: Adjust form padding */
+    .letterresponse-form-wrapper form {
+        width: 100% !important;
+        padding: 1.5rem !important;
     }
     
+    /* ✅ FIX: Make all inputs full width */
     .page-template-letterresponse .letterresponse-form-wrapper input,
     .page-template-letterresponse .letterresponse-form-wrapper select,
     .page-template-letterresponse .letterresponse-form-wrapper textarea,
@@ -2277,15 +2281,19 @@ ul.wp-block-list.contact-bullets strong {
         max-width: 100% !important;
     }
     
+    /* ✅ FIX: Stack name fields */
     .page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name,
     .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container--name {
-        grid-template-columns: 1fr;
-        gap: 0.75rem;
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem !important;
     }
     
+    /* ✅ FIX: Full width button */
     .page-template-letterresponse .letterresponse-form-wrapper .gform_button,
     .page-template-letterresponse-2 .letterresponse-form-wrapper .gform_button {
-        margin-left: 0;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
     }
 }
 /* =========================================
@@ -2884,17 +2892,19 @@ ul.wp-block-list.contact-bullets strong {
         padding: 1rem !important;
     }
     
-    .page-template-step-2 .step-2-form-wrapper {
+    .step-2-form-wrapper {
         width: 100% !important;
         max-width: 100% !important;
         margin: 1rem 0 !important;
         padding: 0 1rem !important;
     }
     
-    .page-template-step-2 .step-2-form-wrapper form {
+    .step-2-form-wrapper form {
+        width: 100% !important;
         padding: 1.5rem !important;
     }
     
+    /* ✅ FIX: Make all inputs full width */
     .page-template-step-2 form[name="step-2-land-offer"] input,
     .page-template-step-2 form[name="step-2-land-offer"] select,
     .page-template-step-2 form[name="step-2-land-offer"] textarea {
@@ -2902,12 +2912,14 @@ ul.wp-block-list.contact-bullets strong {
         max-width: 100% !important;
     }
     
+    /* ✅ FIX: Stack name/email pairs */
     .page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name,
     .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email {
         grid-template-columns: 1fr !important;
-        gap: 0.75rem !important; /* 12px mobile gap */
+        gap: 0.75rem !important;
     }
     
+    /* ✅ FIX: Full width button */
     .page-template-step-2 .step-2-form-wrapper .gform_button {
         width: 100% !important;
     }
@@ -3372,4 +3384,5 @@ main figure.wp-block-image img {
     .wp-block-column figure.wp-block-image {
         margin: 1rem 0;
     }
+
 }
