@@ -2384,6 +2384,67 @@ ul.wp-block-list.contact-bullets strong {
         padding: 1rem !important;
     }
 }
+@media (max-width: 768px) {
+    /* ... keep existing mobile styles ... */
+    
+    /* ✅ FIX #1: Center form and privacy images */
+    .page-template-letterresponse .content-wrap .main,
+    .page-template-letterresponse-2 .content-wrap .main {
+        text-align: center; /* Center inline-block children */
+    }
+    
+    .page-template-letterresponse .letterresponse-form-wrapper,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper {
+        display: inline-block; /* Shrink-to-fit for centering */
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 1rem auto !important;
+        padding: 0 1rem !important;
+    }
+    
+    .page-template-letterresponse .letterresponse-form-wrapper form,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper form {
+        text-align: left; /* Reset form content to left-aligned */
+        width: 100% !important;
+        padding: 1.5rem !important;
+    }
+    
+    .page-template-letterresponse .wp-block-image.aligncenter,
+    .page-template-letterresponse-2 .wp-block-image.aligncenter {
+        display: block !important;
+        text-align: center !important;
+        margin: 2rem auto !important;
+        width: 100% !important;
+    }
+    
+    /* ✅ FIX #2: Name field width blowout */
+    /* Force container to 100% */
+    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container--name {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* CRITICAL: Override input widths inside name fields */
+    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name input[type="text"],
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container--name input[type="text"] {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Same for email container if present */
+    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container_email,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container_email {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+
 /* =========================================
    20. THANK YOU PAGE STYLES (letterresponse)
    ========================================= */
@@ -3083,6 +3144,52 @@ ul.wp-block-list.contact-bullets strong {
         padding: 1rem !important;
     }
 }
+@media (max-width: 768px) {
+    /* ... keep existing mobile styles ... */
+    
+    /* ✅ FIX #1: Center form */
+    .page-template-step-2 .content-wrap .main {
+        text-align: center; /* Center children */
+    }
+    
+    .page-template-step-2 .step-2-form-wrapper {
+        display: inline-block;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 1rem auto !important;
+        padding: 0 1rem !important;
+    }
+    
+    .page-template-step-2 .step-2-form-wrapper form {
+        text-align: left; /* Reset form content */
+        width: 100% !important;
+        padding: 1.5rem !important;
+    }
+    
+    .page-template-step-2 .wp-block-image.aligncenter {
+        display: block !important;
+        text-align: center !important;
+        margin: 2rem auto !important;
+        width: 100% !important;
+    }
+    
+    /* ✅ FIX #2: Name field width */
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name,
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* CRITICAL: Target inputs inside the grid */
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name input,
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email input {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
 /* =========================================
    22. NUMBERED LIST STYLES - LARGE ORANGE CIRCLES
    ========================================= */
@@ -3540,6 +3647,7 @@ main figure.wp-block-image img {
     }
 
 }
+
 
 
 
