@@ -1700,11 +1700,6 @@ ul.wp-block-list.contact-bullets strong {
     margin-bottom: 2rem;
 }
 
-/* Sidebar - CONSOLIDATED RULE */
-.sidebar {
-    padding: 0;
-    margin-top: 2.5rem; /* CONSOLIDATED: Aligns widget top with main content */
-}
 
 .sidebar .widget {
     background: #f8f9fa;
@@ -1906,7 +1901,7 @@ ul.wp-block-list.contact-bullets strong {
 }
 
 /* =========================================
-   18. RESPONSIVE BLOG STYLES
+   18. RESPONSIVE BLOG STYLES - MOBILE-ONLY
    ========================================= */
 
 @media (max-width: 768px) {
@@ -1916,22 +1911,17 @@ ul.wp-block-list.contact-bullets strong {
     }
     
     .sidebar {
-        order: 2;
+        order: 2;           /* Move sidebar below main content */
+        margin-top: 0 !important;  /* Reset desktop margin */
+        padding: 0;         /* Maintain padding reset */
     }
     
     .sidebar .widget {
-        padding: 1rem;
+        padding: 1rem;      /* Reduce padding on mobile */
     }
     
     .entry-title {
         font-size: calc(1.5rem + 3px);
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .blog-layout {
-        grid-template-columns: 3fr 2fr;
-        gap: 2rem;
     }
 }
 /* =========================================
