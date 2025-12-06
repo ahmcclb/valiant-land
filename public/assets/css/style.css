@@ -1010,143 +1010,76 @@ hr.wp-block-separator.has-alpha-channel-opacity {
 /* =========================================
    9. MOBILE RESPONSIVE
    ========================================= */
-/* =========================================
-   9. MOBILE RESPONSIVE (PHASE 5 - CONSOLIDATED FIXES)
-   ========================================= */
-
 @media (max-width: 768px) {
-    
-    /* CRITICAL: Override ALL form container widths */
-    .page-template-letterresponse .letterresponse-form-wrapper,
-    .page-template-letterresponse-2 .letterresponse-form-wrapper,
-    .page-template-step-2 .step-2-form-wrapper {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 1rem auto !important;
-        padding: 0 1rem !important;
-    }
-    
-    .page-template-letterresponse .letterresponse-form-wrapper form,
-    .page-template-letterresponse-2 .letterresponse-form-wrapper form,
-    .page-template-step-2 .step-2-form-wrapper form {
-        padding: 1.5rem !important;
-        width: 100% !important;
-    }
-    
-    /* CRITICAL: Constrain ALL input containers to prevent overflow */
-    .page-template-letterresponse .ginput_container_radio,
-    .page-template-letterresponse-2 .ginput_container_radio,
-    .page-template-step-2 .ginput_container_radio,
-    .page-template-letterresponse .ginput_container_address,
-    .page-template-letterresponse-2 .ginput_container_address,
-    .page-template-step-2 .ginput_container_address,
-    .page-template-letterresponse .ginput_container--name,
-    .page-template-letterresponse-2 .ginput_container--name,
-    .page-template-step-2 .step-2-form-wrapper .ginput_container--name,
-    .page-template-step-2 .step-2-form-wrapper .ginput_container_email {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-    
-    /* CRITICAL: Stack grid fields vertically */
-    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name,
-    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container--name,
-    .page-template-step-2 .step-2-form-wrapper .ginput_container--name,
-    .page-template-step-2 .step-2-form-wrapper .ginput_container_email {
-        grid-template-columns: 1fr !important;
-        gap: 0.75rem !important;
-    }
-    
-    /* CRITICAL: Fix radio/checkbox containers */
-    .page-template-letterresponse .gfield_radio,
-    .page-template-letterresponse-2 .gfield_radio,
-    .page-template-step-2 .gfield_radio,
-    .page-template-letterresponse .gfield_checkbox,
-    .page-template-letterresponse-2 .gfield_checkbox,
-    .page-template-step-2 .gfield_checkbox {
-        max-width: 100% !important;
-        width: 100% !important;
-        gap: 0.75rem !important;
-    }
-    
-    /* CRITICAL: Fix radio label spacing */
-    .page-template-letterresponse .gfield_radio li.gchoice,
-    .page-template-letterresponse-2 .gfield_radio li.gchoice,
-    .page-template-step-2 .gfield_radio li.gchoice,
-    .page-template-letterresponse .gfield_checkbox li.gchoice,
-    .page-template-letterresponse-2 .gfield_checkbox li.gchoice,
-    .page-template-step-2 .gfield_checkbox li.gchoice {
-        gap: 0.75rem !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 0 !important; /* Remove default <li> padding */
-        margin: 0 !important; /* Remove default <li> margin */
-    }
-    
-    /* CRITICAL: Force ALL inputs to 100% */
-    .page-template-letterresponse .letterresponse-form-wrapper input,
-    .page-template-letterresponse-2 .letterresponse-form-wrapper input,
-    .page-template-step-2 .step-2-form-wrapper input,
-    .page-template-letterresponse .letterresponse-form-wrapper select,
-    .page-template-letterresponse-2 .letterresponse-form-wrapper select,
-    .page-template-step-2 .step-2-form-wrapper select,
-    .page-template-letterresponse .letterresponse-form-wrapper textarea,
-    .page-template-letterresponse-2 .letterresponse-form-wrapper textarea,
-    .page-template-step-2 .step-2-form-wrapper textarea {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-    
-    /* CRITICAL: Submit button width */
-    .page-template-letterresponse .letterresponse-form-wrapper .gform_button,
-    .page-template-letterresponse-2 .letterresponse-form-wrapper .gform_button,
-    .page-template-step-2 .step-2-form-wrapper .gform_button {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin-left: 0 !important;
-        font-size: 1rem !important;
-        padding: 0.75rem 1rem !important;
-    }
-    
-    /* Center privacy images */
-    .page-template-letterresponse .wp-block-image.aligncenter,
-    .page-template-letterresponse-2 .wp-block-image.aligncenter,
-    .page-template-step-2 .wp-block-image.aligncenter {
-        text-align: center !important;
-        margin: 2rem auto !important;
-    }
-    
-    /* Stack intro images */
-    .page-template-letterresponse .intro-with-image,
-    .page-template-letterresponse-2 .intro-with-image,
-    .page-template-step-2 .intro-with-image {
-        flex-direction: column !important;
-        text-align: center !important;
-    }
-    
-    .page-template-letterresponse .representative-image,
-    .page-template-letterresponse-2 .representative-image,
-    .page-template-step-2 .representative-image {
-        margin: 0 auto 1rem !important;
-    }
-    
-    /* Center form titles */
-    .page-template-letterresponse .letterresponse-form-title,
-    .page-template-letterresponse-2 .letterresponse-form-title,
-    .page-template-step-2 .step-2-form-title,
-    .page-template-letterresponse .letterresponse-form-subtitle,
-    .page-template-letterresponse-2 .letterresponse-form-subtitle,
-    .page-template-step-2 .step-2-form-subtitle {
-        padding-left: 0 !important;
-        text-align: center !important;
-    }
-}
 
-@media (max-width: 480px) {
-    .page-template-letterresponse .letterresponse-form-wrapper form,
-    .page-template-letterresponse-2 .letterresponse-form-wrapper form,
-    .page-template-step-2 .step-2-form-wrapper form {
-        padding: 1rem !important;
+    /* Force nav-top to show on mobile */
+    .banner--isDefault .nav-top {
+        display: block !important;
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+    
+    .banner--isDefault .nav-top ul {
+        justify-content: center;
+        height: auto;
+    }
+    .banner--isDefault .nav-top {
+        display: none;
+    }
+    
+    .banner--isDefault .brand-container {
+        float: none;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .banner--isDefault .navbar-toggler {
+        display: block;
+    }
+    
+    .banner--isDefault .navbar-collapse {
+        display: none;
+        width: 100%;
+        background: var(--color-brand-primary);
+        margin: 0 -16px;
+        padding: 0 16px;
+    }
+    
+    .banner--isDefault .navbar-collapse.show {
+        display: block;
+    }
+    
+    .banner--isDefault .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .banner--isDefault .nav-link {
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .banner--isDefault .contact-row {
+        float: none;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+    
+    .hero-content-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .wp-block-columns {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .nav-footer ul {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 }
 
@@ -2308,7 +2241,71 @@ ul.wp-block-list.contact-bullets strong {
     display: inline-block;
 }
 
-
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .page-template-letterresponse .content-wrap > .main,
+    .page-template-letterresponse-2 .content-wrap > .main {
+        padding: 1rem;
+    }
+    
+    .letterresponse-intro h3 {
+        font-size: calc(1.5rem + 3px);
+    }
+    
+    .spanish-link-container a {
+        font-size: calc(1.125rem + 3px);
+    }
+    
+    /* ✅ FIX: Center form wrapper */
+    .letterresponse-form-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 1rem auto !important;
+        padding: 0 1rem !important;
+    }
+    
+    .letterresponse-form-wrapper form {
+        width: 100% !important;
+        padding: 1.5rem !important;
+    }
+    
+    /* ✅ FIX: All inputs full width */
+    .page-template-letterresponse .letterresponse-form-wrapper input,
+    .page-template-letterresponse .letterresponse-form-wrapper select,
+    .page-template-letterresponse .letterresponse-form-wrapper textarea,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper input,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper select,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper textarea {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* ✅ FIX: Name fields match other inputs */
+    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container--name {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem !important;
+    }
+    
+    /* ✅ FIX: Radio label spacing */
+    .gchoice {
+        gap: 0.5rem !important;
+    }
+    
+    /* ✅ FIX: Full width button */
+    .letterresponse-form-wrapper .gform_button {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+    }
+    
+    /* ✅ FIX: Center privacy image */
+    .page-template-letterresponse .wp-block-image.aligncenter,
+    .page-template-letterresponse-2 .wp-block-image.aligncenter {
+        margin: 2rem auto !important;
+        text-align: center !important;
+    }
+}
 /* =========================================
    20. THANK YOU PAGE STYLES (letterresponse)
    ========================================= */
@@ -2899,7 +2896,57 @@ ul.wp-block-list.contact-bullets strong {
     display: inline-block;
 }
 
-
+/* ========== MOBILE RESPONSIVE - ≤768px ========== */
+@media (max-width: 768px) {
+    .page-template-step-2 .content-wrap > .main {
+        padding: 1rem !important;
+    }
+    
+    /* ✅ FIX: Center form wrapper */
+    .step-2-form-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 1rem auto !important;
+        padding: 0 1rem !important;
+    }
+    
+    .step-2-form-wrapper form {
+        width: 100% !important;
+        padding: 1.5rem !important;
+    }
+    
+    /* ✅ FIX: All inputs full width */
+    .page-template-step-2 form[name="step-2-land-offer"] input,
+    .page-template-step-2 form[name="step-2-land-offer"] select,
+    .page-template-step-2 form[name="step-2-land-offer"] textarea {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* ✅ FIX: Stack name/email fields */
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name,
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem !important;
+    }
+    
+    /* ✅ FIX: Full width button */
+    .page-template-step-2 .step-2-form-wrapper .gform_button {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* ✅ FIX: Center privacy image */
+    .page-template-step-2 .wp-block-image.aligncenter {
+        margin: 2rem auto !important;
+        text-align: center !important;
+    }
+    
+    .intro-with-image {
+        flex-direction: column;
+        text-align: center;
+    }
+}
 /* =========================================
    22. NUMBERED LIST STYLES - LARGE ORANGE CIRCLES
    ========================================= */
@@ -3357,6 +3404,5 @@ main figure.wp-block-image img {
     }
 
 }
-
 
 
