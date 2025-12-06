@@ -2243,67 +2243,145 @@ ul.wp-block-list.contact-bullets strong {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    /* Layout */
     .page-template-letterresponse .content-wrap > .main,
     .page-template-letterresponse-2 .content-wrap > .main {
         padding: 1rem;
     }
     
-    .letterresponse-intro h3 {
+    .page-template-letterresponse .letterresponse-intro h3,
+    .page-template-letterresponse-2 .letterresponse-intro h3 {
         font-size: calc(1.5rem + 3px);
     }
     
-    .spanish-link-container a {
+    .page-template-letterresponse .spanish-link-container a,
+    .page-template-letterresponse-2 .spanish-link-container a {
         font-size: calc(1.125rem + 3px);
     }
     
-    /* ✅ FIX: Center form wrapper */
-    .letterresponse-form-wrapper {
+    /* Center form container */
+    .page-template-letterresponse .letterresponse-form-wrapper,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper {
         width: 100% !important;
         max-width: 100% !important;
         margin: 1rem auto !important;
         padding: 0 1rem !important;
     }
     
-    .letterresponse-form-wrapper form {
+    .page-template-letterresponse .letterresponse-form-wrapper form,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper form {
         width: 100% !important;
         padding: 1.5rem !important;
     }
     
-    /* ✅ FIX: All inputs full width */
-    .page-template-letterresponse .letterresponse-form-wrapper input,
+    /* Fix ALL input widths */
+    .page-template-letterresponse .letterresponse-form-wrapper input[type="text"],
+    .page-template-letterresponse .letterresponse-form-wrapper input[type="tel"],
+    .page-template-letterresponse .letterresponse-form-wrapper input[type="email"],
     .page-template-letterresponse .letterresponse-form-wrapper select,
     .page-template-letterresponse .letterresponse-form-wrapper textarea,
-    .page-template-letterresponse-2 .letterresponse-form-wrapper input,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper input[type="text"],
+    .page-template-letterresponse-2 .letterresponse-form-wrapper input[type="tel"],
+    .page-template-letterresponse-2 .letterresponse-form-wrapper input[type="email"],
     .page-template-letterresponse-2 .letterresponse-form-wrapper select,
     .page-template-letterresponse-2 .letterresponse-form-wrapper textarea {
         width: 100% !important;
         max-width: 100% !important;
     }
     
-    /* ✅ FIX: Name fields match other inputs */
+    /* Stack name fields */
     .page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name,
     .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container--name {
         grid-template-columns: 1fr !important;
         gap: 0.75rem !important;
+        width: 100% !important;
     }
     
-    /* ✅ FIX: Radio label spacing */
-    .gchoice {
-        gap: 0.5rem !important;
+    /* Stack email fields */
+    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container_email,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container_email {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem !important;
+        width: 100% !important;
     }
     
-    /* ✅ FIX: Full width button */
-    .letterresponse-form-wrapper .gform_button {
+    /* Fix radio/checkbox containers */
+    .page-template-letterresponse .letterresponse-form-wrapper .gfield_radio,
+    .page-template-letterresponse .letterresponse-form-wrapper .gfield_checkbox,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .gfield_radio,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .gfield_checkbox {
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 0.75rem !important;
+    }
+    
+    /* Fix radio label spacing */
+    .page-template-letterresponse .letterresponse-form-wrapper .gchoice,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .gchoice {
+        gap: 0.75rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Stack address fields */
+    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container_address .address_city,
+    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container_address .address_state,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container_address .address_city,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container_address .address_state {
+        display: block !important;
+        width: 100% !important;
+        margin-right: 0 !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container_address .address_zip,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container_address .address_zip {
+        margin-top: 0 !important;
+    }
+    
+    /* Fix submit button */
+    .page-template-letterresponse .letterresponse-form-wrapper .gform_button,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .gform_button {
         width: 100% !important;
         max-width: 100% !important;
         margin-left: 0 !important;
+        font-size: 1rem !important;
+        padding: 0.75rem 1rem !important;
     }
     
-    /* ✅ FIX: Center privacy image */
+    /* Center privacy images */
     .page-template-letterresponse .wp-block-image.aligncenter,
     .page-template-letterresponse-2 .wp-block-image.aligncenter {
-        margin: 2rem auto !important;
         text-align: center !important;
+        margin: 2rem auto !important;
+    }
+    
+    /* Center form titles */
+    .page-template-letterresponse .letterresponse-form-title,
+    .page-template-letterresponse-2 .letterresponse-form-title,
+    .page-template-letterresponse .letterresponse-form-subtitle,
+    .page-template-letterresponse-2 .letterresponse-form-subtitle {
+        padding-left: 0 !important;
+        text-align: center !important;
+    }
+    
+    /* Stack intro image */
+    .page-template-letterresponse .intro-with-image,
+    .page-template-letterresponse-2 .intro-with-image {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    
+    .page-template-letterresponse .representative-image,
+    .page-template-letterresponse-2 .representative-image {
+        margin: 0 auto 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-template-letterresponse .letterresponse-form-wrapper form,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper form {
+        padding: 1rem !important;
     }
 }
 /* =========================================
@@ -2902,49 +2980,107 @@ ul.wp-block-list.contact-bullets strong {
         padding: 1rem !important;
     }
     
-    /* ✅ FIX: Center form wrapper */
-    .step-2-form-wrapper {
+    /* Center form container */
+    .page-template-step-2 .step-2-form-wrapper {
         width: 100% !important;
         max-width: 100% !important;
         margin: 1rem auto !important;
         padding: 0 1rem !important;
     }
     
-    .step-2-form-wrapper form {
+    .page-template-step-2 .step-2-form-wrapper form {
         width: 100% !important;
         padding: 1.5rem !important;
     }
     
-    /* ✅ FIX: All inputs full width */
-    .page-template-step-2 form[name="step-2-land-offer"] input,
+    /* Fix ALL input widths */
+    .page-template-step-2 form[name="step-2-land-offer"] input[type="text"],
+    .page-template-step-2 form[name="step-2-land-offer"] input[type="tel"],
+    .page-template-step-2 form[name="step-2-land-offer"] input[type="email"],
     .page-template-step-2 form[name="step-2-land-offer"] select,
     .page-template-step-2 form[name="step-2-land-offer"] textarea {
         width: 100% !important;
         max-width: 100% !important;
     }
     
-    /* ✅ FIX: Stack name/email fields */
-    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name,
+    /* Stack name fields */
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem !important;
+        width: 100% !important;
+    }
+    
+    /* Stack email fields */
     .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email {
         grid-template-columns: 1fr !important;
         gap: 0.75rem !important;
+        width: 100% !important;
     }
     
-    /* ✅ FIX: Full width button */
-    .page-template-step-2 .step-2-form-wrapper .gform_button {
+    /* Fix radio/checkbox containers */
+    .page-template-step-2 form[name="step-2-land-offer"] .gfield_radio,
+    .page-template-step-2 form[name="step-2-land-offer"] .gfield_checkbox {
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 0.75rem !important;
+    }
+    
+    /* Fix radio label spacing */
+    .page-template-step-2 form[name="step-2-land-offer"] .gchoice {
+        gap: 0.75rem !important;
         width: 100% !important;
         max-width: 100% !important;
     }
     
-    /* ✅ FIX: Center privacy image */
+    /* Stack address fields */
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_address .address_city,
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_address .address_state {
+        display: block !important;
+        width: 100% !important;
+        margin-right: 0 !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_address .address_zip {
+        margin-top: 0 !important;
+    }
+    
+    /* Fix submit button */
+    .page-template-step-2 .step-2-form-wrapper .gform_button {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        font-size: 1rem !important;
+        padding: 0.75rem 1rem !important;
+    }
+    
+    /* Center privacy images */
     .page-template-step-2 .wp-block-image.aligncenter {
+        text-align: center !important;
         margin: 2rem auto !important;
+    }
+    
+    /* Center form titles */
+    .page-template-step-2 .step-2-form-title,
+    .page-template-step-2 .step-2-form-subtitle {
+        padding-left: 0 !important;
         text-align: center !important;
     }
     
-    .intro-with-image {
-        flex-direction: column;
-        text-align: center;
+    /* Stack intro image */
+    .page-template-step-2 .intro-with-image {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    
+    .page-template-step-2 .representative-image {
+        margin: 0 auto 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-template-step-2 .step-2-form-wrapper form {
+        padding: 1rem !important;
     }
 }
 /* =========================================
@@ -3404,5 +3540,6 @@ main figure.wp-block-image img {
     }
 
 }
+
 
 
