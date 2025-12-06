@@ -9,7 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap');
 
 /* =========================================
-   1. ROOT VARIABLES (Brand System)
+   1. ROOT VARIABLES (Brand System) - CONSOLIDATED
    ========================================= */
 :root {
     /* Brand Colors - ORANGE RESTORED */
@@ -31,11 +31,16 @@
     --color-link: #097db2;
     --color-link-hover: #075b81;
     
-    /* Spacing & Layout */
+    /* Spacing & Layout - CONSOLIDATED */
     --brand-spacing: 1rem;
     --logo-maw: 100%;
     --banner-nav-primary-tt: uppercase;
     --banner-nav-top-tt: uppercase;
+    --field-height: 40px;
+    --form-container-width: 714px;
+    --form-content-width: 668px;
+    --form-padding: 23px;
+    --grid-gap: 24px;
 }
 
 @media (min-width: 630px) {
@@ -90,7 +95,7 @@ strong, b {
 }
 
 /* =========================================
-   4. BANNER/HEADER
+   4. BANNER/HEADER - BANNER POSITION FIXED
    ========================================= */
 .banner {
     background: #fff;
@@ -136,26 +141,6 @@ strong, b {
     transition: color 0.2s ease;
     text-decoration: none;
     font-size: 18px !important;
-}
-
-#menu-header-navigation .menu-item:first-child a {
-    color: #065B81 !important;
-    font-weight: 700;
-}
-
-#menu-header-navigation .menu-item:first-child a b {
-    color: #065B81 !important;
-    font-weight: 700;
-}
-
-#menu-header-navigation .menu-item:nth-child(2) a,
-#menu-header-navigation .menu-item:nth-child(3) a {
-    color: #009ED3 !important;
-    font-weight: 500;
-}
-
-#menu-header-navigation .menu-item a:hover {
-    color: var(--color-brand-primary) !important;
 }
 
 .banner--isDefault .nav-top ul {
@@ -245,13 +230,13 @@ strong, b {
 }
 
 /* =========================================
-   5. PRIMARY NAVBAR
+   5. PRIMARY NAVBAR - BANNER POSITION FIXED
    ========================================= */
 .nav-primary {
     clear: both;
     background: var(--color-brand-primary);
     padding: 0;
-    margin-top: 1rem;
+    margin-top: 0.25rem; /* REDUCED from 1rem for 30px shift */
     width: 100%;
     height: 54px;
 }
@@ -527,7 +512,7 @@ strong, b {
 }
 
 /* =========================================
-   7. MAIN CONTENT - WordPress Block Styles
+   7. MAIN CONTENT - ENFORCED BODY TEXT SIZING
    ========================================= */
 
 /* Content Wrap */
@@ -543,25 +528,19 @@ strong, b {
     padding: 2rem 1rem;
 }
 
-/* Banner Image */
-.content-wrap figure.wp-block-image {
-    text-align: center;
-    margin: 2rem 0;
-}
-
-.content-wrap figure.wp-block-image img {
-    max-width: 100%;
-    height: auto;
-    display: inline-block;
-}
-
-/* Base Typography - ALL BLACK */
+/* Base Typography - ALL BLACK, 13.5pt ENFORCED */
 .content-wrap p,
 .content-wrap li,
 .content-wrap h2,
 .content-wrap h3,
 .content-wrap strong {
     color: #000000 !important;
+}
+
+.content-wrap p {
+    font-family: var(--font-primary);
+    font-size: calc(1rem + 3px) !important; /* ENFORCED 13.5pt */
+    line-height: 1.5 !important; /* LOCKED */
 }
 
 /* Base Heading Styles */
@@ -610,7 +589,7 @@ ul.wp-block-list {
     padding: 0.75rem 0;
     border-bottom: 1px solid #e9ecef;
     line-height: 1.5;
-    font-size: calc(1rem + 3px); /* +2pts */
+    font-size: calc(1rem + 3px); /* ENFORCED */
 }
 
 .wp-block-list li:last-child {
@@ -667,7 +646,7 @@ ul.wp-block-list {
 .wp-block-columns .wp-block-list li {
     border: none;
     padding: 0.25rem 0;
-    font-size: calc(1rem + 3px); /* +2pts */
+    font-size: calc(1rem + 3px); /* ENFORCED */
 }
 
 /* Content Form Wrapper - MATCHES HERO FORM */
@@ -678,7 +657,6 @@ ul.wp-block-list {
     margin: 3rem auto;
     border: 1px solid #ced4da; /* Hairline border */
     border-radius: 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .gform-wrapper {
@@ -706,7 +684,7 @@ ul.wp-block-list {
 
 .gform_description {
     font-family: var(--font-primary);
-    font-size: calc(1rem + 3px); /* +2pts */
+    font-size: calc(1rem + 3px); /* ENFORCED */
     color: #000000;
     line-height: 1.4;
 }
@@ -730,7 +708,7 @@ ul.wp-block-list {
 
 .gfield_label {
     font-family: var(--font-headings);
-    font-size: calc(1rem + 3px); /* +2pts */
+    font-size: calc(1rem + 3px) !important; /* ENFORCED */
     font-weight: 600;
     color: #000000;
     display: block;
@@ -786,7 +764,7 @@ ul.wp-block-list {
     padding: 0.75rem;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
-    font-size: calc(1rem + 3px); /* +2pts */
+    font-size: calc(1rem + 3px) !important; /* ENFORCED */
     font-family: var(--font-primary);
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
@@ -805,7 +783,7 @@ ul.wp-block-list {
 /* Sub Labels */
 .gform-field-label--type-sub {
     font-family: var(--font-primary);
-    font-size: calc(0.875rem + 2px); /* +2pts */
+    font-size: calc(0.875rem + 2px) !important; /* ENFORCED */
     font-weight: 400;
     display: block;
     margin-top: 0.25rem;
@@ -815,7 +793,7 @@ ul.wp-block-list {
 /* Field Description */
 .gfield_description {
     font-family: var(--font-primary);
-    font-size: calc(0.875rem + 2px); /* +2pts */
+    font-size: calc(0.875rem + 2px); /* ENFORCED */
     color: #6c757d;
     margin-top: 0.25rem;
 }
@@ -826,7 +804,7 @@ ul.wp-block-list {
     color: var(--color-text-on-primary);
     border: none;
     padding: 1rem 2rem;
-    font-size: calc(1.1rem + 3px); /* +2pts */
+    font-size: calc(1.1rem + 3px) !important; /* ENFORCED */
     font-weight: 700;
     border-radius: 0.25rem;
     cursor: pointer;
@@ -844,7 +822,7 @@ ul.wp-block-list {
 
 /* Footer Note */
 .footer-note {
-    font-size: calc(0.875rem + 2px); /* +2pts */
+    font-size: calc(0.875rem + 2px) !important; /* ENFORCED */
     color: #999999;
     text-align: center;
     margin: 2rem 0;
@@ -901,38 +879,6 @@ ul.wp-block-list {
     width: 16px;
     height: 16px;
     vertical-align: middle;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .wp-block-columns.is-layout-flex {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .wp-block-columns .wp-block-column:first-child,
-    .wp-block-columns .wp-block-column:last-child {
-        display: none; /* Hide spacer columns on mobile */
-    }
-    
-    .content-form-wrapper {
-        margin: 2rem 1rem;
-        padding: 1.5rem 1rem;
-        max-width: 100%;
-    }
-    
-    .gf_left_half,
-    .gf_right_half {
-        width: 100%;
-        display: block;
-        margin-right: 0;
-    }
-    
-    .ginput_container--name,
-    .gform-grid-row {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
 }
 /* =========================================
    7.1 WORDPRESS BLOCK SEPARATOR
@@ -1644,7 +1590,7 @@ ul.wp-block-list.contact-bullets strong {
 }
 
 /* =========================================
-   17. BLOG STYLES - INDEX & POSTS
+   17. BLOG STYLES - INDEX & POSTS (CONSOLIDATED)
    ========================================= */
 
 /* Blog Page Header */
@@ -1730,7 +1676,7 @@ ul.wp-block-list.contact-bullets strong {
 /* Entry Summary */
 .entry-summary {
     font-family: var(--font-primary);
-    font-size: calc(1rem + 3px);
+    font-size: calc(1rem + 3px) !important; /* ENFORCED */
     line-height: 1.6;
     color: #000000;
     margin-top: 1rem;
@@ -1754,9 +1700,10 @@ ul.wp-block-list.contact-bullets strong {
     margin-bottom: 2rem;
 }
 
-/* Sidebar */
+/* Sidebar - CONSOLIDATED RULE */
 .sidebar {
     padding: 0;
+    margin-top: 2.5rem; /* CONSOLIDATED: Aligns widget top with main content */
 }
 
 .sidebar .widget {
@@ -1769,7 +1716,7 @@ ul.wp-block-list.contact-bullets strong {
 .sidebar h3 {
     font-size: calc(1.25rem + 3px);
     color: var(--color-brand-primary);
-    margin-top: 0;
+    margin-top: 0; /* REMOVED: For precise alignment */
     margin-bottom: 1rem;
 }
 
@@ -1791,7 +1738,7 @@ ul.wp-block-list.contact-bullets strong {
 
 .widget_recent_entries a {
     font-family: var(--font-primary);
-    font-size: calc(1rem + 3px);
+    font-size: calc(1rem + 3px) !important; /* ENFORCED */
     color: #000000;
     text-decoration: none;
     font-weight: 500;
@@ -1818,16 +1765,15 @@ ul.wp-block-list.contact-bullets strong {
 
 .widget-subscribe .card-text {
     font-family: var(--font-primary);
-    font-size: calc(1rem + 3px);
+    font-size: calc(1rem + 3px) !important; /* ENFORCED */
     line-height: 1.5;
     color: #000000;
     margin-bottom: 1rem;
 }
 
-
 /* Force consistent font sizing across all blog content */
 .entry-content p {
-    font-size: calc(1rem + 3px);
+    font-size: calc(1rem + 3px) !important; /* ENFORCED */
     line-height: 1.5;
 }
 
@@ -1848,6 +1794,7 @@ ul.wp-block-list.contact-bullets strong {
     display: inline;
     font-weight: 700;
 }
+
 /* Social Share */
 .entry-share {
     margin: 2rem 0;
@@ -1900,7 +1847,7 @@ ul.wp-block-list.contact-bullets strong {
 
 .comment-form label {
     font-family: var(--font-headings);
-    font-size: calc(1rem + 3px);
+    font-size: calc(1rem + 3px) !important; /* ENFORCED */
     font-weight: 600;
     color: #000000;
     display: block;
@@ -1914,7 +1861,7 @@ ul.wp-block-list.contact-bullets strong {
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
     font-family: var(--font-primary);
-    font-size: calc(1rem + 3px);
+    font-size: calc(1rem + 3px) !important; /* ENFORCED */
     margin-bottom: 1rem;
     transition: all 0.2s ease;
 }
@@ -3202,19 +3149,91 @@ ul.wp-block-list.contact-bullets strong {
     }
 }
 /* =========================================
-   25. ABOUT US PAGE SPECIFIC STYLES
+   25. SIDEBAR STYLES - CONSOLIDATED
    ========================================= */
 
-/* Body text sizing - 13.5pt (18px) */
-.page-template-about-us main p {
-    font-family: var(--font-primary);
-    font-size: 18px !important; /* 13.5pt enforcement */
-    line-height: 1.6;
-    color: #000000;
+/* Base sidebar styling - applies to ALL page templates */
+.sidebar {
+    padding: 0;
+    margin-top: 2.5rem; /* CONSOLIDATED: Aligns widget top with main content/image */
 }
 
-/* H2 variant styling - Source Sans Pro 27pt Bold */
-.page-template-about-us .is-style-h2 {
+/* Page-specific sidebar adjustments - only where needed */
+.page-template-about-us .sidebar,
+.page-template-our-company .sidebar {
+    margin-top: 2.5rem; /* Override for proper alignment with hero/main images */
+}
+
+.page-template-testimonials .sidebar {
+    margin-top: 0; /* No offset needed for testimonials layout */
+}
+
+/* Widget container */
+.sidebar .widget {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0.25rem;
+}
+
+.sidebar .widget h3 {
+    margin-top: 0; /* REMOVED: For precise alignment with page content */
+}
+
+/* Form within sidebar */
+.sidebar .gform_wrapper {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.sidebar .gform_wrapper .gform_heading {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar .gform_title {
+    font-family: var(--font-headings);
+    font-size: calc(1.25rem + 3px);
+    font-weight: 700;
+    color: var(--color-brand-primary);
+    margin-bottom: 0.5rem;
+}
+
+.sidebar .gform_description {
+    font-family: var(--font-primary);
+    font-size: calc(1rem + 3px) !important;
+    color: #000000;
+    line-height: 1.4;
+}
+
+/* Mobile Responsive Blog Styles */
+@media (max-width: 768px) {
+    .blog-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .sidebar {
+        order: 2;
+        margin-top: 0 !important; /* Reset on mobile */
+    }
+    
+    .sidebar .widget {
+        padding: 1rem;
+    }
+    
+    .entry-title {
+        font-size: calc(1.5rem + 3px);
+    }
+}
+
+/* =========================================
+   26. PAGE TEMPLATE SPECIFIC STYLES - CONSOLIDATED
+   ========================================= */
+
+/* About Us & Our Company - H2 variant styling */
+.page-template-about-us .is-style-h2,
+.page-template-our-company .is-style-h2 {
     font-family: var(--font-primary);
     font-size: 36px !important; /* 27pt */
     font-weight: 700;
@@ -3223,155 +3242,67 @@ ul.wp-block-list.contact-bullets strong {
     margin: 2rem 0 1rem;
 }
 
-/* Center alignment for call-to-action */
-.page-template-about-us .has-text-align-center.is-style-h2 {
-    text-align: center !important;
+/* How It Works - numbered list styling */
+.is-style-list-numbers-lg.wp-block-list {
+    list-style: none;
+    padding-left: 80px;
+    counter-reset: numbered-list;
     margin: 2rem 0;
 }
 
-/* Link styling within content */
-.page-template-about-us main a {
-    color: var(--color-link);
-    text-decoration: underline;
-    font-weight: 700;
-}
-
-.page-template-about-us main a:hover {
-    color: var(--color-link-hover);
-}
-
-/* Image alignment */
-.page-template-about-us figure.wp-block-image {
-    text-align: center;
-    margin: 2rem 0;
-}
-
-.page-template-about-us figure.wp-block-image img {
-    max-width: 100%;
-    height: auto;
-    display: inline-block;
-}
-
-/* Ensure H1 uses proper heading font */
-.page-template-about-us h1.wp-block-heading {
-    font-family: var(--font-headings);
-    font-size: calc(2.25rem + 3px); /* ~39px */
-    font-weight: 700;
-    line-height: 1.2;
-    text-align: left !important;
-    margin: 2rem 0 1rem;
-    color: #000000;
-}
-
-/* Sidebar form constraints */
-.page-template-about-us .gform_wrapper {
-    margin: 0 auto;
-    width: 100%;
-}
-
-/* ===== ALIGN SIDEBAR WITH MAIN IMAGE TOP ===== */
-.page-template-about-us .sidebar {
-    margin-top: 2.5rem; /* Aligns widget top with image top */
-}
-
-.page-template-about-us .sidebar .widget h3 {
-    margin-top: 0; /* Removes h3 top margin for precise alignment */
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-    .page-template-about-us .is-style-h2 {
-        font-size: calc(1.75rem + 3px) !important; /* Scales down on mobile */
-    }
-    
-    .page-template-about-us .sidebar {
-        margin-top: 0; /* Reset margin on mobile stacking */
-    }
-}
-
-/* =========================================
-   26. OUR COMPANY PAGE SPECIFIC STYLES
-   ========================================= */
-
-/* Body text sizing - 13.5pt (18px) */
-.page-template-our-company main p {
+.is-style-list-numbers-lg.wp-block-list li {
+    counter-increment: numbered-list;
+    position: relative;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
     font-family: var(--font-primary);
-    font-size: 18px !important; /* 13.5pt enforcement */
-    line-height: 1.6;
+    font-size: calc(1rem + 3px) !important; /* ENFORCED */
+    font-weight: 700;
+    line-height: 1.5;
     color: #000000;
 }
 
-/* H4 headings with brand color - Open Sans Bold */
-.page-template-our-company h4.wp-block-heading.has-c-brand-primary-color {
-    font-family: var(--font-headings);
-    font-size: calc(1.25rem + 3px); /* ~23px */
+.is-style-list-numbers-lg.wp-block-list li::before {
+    content: counter(numbered-list);
+    position: absolute;
+    left: -80px;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-brand-primary);
+    color: var(--color-text-on-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-primary);
+    font-size: 24px;
     font-weight: 700;
-    line-height: 1.3;
-    color: var(--color-brand-primary) !important;
-    margin: 2rem 0 1rem;
+    line-height: 1;
+    text-align: center;
+    flex-shrink: 0;
 }
 
-/* Two-column layout adjustments */
-.page-template-our-company .wp-block-columns.is-layout-flex {
-    margin: 2rem 0;
-    align-items: center; /* Vertically center align columns */
+/* Blog post content fixes */
+.single-post .entry-content p {
+    font-size: calc(1rem + 3px) !important; /* ENFORCED */
+    line-height: 1.5 !important;
 }
 
-/* Ensure images in columns don't overflow */
-.page-template-our-company .wp-block-column figure.wp-block-image {
-    margin: 0; /* Remove default margin for better alignment */
+.single-post .entry-content ul.wp-block-list {
+    list-style: disc !important;
+    padding-left: 2rem !important;
+    margin: 1rem 0 2rem !important;
 }
 
-.page-template-our-company .wp-block-column figure.wp-block-image img {
-    width: 100%;
-    height: auto;
-    display: block;
+.single-post .entry-content ul.wp-block-list li {
+    border-bottom: none !important;
+    padding: 0.25rem 0;
 }
 
-/* Center alignment for call-to-action */
-.page-template-our-company .has-text-align-center.is-style-h2 {
-    text-align: center !important;
-    margin: 2rem 0;
-}
-
-/* Link styling within content */
-.page-template-our-company main a {
-    color: var(--color-link);
-    text-decoration: underline;
+.single-post .entry-content p strong {
+    display: inline !important;
     font-weight: 700;
 }
 
-.page-template-our-company main a:hover {
-    color: var(--color-link-hover);
-}
-
-/* Sidebar form constraints */
-.page-template-our-company .gform_wrapper {
-    margin: 0 auto;
-    width: 100%;
-}
-
-/* ===== ALIGN SIDEBAR WITH MAIN CONTENT TOP ===== */
-.page-template-our-company .sidebar {
-    margin-top: 2.5rem; /* Aligns widget top with main content top */
-}
-
-.page-template-our-company .sidebar .widget h3 {
-    margin-top: 0; /* Removes h3 top margin for precise alignment */
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-    .page-template-our-company h4.wp-block-heading.has-c-brand-primary-color {
-        font-size: calc(1.125rem + 3px) !important; /* Scales down on mobile */
-    }
-    
-    .page-template-our-company .sidebar {
-        margin-top: 0; /* Reset margin on mobile stacking */
-    }
-    
-    .page-template-our-company .wp-block-columns.is-layout-flex {
-        flex-direction: column; /* Stack columns on mobile */
-        gap: 1rem;
-    }
 }
