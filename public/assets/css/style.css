@@ -2269,41 +2269,84 @@ ul.wp-block-list.contact-bullets strong {
         padding: 1.5rem !important;
     }
     
+    /* ✅ FIX: Center privacy image */
+    .wp-block-image.aligncenter {
+        text-align: center !important;
+        margin: 2rem auto !important;
+    }
+    
     /* ✅ FIX: All inputs full width */
     .page-template-letterresponse .letterresponse-form-wrapper input,
-    .page-template-letterresponse .letterresponse-form-wrapper select,
-    .page-template-letterresponse .letterresponse-form-wrapper textarea,
     .page-template-letterresponse-2 .letterresponse-form-wrapper input,
+    .page-template-letterresponse .letterresponse-form-wrapper select,
     .page-template-letterresponse-2 .letterresponse-form-wrapper select,
+    .page-template-letterresponse .letterresponse-form-wrapper textarea,
     .page-template-letterresponse-2 .letterresponse-form-wrapper textarea {
         width: 100% !important;
         max-width: 100% !important;
     }
     
-    /* ✅ FIX: Name fields match other inputs */
-    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name,
-    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container--name {
+    /* ✅ FIX: Stack name fields */
+    .letterresponse-form-wrapper .ginput_container--name {
         grid-template-columns: 1fr !important;
         gap: 0.75rem !important;
     }
     
-    /* ✅ FIX: Radio label spacing */
-    .gchoice {
-        gap: 0.5rem !important;
+    /* ✅ FIX: Stack address fields */
+    .ginput_container_address .address_city,
+    .ginput_container_address .address_state {
+        display: block !important;
+        width: 100% !important;
+        margin-right: 0 !important;
+        margin-bottom: 0.75rem !important;
     }
     
-    /* ✅ FIX: Full width button */
+    .ginput_container_address .address_zip {
+        margin-top: 0 !important;
+    }
+    
+    /* ✅ FIX: Radio label spacing */
+    .gfield_radio,
+    .gfield_checkbox {
+        max-width: 100% !important;
+        gap: 0.75rem !important;
+    }
+    
+    .gchoice {
+        gap: 0.75rem !important;
+        width: 100% !important;
+    }
+    
+    /* ✅ FIX: Submit button width */
     .letterresponse-form-wrapper .gform_button {
         width: 100% !important;
         max-width: 100% !important;
         margin-left: 0 !important;
+        font-size: 1rem !important;
+        padding: 0.75rem 1rem !important;
     }
     
-    /* ✅ FIX: Center privacy image */
-    .page-template-letterresponse .wp-block-image.aligncenter,
-    .page-template-letterresponse-2 .wp-block-image.aligncenter {
-        margin: 2rem auto !important;
+    /* Center form titles */
+    .letterresponse-form-title,
+    .letterresponse-form-subtitle {
+        padding-left: 0 !important;
         text-align: center !important;
+    }
+    
+    /* Stack intro image */
+    .intro-with-image {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    
+    .representative-image {
+        margin: 0 auto 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .letterresponse-form-wrapper form {
+        padding: 1rem !important;
     }
 }
 /* =========================================
@@ -2902,6 +2945,10 @@ ul.wp-block-list.contact-bullets strong {
         padding: 1rem !important;
     }
     
+    .step-2-intro h3 {
+        font-size: calc(1.5rem + 3px);
+    }
+    
     /* ✅ FIX: Center form wrapper */
     .step-2-form-wrapper {
         width: 100% !important;
@@ -2915,36 +2962,82 @@ ul.wp-block-list.contact-bullets strong {
         padding: 1.5rem !important;
     }
     
+    /* ✅ FIX: Center privacy image */
+    .wp-block-image.aligncenter {
+        text-align: center !important;
+        margin: 2rem auto !important;
+    }
+    
     /* ✅ FIX: All inputs full width */
-    .page-template-step-2 form[name="step-2-land-offer"] input,
-    .page-template-step-2 form[name="step-2-land-offer"] select,
-    .page-template-step-2 form[name="step-2-land-offer"] textarea {
+    .page-template-step-2 .step-2-form-wrapper input,
+    .page-template-step-2 .step-2-form-wrapper select,
+    .page-template-step-2 .step-2-form-wrapper textarea {
         width: 100% !important;
         max-width: 100% !important;
     }
     
     /* ✅ FIX: Stack name/email fields */
-    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name,
-    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email {
+    .step-2-form-wrapper .ginput_container--name,
+    .step-2-form-wrapper .ginput_container_email {
         grid-template-columns: 1fr !important;
         gap: 0.75rem !important;
     }
     
-    /* ✅ FIX: Full width button */
-    .page-template-step-2 .step-2-form-wrapper .gform_button {
+    /* ✅ FIX: Stack address fields */
+    .ginput_container_address .address_city,
+    .ginput_container_address .address_state {
+        display: block !important;
         width: 100% !important;
-        max-width: 100% !important;
+        margin-right: 0 !important;
+        margin-bottom: 0.75rem !important;
     }
     
-    /* ✅ FIX: Center privacy image */
-    .page-template-step-2 .wp-block-image.aligncenter {
-        margin: 2rem auto !important;
+    .ginput_container_address .address_zip {
+        margin-top: 0 !important;
+    }
+    
+    /* ✅ FIX: Radio label spacing */
+    .gfield_radio,
+    .gfield_checkbox {
+        max-width: 100% !important;
+        gap: 0.75rem !important;
+    }
+    
+    .gchoice {
+        gap: 0.75rem !important;
+        width: 100% !important;
+    }
+    
+    /* ✅ FIX: Submit button width */
+    .step-2-form-wrapper .gform_button {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        font-size: 1rem !important;
+        padding: 0.75rem 1rem !important;
+    }
+    
+    /* Center form titles */
+    .step-2-form-title,
+    .step-2-form-subtitle {
+        padding-left: 0 !important;
         text-align: center !important;
     }
     
+    /* Stack intro image */
     .intro-with-image {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    
+    .representative-image {
+        margin: 0 auto 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .step-2-form-wrapper form {
+        padding: 1rem !important;
     }
 }
 /* =========================================
@@ -3404,4 +3497,5 @@ main figure.wp-block-image img {
     }
 
 }
+
 
