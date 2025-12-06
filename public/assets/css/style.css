@@ -3222,8 +3222,41 @@ ul.wp-block-list.contact-bullets strong {
 }
 
 /* =========================================
-   26. PAGE TEMPLATE SPECIFIC STYLES - CONSOLIDATED
+   26. PAGE TEMPLATE SPECIFIC STYLES - CONSOLIDATED & FIXED
    ========================================= */
+
+/* CRITICAL: Fix image overflow in columns */
+.wp-block-columns.is-layout-flex {
+    display: flex;
+    gap: 2rem;
+    max-width: 100%; /* Changed from 900px to prevent overflow */
+    margin: 0 auto;
+    align-items: flex-start;
+    overflow: hidden; /* Prevent flex overflow */
+}
+
+.wp-block-column {
+    flex: 1;
+    min-width: 0; /* CRITICAL: Allows flex items to shrink properly */
+}
+
+/* Empty spacer columns */
+.wp-block-columns .wp-block-column:first-child,
+.wp-block-columns .wp-block-column:last-child {
+    flex: 0.5;
+}
+
+/* Image containment fix - prevents horizontal blowout */
+.wp-block-column figure.wp-block-image {
+    margin: 0;
+    width: 100%;
+}
+
+.wp-block-column figure.wp-block-image img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Changed from inline-block for better containment */
+}
 
 /* About Us & Our Company - H2 variant styling */
 .page-template-about-us .is-style-h2,
@@ -3234,6 +3267,11 @@ ul.wp-block-list.contact-bullets strong {
     line-height: 1.3;
     color: #000000 !important;
     margin: 2rem 0 1rem;
+}
+
+/* RESTORED: Brand color utility class for WordPress-generated classes */
+.has-c-brand-primary-color {
+    color: var(--color-brand-primary) !important;
 }
 
 /* How It Works - numbered list styling */
@@ -3299,4 +3337,19 @@ ul.wp-block-list.contact-bullets strong {
     font-weight: 700;
 }
 
+/* Mobile adjustments for page templates */
+@media (max-width: 768px) {
+    .page-template-about-us .is-style-h2,
+    .page-template-our-company .is-style-h2 {
+        font-size: calc(1.75rem + 3px) !important; /* Smaller on mobile */
+    }
+    
+    .wp-block-columns.is-layout-flex {
+        flex-direction: column; /* Stack columns on mobile */
+        gap: 1rem;
+    }
+    
+    .wp-block-column figure.wp-block-image {
+        margin: 1rem 0; /* Add spacing when stacked */
+    }
 }
