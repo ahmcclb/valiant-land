@@ -1008,78 +1008,175 @@ hr.wp-block-separator.has-alpha-channel-opacity {
 }
 
 /* =========================================
-   9. MOBILE RESPONSIVE
+   9. MOBILE RESPONSIVE - PHASE 5 FIXES
    ========================================= */
 @media (max-width: 768px) {
 
-    /* Force nav-top to show on mobile */
+    /* ==================== ALL PAGES ==================== */
+    
+    /* 1. Logo centered below nav-top */
     .banner--isDefault .nav-top {
         display: block !important;
         float: none;
         width: 100%;
         text-align: center;
         margin-top: 0.5rem;
+        height: auto;
     }
     
     .banner--isDefault .nav-top ul {
         justify-content: center;
         height: auto;
-    }
-    .banner--isDefault .nav-top {
-        display: none;
+        padding: 0.5rem 0;
     }
     
     .banner--isDefault .brand-container {
         float: none;
         text-align: center;
+        margin: 1rem auto 0;
+        padding: 0;
+    }
+    
+    .banner--isDefault .brand-logo {
         margin: 0 auto;
     }
+
+    /* ==================== HOME PAGE (index.html) ==================== */
     
-    .banner--isDefault .navbar-toggler {
-        display: block;
-    }
-    
-    .banner--isDefault .navbar-collapse {
-        display: none;
-        width: 100%;
-        background: var(--color-brand-primary);
-        margin: 0 -16px;
-        padding: 0 16px;
-    }
-    
-    .banner--isDefault .navbar-collapse.show {
-        display: block;
-    }
-    
-    .banner--isDefault .navbar-nav {
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .banner--isDefault .nav-link {
-        padding: 1rem;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    
-    .banner--isDefault .contact-row {
-        float: none;
-        text-align: center;
-        margin-top: 0.5rem;
-    }
-    
+    /* 2. Center hero containers */
     .hero-content-container {
         grid-template-columns: 1fr;
         text-align: center;
+        max-width: 100% !important;
+        padding: 0 1rem;
     }
     
-    .wp-block-columns {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    .hero-content {
+        margin-top: 0 !important;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
     
+    .hero-form-container {
+        margin-top: 0 !important;
+        max-width: 100% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* 3. Fix banner image scaling */
+    figure.wp-block-image.size-large.is-resized img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        object-fit: contain;
+    }
+    
+    /* 4. Reduce button font size to prevent truncation */
+    .gform_footer input[type="submit"],
+    .gform_footer button[type="submit"],
+    .gform_button {
+        font-size: 16px !important; /* Reduced from calc(1.1rem + 3px) */
+        padding: 0.75rem 1rem !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* ==================== FORM PAGES (letterresponse, step-2) ==================== */
+    
+    /* 5. Fix form overflow - make forms fit viewport */
+    .letterresponse-form-wrapper,
+    .step-2-form-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 1rem 0 !important;
+        padding: 0 1rem !important;
+    }
+    
+    .letterresponse-form-wrapper form,
+    .step-2-form-wrapper form {
+        width: 100% !important;
+        padding: 1.5rem !important;
+    }
+    
+    /* Make all form fields full width on mobile */
+    .letterresponse-form-wrapper input[type="text"],
+    .letterresponse-form-wrapper input[type="tel"],
+    .letterresponse-form-wrapper input[type="email"],
+    .letterresponse-form-wrapper select,
+    .letterresponse-form-wrapper textarea,
+    .step-2-form-wrapper input[type="text"],
+    .step-2-form-wrapper input[type="tel"],
+    .step-2-form-wrapper input[type="email"],
+    .step-2-form-wrapper select,
+    .step-2-form-wrapper textarea {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Override grid layouts for name/email pairs */
+    .ginput_container--name,
+    .ginput_container_email {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem !important;
+    }
+    
+    /* Make submit button full width */
+    .letterresponse-form-wrapper .gform_button,
+    .step-2-form-wrapper .gform_button {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+    }
+    
+    /* Adjust radio/checkbox spacing */
+    .gfield_radio,
+    .gfield_checkbox {
+        gap: 0.5rem !important;
+    }
+    
+    .gchoice {
+        gap: 0.5rem !important;
+    }
+
+    /* ==================== GENERAL MOBILE FIXES ==================== */
+    
+    /* Navbar collapse full width */
+    .banner--isDefault .navbar-collapse {
+        margin: 0 -1rem !important;
+        padding: 0 !important;
+    }
+    
+    /* Force nav links to stack */
+    .banner--isDefault .navbar-nav {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+    
+    .banner--isDefault .nav-link {
+        text-align: left !important;
+        padding: 1rem !important;
+        border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+    }
+    
+    /* Footer nav stack */
     .nav-footer ul {
         flex-direction: column;
         gap: 0.5rem;
+    }
+    
+    /* Content padding fix */
+    .content-wrap > .main,
+    .page-template-letterresponse .content-wrap > .main,
+    .page-template-step-2 .content-wrap > .main {
+        padding: 1rem !important;
+    }
+    
+    /* Sidebar reset */
+    .sidebar {
+        margin-top: 2rem !important;
     }
 }
 
@@ -3372,4 +3469,5 @@ main figure.wp-block-image img {
     .wp-block-column figure.wp-block-image {
         margin: 1rem 0;
     }
+
 }
