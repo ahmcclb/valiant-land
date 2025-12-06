@@ -3,22 +3,16 @@
    ========================================= */
 
 /* =========================================
-   0. FONT LOADING (FIXES THE PROBLEM)
+   0. FONT LOADING (FIXED - Google Fonts CDN)
    ========================================= */
 
-/* Source Sans Pro - Variable Font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap');
-}
-
-/* Open Sans - Variable Font */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap');
-}
 
 /* =========================================
    1. ROOT VARIABLES (Brand System)
    ========================================= */
 :root {
-    /* Brand Colors */
+    /* Brand Colors - ORANGE RESTORED */
     --color-brand-primary: #f25116;
     --color-brand-primary-hover: #ca3e0b;
     --color-brand-primary-lighter: #f6875e;
@@ -50,7 +44,6 @@
         --logo-maw: 450px;
     }
 }
-
 /* =========================================
    2. BASE & TYPOGRAPHY
    ========================================= */
@@ -1072,6 +1065,20 @@ hr.wp-block-separator.has-alpha-channel-opacity {
    9. MOBILE RESPONSIVE
    ========================================= */
 @media (max-width: 768px) {
+
+    /* Force nav-top to show on mobile */
+    .banner--isDefault .nav-top {
+        display: block !important;
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+    
+    .banner--isDefault .nav-top ul {
+        justify-content: center;
+        height: auto;
+    }
     .banner--isDefault .nav-top {
         display: none;
     }
