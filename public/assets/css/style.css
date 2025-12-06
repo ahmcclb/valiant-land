@@ -1700,6 +1700,10 @@ ul.wp-block-list.contact-bullets strong {
     margin-bottom: 2rem;
 }
 
+/* Sidebar */
+.sidebar {
+    padding: 0;
+}
 
 .sidebar .widget {
     background: #f8f9fa;
