@@ -3021,6 +3021,10 @@ ul.wp-block-list.contact-bullets strong {
 }
 
 
+/* =========================================
+   21. STEP 2 PAGE STYLES - DEBUGGED & ENFORCED
+   ========================================= */
+
 /* MOBILE FINAL FIXES - Session 17 */
 
 @media (max-width: 768px) {
@@ -3047,7 +3051,16 @@ ul.wp-block-list.contact-bullets strong {
         box-sizing: border-box !important;
     }
     
-    /* ✅ FIX: Name field width blowout */
+    /* ✅ FIX #1: Align subtitle with intro section */
+    .page-template-step-2 .letterresponse-form-subtitle {
+        padding-left: 0 !important; /* Remove desktop padding */
+        text-align: center !important; /* Center text on mobile */
+        margin: 0 auto 1rem !important; /* Center block with bottom margin */
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* ✅ FIX #2: Name field width blowout */
     .page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name,
     .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email {
         grid-template-columns: 1fr !important;
@@ -3075,14 +3088,22 @@ ul.wp-block-list.contact-bullets strong {
         box-sizing: border-box !important;
     }
     
-    /* Fix submit button */
+    /* ✅ FIX #3: Submit button width - CRITICAL: Remove parent container padding */
+    .page-template-step-2 .letterresponse-form-wrapper .gform_footer {
+        padding: 0 !important; /* Remove Gravity Forms default padding */
+        margin: 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
     .page-template-step-2 .letterresponse-form-wrapper .gform_button {
         width: 100% !important;
         max-width: 100% !important;
         margin-left: 0 !important;
+        margin-right: 0 !important; /* Ensure no horizontal margins */
         font-size: 1rem !important;
         padding: 0.75rem 1rem !important;
-        box-sizing: border-box !important;
+        box-sizing: border-box !important; /* Include padding in width calculation */
     }
     
     /* Center privacy images */
@@ -3094,8 +3115,7 @@ ul.wp-block-list.contact-bullets strong {
     }
     
     /* Center form titles */
-    .page-template-step-2 .step-2-form-title,
-    .page-template-step-2 .step-2-form-subtitle {
+    .page-template-step-2 .step-2-form-title {
         padding-left: 0 !important;
         text-align: center !important;
     }
