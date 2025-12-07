@@ -3649,6 +3649,8 @@ main figure.wp-block-image img {
 /* =========================================
    27. OPTIONS TO SELL LAND PAGE STYLES
    ========================================= */
+   
+
 
 /* Body Text */
 .page-template-options-to-sell-land main p {
@@ -3713,6 +3715,10 @@ main figure.wp-block-image img {
 .page-template-options-to-sell-land .text-underline {
     text-decoration: underline;
     text-decoration-color: var(--color-brand-primary);
+}
+/* Ensure form wrapper inherits correct width */
+.page-template-options-to-sell-land .content-form-wrapper {
+    margin: 2rem auto !important; /* Match sell-your-land spacing */
 }
 
 /* Mobile Adjustments */
