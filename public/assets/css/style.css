@@ -1015,18 +1015,15 @@ hr.wp-block-separator.has-alpha-channel-opacity {
     /* Force nav-top to show on mobile */
     .banner--isDefault .nav-top {
         display: block !important;
-        float: none;
-        width: 100%;
-        text-align: center;
-        margin-top: 0.5rem;
+        float: none !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin-bottom: 0.5rem !important; /* Provides spacing below nav */
     }
     
     .banner--isDefault .nav-top ul {
         justify-content: center;
         height: auto;
-    }
-    .banner--isDefault .nav-top {
-        display: none;
     }
     
     .banner--isDefault .brand-container {
@@ -1034,10 +1031,13 @@ hr.wp-block-separator.has-alpha-channel-opacity {
         text-align: center !important;
         margin: 0 auto !important;
         width: 100% !important;
+        padding-top: 2rem !important; /* ADDED: Push logo down from nav */
+        padding-bottom: 1rem !important; /* Adjust bottom spacing */
     }
+    
     .banner--isDefault .brand-logo {
         margin: 0 auto !important;
-        max-width: 200px !important; /* Constrain logo size on mobile */
+        max-width: 200px !important;
         display: block !important;
     }
     
@@ -1077,9 +1077,24 @@ hr.wp-block-separator.has-alpha-channel-opacity {
         background: none !important;
         background-color: rgba(0,0,0,0.85) !important; /* Solid dark background instead */
     }
-    .hero-content-container {
-        padding: 0 1rem !important; /* Ensure consistent padding */
-        justify-content: center !important; /* Explicitly center content */
+        .hero-content-container {
+        display: block !important; /* Changed from grid to block for stacking */
+        width: 100% !important;
+        padding: 0 1rem !important;
+        justify-content: unset !important; /* Remove grid alignment */
+    }
+    
+    .hero-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto 2rem !important; /* Space below content block */
+        padding: 1.5rem !important; /* Reduce padding on mobile */
+    }
+    
+    .hero-form-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important; /* Center form container */
     }
     
     .wp-block-columns {
