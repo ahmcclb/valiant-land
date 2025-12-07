@@ -3020,37 +3020,34 @@ ul.wp-block-list.contact-bullets strong {
     display: inline-block;
 }
 
-/* =========================================
-   21. STEP 2 PAGE STYLES - DEBUGGED & ENFORCED
-   ========================================= */
 
 /* MOBILE FINAL FIXES - Session 17 */
 
 @media (max-width: 768px) {
-    /* Layout */
+    /* Reduce parent padding that causes overflow */
     .page-template-step-2 .content-wrap > .main {
-        padding: 1rem 0 !important; /* Reduced padding to allow centering */
-        text-align: center; /* ✅ FIX #1: Center children */
+        padding: 1rem 0 !important; /* Remove horizontal padding */
+        text-align: center;
     }
     
-    /* ✅ FIX #1: Center form container */
-    .page-template-step-2 .step-2-form-wrapper {
-        display: block !important; /* ✅ Changed from inline-block to block */
+    /* ✅ FIX: Target ACTUAL class used in step-2.html */
+    .page-template-step-2 .letterresponse-form-wrapper {
+        display: block !important; /* Enable reliable centering */
         width: 100% !important;
         max-width: 100% !important;
-        margin: 1rem auto !important; /* Auto margins work for block elements */
-        padding: 0 1rem !important;
-        box-sizing: border-box !important; /* ✅ Prevents padding overflow */
+        margin: 1rem auto !important; /* Center with auto margins */
+        padding: 0 1rem !important; /* Add horizontal spacing */
+        box-sizing: border-box !important; /* Prevent overflow */
     }
     
-    .page-template-step-2 .step-2-form-wrapper form {
+    /* Ensure form fills container */
+    .page-template-step-2 .letterresponse-form-wrapper form {
         width: 100% !important;
         padding: 1.5rem !important;
-        text-align: left; /* Reset form content alignment */
         box-sizing: border-box !important;
     }
     
-    /* ✅ FIX #2: Name field width blowout */
+    /* ✅ FIX: Name field width blowout */
     .page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name,
     .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email {
         grid-template-columns: 1fr !important;
@@ -3060,22 +3057,14 @@ ul.wp-block-list.contact-bullets strong {
         box-sizing: border-box !important;
     }
     
-    /* ✅ CRITICAL: Constrain spans inside containers */
+    /* Constrain spans inside containers */
     .page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name span,
     .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email span {
         width: 100% !important;
         box-sizing: border-box !important;
     }
     
-    /* ✅ Ensure inputs fill their containers */
-    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name input,
-    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email input {
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-    }
-    
-    /* Fix ALL input widths */
+    /* Ensure inputs fill their containers */
     .page-template-step-2 form[name="step-2-land-offer"] input[type="text"],
     .page-template-step-2 form[name="step-2-land-offer"] input[type="tel"],
     .page-template-step-2 form[name="step-2-land-offer"] input[type="email"],
@@ -3086,50 +3075,8 @@ ul.wp-block-list.contact-bullets strong {
         box-sizing: border-box !important;
     }
     
-    /* Stack name fields */
-    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name {
-        grid-template-columns: 1fr !important;
-        gap: 0.75rem !important;
-        width: 100% !important;
-    }
-    
-    /* Stack email fields */
-    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email {
-        grid-template-columns: 1fr !important;
-        gap: 0.75rem !important;
-        width: 100% !important;
-    }
-    
-    /* Fix radio/checkbox containers */
-    .page-template-step-2 form[name="step-2-land-offer"] .gfield_radio,
-    .page-template-step-2 form[name="step-2-land-offer"] .gfield_checkbox {
-        width: 100% !important;
-        max-width: 100% !important;
-        gap: 0.75rem !important;
-    }
-    
-    /* Fix radio label spacing */
-    .page-template-step-2 form[name="step-2-land-offer"] .gchoice {
-        gap: 0.75rem !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-    
-    /* Stack address fields */
-    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_address .address_city,
-    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_address .address_state {
-        display: block !important;
-        width: 100% !important;
-        margin-right: 0 !important;
-        margin-bottom: 0.75rem !important;
-    }
-    
-    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_address .address_zip {
-        margin-top: 0 !important;
-    }
-    
     /* Fix submit button */
-    .page-template-step-2 .step-2-form-wrapper .gform_button {
+    .page-template-step-2 .letterresponse-form-wrapper .gform_button {
         width: 100% !important;
         max-width: 100% !important;
         margin-left: 0 !important;
@@ -3138,7 +3085,7 @@ ul.wp-block-list.contact-bullets strong {
         box-sizing: border-box !important;
     }
     
-    /* ✅ Center privacy images */
+    /* Center privacy images */
     .page-template-step-2 .wp-block-image.aligncenter {
         display: block !important;
         text-align: center !important;
@@ -3165,7 +3112,7 @@ ul.wp-block-list.contact-bullets strong {
 }
 
 @media (max-width: 480px) {
-    .page-template-step-2 .step-2-form-wrapper form {
+    .page-template-step-2 .letterresponse-form-wrapper form {
         padding: 1rem !important;
     }
 }
