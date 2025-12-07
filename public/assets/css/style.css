@@ -3025,41 +3025,28 @@ ul.wp-block-list.contact-bullets strong {
    21. STEP 2 PAGE MEDIA STYLES - DEBUGGED & ENFORCED
    ========================================= */
 
-/* =========================================
-   21. STEP 2 PAGE STYLES - DEBUGGED & ENFORCED
-   ========================================= */
-
 /* MOBILE FINAL FIXES - Session 17 */
 
 @media (max-width: 768px) {
     /* Remove text-align to prevent cascading */
     .page-template-step-2 .content-wrap > .main {
-        padding: 1rem 0 !important; /* Remove horizontal padding */
+        padding: 1rem 0 !important;
     }
     
-    /* ✅ FIX #1: Center form container as block */
+    /* Center form container */
     .page-template-step-2 .letterresponse-form-wrapper {
         display: block !important;
         width: 100% !important;
         max-width: 100% !important;
-        margin: 1rem auto !important; /* ✅ This centers the block */
+        margin: 1rem auto !important;
         padding: 0 1rem !important;
         box-sizing: border-box !important;
     }
     
-    /* Form fills wrapper */
     .page-template-step-2 .letterresponse-form-wrapper form {
         width: 100% !important;
         padding: 1.5rem !important;
         box-sizing: border-box !important;
-        text-align: left !important; /* Left-align form content */
-    }
-    
-    /* ✅ FIX #2: Explicitly left-align ALL text elements */
-    .page-template-step-2 form[name="step-2-land-offer"] .gfield_label,
-    .page-template-step-2 form[name="step-2-land-offer"] .gfield_description,
-    .page-template-step-2 form[name="step-2-land-offer"] .gform-field-label--type-sub,
-    .page-template-step-2 form[name="step-2-land-offer"] p {
         text-align: left !important;
     }
     
@@ -3072,10 +3059,17 @@ ul.wp-block-list.contact-bullets strong {
         box-sizing: border-box !important;
     }
     
+    /* Left-align ALL form text */
+    .page-template-step-2 form[name="step-2-land-offer"] p,
+    .page-template-step-2 form[name="step-2-land-offer"] .gfield_label,
+    .page-template-step-2 form[name="step-2-land-offer"] .gfield_description,
+    .page-template-step-2 form[name="step-2-land-offer"] .gform-field-label--type-sub {
+        text-align: left !important;
+    }
+    
     /* Name field containers */
     .page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name,
     .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email {
-        text-align: left !important;
         grid-template-columns: 1fr !important;
         gap: 0.75rem !important;
         width: 100% !important;
@@ -3101,18 +3095,20 @@ ul.wp-block-list.contact-bullets strong {
         box-sizing: border-box !important;
     }
     
-    /* ✅ FIX #3: Submit button - remove parent padding */
-    .page-template-step-2 .letterresponse-form-wrapper .gform_footer {
+    /* Fix button parent */
+    .page-template-step-2 form[name="step-2-land-offer"] .gform_footer {
         padding: 0 !important;
         margin: 0 !important;
         width: 100% !important;
         box-sizing: border-box !important;
     }
     
-    .page-template-step-2 .letterresponse-form-wrapper .gform_button {
+    /* ✅ FIX #3: Match desktop specificity for button */
+    .page-template-step-2 form[name="step-2-land-offer"] .gform_button {
         width: 100% !important;
         max-width: 100% !important;
-        margin: 0 !important; /* No margins */
+        margin-left: 0 !important;
+        margin-right: 0 !important;
         font-size: 1rem !important;
         padding: 0.75rem 1rem !important;
         box-sizing: border-box !important;
