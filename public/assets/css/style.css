@@ -1030,9 +1030,15 @@ hr.wp-block-separator.has-alpha-channel-opacity {
     }
     
     .banner--isDefault .brand-container {
-        float: none;
-        text-align: center;
-        margin: 0 auto;
+        float: none !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+    }
+    .banner--isDefault .brand-logo {
+        margin: 0 auto !important;
+        max-width: 200px !important; /* Constrain logo size on mobile */
+        display: block !important;
     }
     
     .banner--isDefault .navbar-toggler {
@@ -1067,14 +1073,24 @@ hr.wp-block-separator.has-alpha-channel-opacity {
         margin-top: 0.5rem;
     }
     
+    .hero {
+        background: none !important;
+        background-color: rgba(0,0,0,0.85) !important; /* Solid dark background instead */
+    }
     .hero-content-container {
-        grid-template-columns: 1fr;
-        text-align: center;
+        padding: 0 1rem !important; /* Ensure consistent padding */
+        justify-content: center !important; /* Explicitly center content */
     }
     
     .wp-block-columns {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+	.wp-block-image.size-large.is-resized img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
     
     .nav-footer ul {
