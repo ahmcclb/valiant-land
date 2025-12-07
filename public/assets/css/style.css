@@ -2242,11 +2242,17 @@ ul.wp-block-list.contact-bullets strong {
 }
 
 /* Responsive adjustments */
+/* =========================================
+   19. LETTER RESPONSE FORM PAGE STYLES
+   ========================================= */
+
+/* MOBILE FINAL FIXES - Session 17 */
 @media (max-width: 768px) {
     /* Layout */
     .page-template-letterresponse .content-wrap > .main,
     .page-template-letterresponse-2 .content-wrap > .main {
-        padding: 1rem;
+        padding: 1rem 0; /* Reduced padding to allow centering */
+        text-align: center; /* ✅ FIX #1: Center inline children */
     }
     
     .page-template-letterresponse .letterresponse-intro h3,
@@ -2259,19 +2265,69 @@ ul.wp-block-list.contact-bullets strong {
         font-size: calc(1.125rem + 3px);
     }
     
-    /* Center form container */
+    /* ✅ FIX #1: Center form container */
     .page-template-letterresponse .letterresponse-form-wrapper,
     .page-template-letterresponse-2 .letterresponse-form-wrapper {
+        display: block !important; /* ✅ Changed from inline-block to block */
         width: 100% !important;
         max-width: 100% !important;
-        margin: 1rem auto !important;
+        margin: 1rem auto !important; /* Auto margins work for block elements */
         padding: 0 1rem !important;
+        box-sizing: border-box !important; /* ✅ Prevents padding overflow */
     }
     
     .page-template-letterresponse .letterresponse-form-wrapper form,
     .page-template-letterresponse-2 .letterresponse-form-wrapper form {
         width: 100% !important;
         padding: 1.5rem !important;
+        text-align: left; /* Reset form content alignment */
+        box-sizing: border-box !important;
+    }
+    
+    /* ✅ FIX #2: Name field width blowout */
+    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container--name {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* ✅ CRITICAL: Constrain spans inside name container */
+    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name span,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container--name span {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* ✅ Ensure inputs fill their containers */
+    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name input[type="text"],
+    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name input[type="tel"],
+    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name input[type="email"],
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container--name input[type="text"],
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container--name input[type="tel"],
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container--name input[type="email"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Handle email container if present */
+    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container_email,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container_email {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* ✅ Constrain email spans */
+    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container_email span,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container_email span {
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
     
     /* Fix ALL input widths */
@@ -2287,22 +2343,7 @@ ul.wp-block-list.contact-bullets strong {
     .page-template-letterresponse-2 .letterresponse-form-wrapper textarea {
         width: 100% !important;
         max-width: 100% !important;
-    }
-    
-    /* Stack name fields */
-    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name,
-    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container--name {
-        grid-template-columns: 1fr !important;
-        gap: 0.75rem !important;
-        width: 100% !important;
-    }
-    
-    /* Stack email fields */
-    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container_email,
-    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container_email {
-        grid-template-columns: 1fr !important;
-        gap: 0.75rem !important;
-        width: 100% !important;
+        box-sizing: border-box !important;
     }
     
     /* Fix radio/checkbox containers */
@@ -2347,13 +2388,16 @@ ul.wp-block-list.contact-bullets strong {
         margin-left: 0 !important;
         font-size: 1rem !important;
         padding: 0.75rem 1rem !important;
+        box-sizing: border-box !important;
     }
     
-    /* Center privacy images */
+    /* ✅ Center privacy images */
     .page-template-letterresponse .wp-block-image.aligncenter,
     .page-template-letterresponse-2 .wp-block-image.aligncenter {
+        display: block !important;
         text-align: center !important;
         margin: 2rem auto !important;
+        width: 100% !important;
     }
     
     /* Center form titles */
@@ -2382,65 +2426,6 @@ ul.wp-block-list.contact-bullets strong {
     .page-template-letterresponse .letterresponse-form-wrapper form,
     .page-template-letterresponse-2 .letterresponse-form-wrapper form {
         padding: 1rem !important;
-    }
-}
-@media (max-width: 768px) {
-    /* ... keep existing mobile styles ... */
-    
-    /* ✅ FIX #1: Center form and privacy images */
-    .page-template-letterresponse .content-wrap .main,
-    .page-template-letterresponse-2 .content-wrap .main {
-        text-align: center; /* Center inline-block children */
-    }
-    
-    .page-template-letterresponse .letterresponse-form-wrapper,
-    .page-template-letterresponse-2 .letterresponse-form-wrapper {
-        display: inline-block; /* Shrink-to-fit for centering */
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 1rem auto !important;
-        padding: 0 1rem !important;
-    }
-    
-    .page-template-letterresponse .letterresponse-form-wrapper form,
-    .page-template-letterresponse-2 .letterresponse-form-wrapper form {
-        text-align: left; /* Reset form content to left-aligned */
-        width: 100% !important;
-        padding: 1.5rem !important;
-    }
-    
-    .page-template-letterresponse .wp-block-image.aligncenter,
-    .page-template-letterresponse-2 .wp-block-image.aligncenter {
-        display: block !important;
-        text-align: center !important;
-        margin: 2rem auto !important;
-        width: 100% !important;
-    }
-    
-    /* ✅ FIX #2: Name field width blowout */
-    /* Force container to 100% */
-    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name,
-    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container--name {
-        grid-template-columns: 1fr !important;
-        gap: 0.75rem !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-    
-    /* CRITICAL: Override input widths inside name fields */
-    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name input[type="text"],
-    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container--name input[type="text"] {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-    
-    /* Same for email container if present */
-    .page-template-letterresponse .letterresponse-form-wrapper .ginput_container_email,
-    .page-template-letterresponse-2 .letterresponse-form-wrapper .ginput_container_email {
-        grid-template-columns: 1fr !important;
-        gap: 0.75rem !important;
-        width: 100% !important;
-        max-width: 100% !important;
     }
 }
 
@@ -3035,23 +3020,59 @@ ul.wp-block-list.contact-bullets strong {
     display: inline-block;
 }
 
-/* ========== MOBILE RESPONSIVE - ≤768px ========== */
+/* =========================================
+   21. STEP 2 PAGE STYLES - DEBUGGED & ENFORCED
+   ========================================= */
+
+/* MOBILE FINAL FIXES - Session 17 */
+
 @media (max-width: 768px) {
+    /* Layout */
     .page-template-step-2 .content-wrap > .main {
-        padding: 1rem !important;
+        padding: 1rem 0 !important; /* Reduced padding to allow centering */
+        text-align: center; /* ✅ FIX #1: Center children */
     }
     
-    /* Center form container */
+    /* ✅ FIX #1: Center form container */
     .page-template-step-2 .step-2-form-wrapper {
+        display: block !important; /* ✅ Changed from inline-block to block */
         width: 100% !important;
         max-width: 100% !important;
-        margin: 1rem auto !important;
+        margin: 1rem auto !important; /* Auto margins work for block elements */
         padding: 0 1rem !important;
+        box-sizing: border-box !important; /* ✅ Prevents padding overflow */
     }
     
     .page-template-step-2 .step-2-form-wrapper form {
         width: 100% !important;
         padding: 1.5rem !important;
+        text-align: left; /* Reset form content alignment */
+        box-sizing: border-box !important;
+    }
+    
+    /* ✅ FIX #2: Name field width blowout */
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name,
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* ✅ CRITICAL: Constrain spans inside containers */
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name span,
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email span {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* ✅ Ensure inputs fill their containers */
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name input,
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email input {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
     
     /* Fix ALL input widths */
@@ -3062,6 +3083,7 @@ ul.wp-block-list.contact-bullets strong {
     .page-template-step-2 form[name="step-2-land-offer"] textarea {
         width: 100% !important;
         max-width: 100% !important;
+        box-sizing: border-box !important;
     }
     
     /* Stack name fields */
@@ -3113,12 +3135,15 @@ ul.wp-block-list.contact-bullets strong {
         margin-left: 0 !important;
         font-size: 1rem !important;
         padding: 0.75rem 1rem !important;
+        box-sizing: border-box !important;
     }
     
-    /* Center privacy images */
+    /* ✅ Center privacy images */
     .page-template-step-2 .wp-block-image.aligncenter {
+        display: block !important;
         text-align: center !important;
         margin: 2rem auto !important;
+        width: 100% !important;
     }
     
     /* Center form titles */
@@ -3142,51 +3167,6 @@ ul.wp-block-list.contact-bullets strong {
 @media (max-width: 480px) {
     .page-template-step-2 .step-2-form-wrapper form {
         padding: 1rem !important;
-    }
-}
-@media (max-width: 768px) {
-    /* ... keep existing mobile styles ... */
-    
-    /* ✅ FIX #1: Center form */
-    .page-template-step-2 .content-wrap .main {
-        text-align: center; /* Center children */
-    }
-    
-    .page-template-step-2 .step-2-form-wrapper {
-        display: inline-block;
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 1rem auto !important;
-        padding: 0 1rem !important;
-    }
-    
-    .page-template-step-2 .step-2-form-wrapper form {
-        text-align: left; /* Reset form content */
-        width: 100% !important;
-        padding: 1.5rem !important;
-    }
-    
-    .page-template-step-2 .wp-block-image.aligncenter {
-        display: block !important;
-        text-align: center !important;
-        margin: 2rem auto !important;
-        width: 100% !important;
-    }
-    
-    /* ✅ FIX #2: Name field width */
-    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name,
-    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email {
-        grid-template-columns: 1fr !important;
-        gap: 0.75rem !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-    
-    /* CRITICAL: Target inputs inside the grid */
-    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name input,
-    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email input {
-        width: 100% !important;
-        max-width: 100% !important;
     }
 }
 
@@ -3647,6 +3627,7 @@ main figure.wp-block-image img {
     }
 
 }
+
 
 
 
