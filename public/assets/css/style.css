@@ -3646,7 +3646,86 @@ main figure.wp-block-image img {
     }
 
 }
+/* =========================================
+   27. OPTIONS TO SELL LAND PAGE STYLES
+   ========================================= */
 
+/* Body Text */
+.page-template-options-to-sell-land main p {
+    font-family: var(--font-primary);
+    font-size: 18px !important; /* 13.5pt */
+    line-height: 1.6 !important;
+    color: #000000;
+}
+
+/* Headings - Black */
+.page-template-options-to-sell-land h1.wp-block-heading,
+.page-template-options-to-sell-land h2.wp-block-heading,
+.page-template-options-to-sell-land h3.wp-block-heading {
+    color: #000000 !important;
+}
+
+/* Table Container */
+.page-template-options-to-sell-land .wp-block-table {
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scroll on small screens */
+    margin: 2rem 0;
+    box-sizing: border-box;
+}
+
+/* Table */
+.page-template-options-to-sell-land table {
+    width: 100%;
+    min-width: 500px; /* Prevent crushing on mobile */
+    border-collapse: collapse;
+    font-family: var(--font-primary);
+    font-size: 18px;
+    line-height: 1.5;
+    table-layout: auto; /* Allow text to wrap */
+}
+
+/* Table Header */
+.page-template-options-to-sell-land thead {
+    background-color: var(--color-brand-primary-lighter);
+}
+
+/* Cells */
+.page-template-options-to-sell-land th,
+.page-template-options-to-sell-land td {
+    padding: 0.75rem;
+    border: 1px solid #000000; /* Thin black border */
+    text-align: left;
+    color: #000000;
+    vertical-align: top; /* Align text to top for wrapping */
+}
+
+/* Header Cells */
+.page-template-options-to-sell-land th {
+    font-weight: 700;
+}
+
+/* Subtle Row Background (not zebra striping) */
+.page-template-options-to-sell-land tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.03); /* Very subtle grey */
+}
+
+/* Underline for emphasis */
+.page-template-options-to-sell-land .text-underline {
+    text-decoration: underline;
+    text-decoration-color: var(--color-brand-primary);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .page-template-options-to-sell-land table {
+        min-width: 300px; /* Allow table to be narrower on mobile */
+    }
+    
+    .page-template-options-to-sell-land th,
+    .page-template-options-to-sell-land td {
+        padding: 0.5rem; /* Reduce padding for smaller screens */
+    }
+}
 
 
 
