@@ -1077,25 +1077,37 @@ hr.wp-block-separator.has-alpha-channel-opacity {
         background: none !important;
         background-color: rgba(0,0,0,0.85) !important; /* Solid dark background instead */
     }
-        .hero-content-container {
-        display: block !important; /* Changed from grid to block for stacking */
+     .hero-content-container {
+        display: block !important;
         width: 100% !important;
         padding: 0 1rem !important;
-        justify-content: unset !important; /* Remove grid alignment */
+        box-sizing: border-box !important;
+        margin: 0 !important; /* Remove any inherited margins */
     }
     
+    /* Fix content block - full width visibility */
     .hero-content {
         width: 100% !important;
         max-width: 100% !important;
-        margin: 0 auto 2rem !important; /* Space below content block */
-        padding: 1.5rem !important; /* Reduce padding on mobile */
+        margin: 0 auto 2rem !important;
+        padding: 1.5rem !important;
+        box-sizing: border-box !important;
+        /* Remove any potential "border" appearance */
+        border: none !important;
+        box-shadow: none !important;
     }
     
+    /* Fix form container - ensure no cutoff */
     .hero-form-container {
         width: 100% !important;
         max-width: 100% !important;
-        margin: 0 auto !important; /* Center form container */
+        margin: 0 auto !important;
+        padding: 1.5rem !important; /* Consistent padding */
+        box-sizing: border-box !important;
+        border: none !important;
+        box-shadow: none !important;
     }
+}
     
     .wp-block-columns {
         grid-template-columns: 1fr;
