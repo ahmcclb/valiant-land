@@ -1,103 +1,68 @@
-// form-validation.js - DEBUGGED VERSION
+// DEBUGGED FORM VALIDATION - Valiant Land
+console.log('🔥 FORM VALIDATION SCRIPT INITIALIZING');
+
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🚀 Valiant Land Form Validation Loading...');
+    console.log('📄 DOMContentLoaded fired - searching for forms');
     
-    // Validation patterns
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^\(?([0-9]{3})\)?[-.\s]?([0-9]{3})[-.\s]?([0-9]{4})$/;
-    const apnRegex = /^[a-zA-Z0-9\s\-\#\.\/]{5,}$/;
     
-    // Honeypot detection function
+    // Aggressive honeypot detection
     function isHoneypot(field) {
-        return (
-            field.offsetParent === null || // Hidden by CSS
-            field.type === 'hidden' || // Hidden input type
-            field.style.display === 'none' || // Inline hidden
-            field.hasAttribute('tabindex') && field.getAttribute('tabindex') === '-1' || // Tabindex -1
-            field.closest('.honeypot-field') !== null || // Inside honeypot container
-            field.closest('.gfield--type-honeypot') !== null || // Gravity Forms honeypot
-            field.name === 'bot-field' || // Common honeypot name
-            field.name === 'ak_hp_textarea' || // Akismet honeypot
-            field.name.includes('_57') // Your specific honeypot field
-        );
+        return field.offsetParent === null || 
+               field.type === 'hidden' || 
+               field.style.display === 'none' ||
+               field.getAttribute('tabindex') === '-1' ||
+               field.closest('.honeypot-field, .gfield--type-honeypot') !== null;
     }
     
-    // Find the error message container (create if needed)
-    function getErrorContainer(field) {
-        // Gravity Forms structure: .gfield is the parent container
-        let container = field.closest('.gfield, .form-field-group');
-        if (!container) return null;
-        
-        // Look for existing error message or create one
-        let errorDiv = container.querySelector('.field-error-message');
-        if (!errorDiv) {
-            errorDiv = document.createElement('div');
-            errorDiv.className = 'field-error-message';
-            container.appendChild(errorDiv);
-        }
-        
-        return errorDiv;
-    }
-    
-    // Validate individual field
+    // Field validation
     function validateField(field) {
-        // Skip honeypot fields entirely
-        if (isHoneypot(field)) {
-            console.log('🍯 Skipping honeypot field:', field.name);
+        if (isHoneypot(field)) return true;
+        
+        const container = field.closest('.gfield');
+        if (!container) {
+            console.warn('⚠️ Could not find .gfield container for:', field.name);
             return true;
         }
         
-        const errorDiv = getErrorContainer(field);
-        if (!errorDiv) return true;
-        
-        // Reset error state
-        field.closest('.gfield, .form-field-group').classList.remove('field-error');
-        errorDiv.textContent = '';
+        // Clear previous errors
+        container.classList.remove('field-error');
+        const existingError = container.querySelector('.field-error-message');
+        if (existingError) existingError.remove();
         
         const value = field.value.trim();
         let errorText = '';
         
-        // Required validation
-        if (!value) {
+        if (!value && field.hasAttribute('required')) {
             errorText = 'This field is required';
-        }
-        // Email validation
-        else if (field.type === 'email' && !emailRegex.test(value)) {
+        } else if (field.type === 'email' && value && !emailRegex.test(value)) {
             errorText = 'Please enter a valid email address';
-        }
-        // Phone validation and normalization
-        else if (field.type === 'tel' && value) {
-            if (!phoneRegex.test(value)) {
-                errorText = 'Please enter a valid phone number';
-            } else {
-                // Normalize to XXX-XXX-XXXX
-                const normalized = value.replace(phoneRegex, '$1-$2-$3');
-                field.value = normalized;
-            }
-        }
-        // APN/Address validation
-        else if ((field.name.includes('7.1') || field.name.includes('input_30')) && !apnRegex.test(value)) {
-            errorText = 'Please provide a valid property identifier (min 5 characters)';
+        } else if (field.type === 'tel' && value && !phoneRegex.test(value)) {
+            errorText = 'Please enter a valid phone number';
         }
         
-        // Show error if exists
         if (errorText) {
-            field.closest('.gfield, .form-field-group').classList.add('field-error');
+            container.classList.add('field-error');
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'field-error-message';
             errorDiv.textContent = errorText;
-            console.log('❌ Validation failed:', field.name, errorText);
+            container.appendChild(errorDiv);
+            console.log('❌ Error on', field.name, ':', errorText);
             return false;
         }
         
-        console.log('✅ Validation passed:', field.name);
+        console.log('✅ Valid:', field.name);
         return true;
     }
     
-    // Validate entire form
+    // Form validation
     function validateForm(form) {
-        const requiredFields = form.querySelectorAll('[required]');
+        console.log('🧪 Starting form validation for:', form.name);
         let isValid = true;
+        const requiredFields = form.querySelectorAll('[required]');
         
-        console.log('🧪 Validating form with', requiredFields.length, 'required fields');
+        console.log('Found', requiredFields.length, 'required fields');
         
         requiredFields.forEach(field => {
             if (!validateField(field)) {
@@ -106,39 +71,50 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         if (!isValid) {
-            console.log('🚨 Form validation FAILED');
+            console.log('🚨 VALIDATION FAILED');
             const firstError = form.querySelector('.field-error');
             if (firstError) {
-                firstError.scrollIntoView({ 
-                    behavior: 'smooth', 
-                    block: 'center' 
-                });
+                firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
         } else {
-            console.log('✅ Form validation PASSED - submitting to Netlify');
+            console.log('✅ VALIDATION PASSED - ALLOWING SUBMIT');
         }
         
         return isValid;
     }
     
-    // Attach to all Netlify forms
+    // Find and attach to forms
     const forms = document.querySelectorAll('form[data-netlify="true"]');
-    console.log('📋 Found', forms.length, 'Netlify forms to validate');
+    console.log('🎯 Found', forms.length, 'Netlify forms');
+    
+    if (forms.length === 0) {
+        console.error('❌ NO NETLIFY FORMS FOUND - SCRIPT WILL NOT WORK');
+    }
     
     forms.forEach(form => {
-        // Add blur listeners
+        console.log('🔌 Attaching validation to form:', form.name);
+        
+        // Attach blur listeners
         form.querySelectorAll('[required]').forEach(field => {
-            field.addEventListener('blur', () => validateField(field));
+            field.addEventListener('blur', () => {
+                console.log('👁️ Blur event on:', field.name);
+                validateField(field);
+            });
         });
         
-        // Intercept submission
+        // CRITICAL: Use addEventListener with capture phase
         form.addEventListener('submit', function(e) {
-            console.log('🎯 Form submission intercepted');
+            console.log('🎯 SUBMIT EVENT CAPTURED - EXECUTING VALIDATION');
+            
             if (!validateForm(form)) {
+                console.log('⛔ PREVENTING SUBMISSION - ERRORS FOUND');
                 e.preventDefault();
                 e.stopPropagation();
+                e.stopImmediatePropagation();
                 return false;
             }
-        });
+            
+            console.log('✅ NO ERRORS - ALLOWING NETLIFY SUBMISSION');
+        }, false); // Use bubbling phase, not capture
     });
 });
