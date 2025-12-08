@@ -218,7 +218,7 @@
     <h3>Sell Your Land For Cash: Start Below!</h3>
     <div class='gf_browser_chrome gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework' data-form-theme='legacy' data-form-index='0' id='gform_wrapper_1'>
         <div id='gf_1' class='gform_anchor' tabindex='-1'></div>
-        <form method='post' name="blog-land-offer" data-netlify="true" id='gform_1' action='/step-2.html' novalidate>
+        <form method='post' name="blog-land-offer" data-netlify="true" id='gform_1' action='/step-2.html' novalidate onsubmit="return validateValiantForm(this);">
             <input type="hidden" name="form-name" value="blog-land-offer">
             <div class='gform-body gform_body'>
                 <ul id='gform_fields_1' class='gform_fields top_label form_sublabel_below description_below'>
@@ -344,5 +344,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
+    <script src="/assets/js/form-validation.js"></script>
 </body>
 </html>

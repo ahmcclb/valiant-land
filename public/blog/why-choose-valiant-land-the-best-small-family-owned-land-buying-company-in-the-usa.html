@@ -285,7 +285,7 @@
 
         <div class='gf_browser_chrome gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework' data-form-theme='legacy' data-form-index='0' id='gform_wrapper_1'>
             <div id='gf_1' class='gform_anchor' tabindex='-1'></div>
-            <form method='post' name="post-land-offer" data-netlify="true" id='gform_1' action='/step-2.html' novalidate>
+            <form method='post' name="post-land-offer" data-netlify="true" id='gform_1' action='/step-2.html' novalidate onsubmit="return validateValiantForm(this);">
                 <input type="hidden" name="form-name" value="post-land-offer">
                 <div class='gform_body gform_body'>
                     <ul id='gform_fields_1' class='gform_fields top_label form_sublabel_below description_below'>
@@ -398,5 +398,6 @@
             }
         });
     </script>
+    <script src="/assets/js/form-validation.js"></script>
 </body>
 </html>
