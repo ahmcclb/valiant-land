@@ -103,7 +103,7 @@
 
                 <!-- Netlify Form -->
                 <div class="letterresponse-form-wrapper">
-                    <form name="step-2-land-offer" method="POST" data-netlify="true" action="/thankyou-letterresponse.html" novalidate>
+<form name="step-2-land-offer" method="POST" data-netlify="true" action="/thankyou-letterresponse.html" novalidate onsubmit="return validateValiantForm(this);">
                         <input type="hidden" name="form-name" value="step-2-land-offer">
                         
                         <ul class="gform_fields">
@@ -411,5 +411,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
+    <script src="/assets/js/form-validation.js"></script>
 </body>
 </html>

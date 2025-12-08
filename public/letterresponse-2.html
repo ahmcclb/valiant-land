@@ -112,7 +112,7 @@
 
                 <!-- Netlify Form -->
                 <div class="letterresponse-form-wrapper">
-                    <form name="letter-response-es" method="POST" data-netlify="true" action="/thankyou-letterresponse-2.html" novalidate>
+<form name="letter-response-es" method="POST" data-netlify="true" action="/thankyou-letterresponse-2.html" novalidate onsubmit="return validateValiantForm(this);">
                         <input type="hidden" name="form-name" value="letter-response-es">
                         
                         <ul class="gform_fields">
@@ -613,5 +613,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
+    <script src="/assets/js/form-validation.js"></script>
 </body>
 </html>
