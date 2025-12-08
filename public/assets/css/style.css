@@ -3813,10 +3813,7 @@ main figure.wp-block-image img {
 .honeypot-field .field-error-message {
     display: none !important;
 }
-/* Add this to Section 28 */
-.gfield {
-    border: 2px solid blue !important; /* TEMP: Will show if CSS loads */
-}
+
 
 
 
