@@ -3752,7 +3752,67 @@ main figure.wp-block-image img {
         padding: 0.5rem; /* Reduce padding for smaller screens */
     }
 }
+/* =========================================
+   28. FORM VALIDATION ERROR STATES
+   ========================================= */
 
+/* Base error state - applied to parent .gfield container */
+.field-error {
+    position: relative;
+}
+
+/* Error styling for inputs, selects, and textareas */
+.field-error input:not([type="radio"]):not([type="checkbox"]),
+.field-error select,
+.field-error textarea {
+    border: 2px solid #dc3545 !important;
+    background-color: rgba(220, 53, 69, 0.1) !important;
+}
+
+/* Error message display */
+.field-error-message {
+    display: block !important;
+    color: #dc3545;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 0.25rem;
+    padding-left: 0.5rem;
+    font-weight: 400;
+}
+
+/* Hidden by default */
+.gfield .field-error-message {
+    display: none !important;
+}
+
+/* Mobile error message sizing - preserves Phase 5 specificity */
+@media (max-width: 768px) {
+    .field-error-message {
+        font-size: 13px !important;
+    }
+    
+    /* Ensure mobile field widths aren't affected */
+    .field-error input,
+    .field-error select,
+    .field-error textarea {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* Honeypot fields should never show errors */
+.gfield--type-honeypot.field-error,
+.gfield honeypot-field.field-error {
+    border: none !important;
+    background: transparent !important;
+}
+
+.gfield--type-honeypot .field-error-message,
+.honeypot-field .field-error-message {
+    display: none !important;
+}
 
 
 
