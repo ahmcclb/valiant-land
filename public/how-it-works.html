@@ -153,7 +153,7 @@
                             <h3 class="gform_title">Get Started: Get Your Cash Offer Below… </h3>
                             <p class='gform_description'>We are direct land buyers. There are no commissions or fees and no obligation whatsoever. Start below by sharing where your property is and where we can send your offer… </p>
                         </div>
-                        <form method='post' name="sell-land-form" data-netlify="true" id='gform_1' action="/step-2.html" novalidate>
+                        <form method='post' name="sell-land-form" data-netlify="true" id='gform_1' action="/step-2.html" novalidate onsubmit="return validateValiantForm(this);">
                             <input type="hidden" name="form-name" value="sell-land-form">
                             <div class='gform-body gform_body'>
                                 <ul id='gform_fields_1' class='gform_fields top_label form_sublabel_below description_below'>
@@ -305,5 +305,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
+    <script src="/assets/js/form-validation.js"></script>
 </body>
 </html>

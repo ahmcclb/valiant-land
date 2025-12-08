@@ -173,7 +173,7 @@
                         <div class='gform_heading'>
                             <h3 class="gform_title">Get Started: Get Your Cash Offer Below&#8230; </h3>
                             <p class='gform_description'>We are direct land buyers. There are no commissions or fees and no obligation whatsoever. Start below by sharing where your property is and where we can send your offer&#8230; </p>
-                        </div><form method='post' name="sell-land-form" data-netlify="true" id='gform_1'  action="/step-2.html" novalidate>
+                        </div><form method='post' name="sell-land-form" data-netlify="true" id='gform_1'  action="/step-2.html" novalidate onsubmit="return validateValiantForm(this);">
                         <input type="hidden" name="form-name" value="sell-land-form">
                         <div class='gform-body gform_body'><ul id='gform_fields_1' class='gform_fields top_label form_sublabel_below description_below'><li id="field_1_5"  class="gfield gfield--type-name gfield_contains_required field_sublabel_below gfield--no-description field_description_below gfield_visibility_visible"  data-js-reload="field_1_5"><label class='gfield_label gform-field-label gfield_label_before_complex'  >Name<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_complex ginput_container ginput_container--name no_prefix has_first_name no_middle_name has_last_name no_suffix gf_name_has_2 ginput_container_name gform-grid-row' id='input_1_5'>
                             
@@ -293,5 +293,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
+    <script src="/assets/js/form-validation.js"></script>
 </body>
 </html>

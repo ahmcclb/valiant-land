@@ -170,7 +170,7 @@
                         </p>
                         
 <!-- FAQ Form -->
-<form name="faq-land-offer" method="POST" data-netlify="true" action="/step-2.html">
+<form name="faq-land-offer" method="POST" data-netlify="true" action="/step-2.html" novalidate onsubmit="return validateValiantForm(this);">
     <input type="hidden" name="form-name" value="faq-land-offer">
     <div class="form-field-group gfield">
         <label class="gfield_label">Name <span class="required-asterisk">*</span></label>
@@ -295,6 +295,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
-
+    <script src="/assets/js/form-validation.js"></script>
 </body>
 </html>

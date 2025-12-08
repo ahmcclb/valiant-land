@@ -7,7 +7,6 @@
     <meta name="description" content="Get in touch with Valiant Land. Ready to sell your land? Call us at 203-487-2412 or fill out our contact form for a fast cash offer.">
     
     <!-- Fonts -->
-    <link rel="preconnect" href="https://cdn.carrot.com">
     <link rel="stylesheet" href="/assets/css/style.css">
     
     <!-- Google Tag Manager -->
@@ -143,7 +142,7 @@
                             <p class='gform_description'>Fill out the form below and we'll get back to you within 48 hours.</p>
                         </div>
                         <!-- MODIFIED ACTION TO REDIRECT WITH QUERY PARAMETER -->
-                        <form name="contact-form" method='post' enctype='multipart/form-data' id='gform_4' action='/contact/?submitted=true' data-formid='4' novalidate data-netlify="true" netlify-honeypot="bot-field">
+                        <form name="contact-form" method='post' enctype='multipart/form-data' id='gform_4' action='/contact/?submitted=true' data-formid='4' novalidate data-netlify="true" netlify-honeypot="bot-field" novalidate onsubmit="return validateValiantForm(this);">
                             <input type="hidden" name="form-name" value="contact-form">
                             <div class='gform_body gform_body'>
                                 <ul id='gform_fields_4' class='gform_fields top_label form_sublabel_below description_below'>
@@ -296,6 +295,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
-
+    <script src="/assets/js/form-validation.js"></script>
 </body>
 </html>
