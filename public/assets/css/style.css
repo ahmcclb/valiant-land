@@ -2363,7 +2363,7 @@ ul.wp-block-list.contact-bullets strong {
         width: 100% !important;
         box-sizing: border-box !important;
     }
-    
+	
     /* ✅ Ensure inputs fill their containers */
     .page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name input[type="text"],
     .page-template-letterresponse .letterresponse-form-wrapper .ginput_container--name input[type="tel"],
@@ -2375,6 +2375,31 @@ ul.wp-block-list.contact-bullets strong {
         max-width: 100% !important;
         box-sizing: border-box !important;
     }
+	
+	/* Add this inside the @media (max-width: 768px) section in Section 19 
+   (around line 1776 where the other name field fixes are) */
+
+	/* Target the specific name field spans */
+	.page-template-letterresponse .letterresponse-form-wrapper .name_first,
+	.page-template-letterresponse .letterresponse-form-wrapper .name_last,
+	.page-template-letterresponse-2 .letterresponse-form-wrapper .name_first,
+	.page-template-letterresponse-2 .letterresponse-form-wrapper .name_last {
+		display: block !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		box-sizing: border-box !important;
+	}
+
+	/* Ensure inputs inside those spans respect boundaries */
+	.page-template-letterresponse .letterresponse-form-wrapper .name_first input,
+	.page-template-letterresponse .letterresponse-form-wrapper .name_last input,
+	.page-template-letterresponse-2 .letterresponse-form-wrapper .name_first input,
+	.page-template-letterresponse-2 .letterresponse-form-wrapper .name_last input {
+		width: 100% !important;
+		max-width: 100% !important;
+		box-sizing: border-box !important;
+		display: block !important;
+	}
     
     /* Handle email container if present */
     .page-template-letterresponse .letterresponse-form-wrapper .ginput_container_email,
