@@ -3157,9 +3157,11 @@ ul.wp-block-list.contact-bullets strong {
         text-align: left !important;
     }
     
-    /* Name field containers */
+    /* Name field containers - match desktop specificity */
     .page-template-step-2 form[name="step-2-land-offer"] .ginput_container--name,
-    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email {
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container.ginput_container--name,
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container_email,
+    .page-template-step-2 form[name="step-2-land-offer"] .ginput_container.ginput_container_email {
         grid-template-columns: 1fr !important;
         gap: 0.75rem !important;
         width: 100% !important;
