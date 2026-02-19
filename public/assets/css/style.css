@@ -2248,15 +2248,17 @@ ul.wp-block-list.contact-bullets strong {
     width: 100% !important;
 }
 
-/* Full width single fields (APN, Email, Phone, etc.) */
-.page-template-letterresponse .letterresponse-form-wrapper .gfield--width-full input:not([type="radio"]):not([type="checkbox"]),
-.page-template-letterresponse .letterresponse-form-wrapper .gfield--width-full select,
-.page-template-letterresponse .letterresponse-form-wrapper .gfield--width-full textarea,
-.page-template-letterresponse-2 .letterresponse-form-wrapper .gfield--width-full input:not([type="radio"]):not([type="checkbox"]),
-.page-template-letterresponse-2 .letterresponse-form-wrapper .gfield--width-full select,
-.page-template-letterresponse-2 .letterresponse-form-wrapper .gfield--width-full textarea {
-    width: 668px !important;
-    max-width: 100%;
+@media (min-width: 769px) {
+    /* Full width single fields - DESKTOP ONLY */
+    .page-template-letterresponse .letterresponse-form-wrapper .gfield--width-full input:not([type="radio"]):not([type="checkbox"]),
+    .page-template-letterresponse .letterresponse-form-wrapper .gfield--width-full select,
+    .page-template-letterresponse .letterresponse-form-wrapper .gfield--width-full textarea,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .gfield--width-full input:not([type="radio"]):not([type="checkbox"]),
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .gfield--width-full select,
+    .page-template-letterresponse-2 .letterresponse-form-wrapper .gfield--width-full textarea {
+        width: 668px !important;
+        max-width: 100%;
+    }
 }
 
 /* Half width fields - Lot Size specifically */
